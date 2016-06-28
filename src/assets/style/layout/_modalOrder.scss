@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+#modalOrder {
+
+    .modal {
+
+        &-content {
+            padding: 30px 50px 50px;
+
+            @media only screen and (max-width: 479px) {
+                padding: 15px 25px 25px;
+            }
+        }
+
+        &-header {
+            border-bottom: none;
+
+            .close {
+                font-size: 3em;
+                font-weight: 100;
+                transition: all 300ms ease;
+            }
+
+            .modal-title {
+                color: map-get($colors, "bs");
+                font-size: 1.71428571em;
+            }
+        }
+
+        &-body {
+
+            .btn {
+
+                &-main {
+                    background-color: map-get($colors, "bpo");
+                    color: map-get($colors, "bs");
+                    min-width: 100%;
+
+                    &:hover {
+                        background-color: map-get($colors, "bp");
+                        color: map-get($colors, "c_w");
+                    }
+                }
+            }
+        }
+
+        &-footer {
+            border-top: none;
+        }
+    }
+}

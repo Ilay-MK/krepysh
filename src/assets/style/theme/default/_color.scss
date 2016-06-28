@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+$color-white: #fff;
+
+$colors-Gorse                   : rgb(255, 221, 50);       /*#FFDD32*/
+$colors-Gorse-opacity           : rgba(255, 221, 50, 0.5); /*#48bfc1 50%*/
+$colors-PacificBlue             : rgb(0, 136, 203);        /*#0088CB*/
+$colors-PacificBlue-opacity     : rgba(0, 136, 203, 0.6);  /*#2a2a35 60%*/
+$colors-NightRider              : rgb(53, 53, 53);         /*#353535*/
+$colors-NightRider-opacity      : rgba(53, 53, 53, 0.6);   /*#353535 60%*/
+
+// --------- //
+
+$brand-primary                  : $colors-Gorse;
+$brand-primary-opacity          : $colors-Gorse-opacity;
+$brand-blackout                 : $colors-PacificBlue;
+$brand-blackout-opacity         : $colors-PacificBlue-opacity;
+$brand-secondary                : $colors-NightRider;
+$brand-secondary-opacity        : $colors-NightRider-opacity ;
+
+// ------------------------------- //
+
+$c_w : $color-white;
+$bp  : $brand-primary;
+$bpo : $brand-primary-opacity;
+$bb  : $brand-blackout;
+$bbo : $brand-blackout-opacity;
+$bs  : $brand-secondary;
+$bso : $brand-secondary-opacity;

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+%bg-cover {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+	   -moz-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+}
+
+// --------------------------------------- //
+
+%transition300ease {
+    -webkit-transition: All 300ms ease;
+       -moz-transition: All 300ms ease;
+         -o-transition: All 300ms ease;
+            transition: All 300ms ease;
+}
+
+%outline_boxShadow_none {
+    box-shadow: 0 0 0 0 transparent;
+    box-shadow: none;
+    outline: 0 solid transparent;
+    outline: none;
+}
+
+// --------------------------------------- //
+
+// --------------------------------------- //

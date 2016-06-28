@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.modal {
+
+    &-dialog {
+
+        .modal-header {
+
+            .close {
+                @extend %transition300ease;
+
+                &:focus, &:active:focus {
+                    @extend %outline_boxShadow_none;
+                }
+            }
+        }
+
+        .form-order {
+
+            .btn {
+                &-main, &-main:link, &-main:visited, &-main:hover, &-main:active, &-main:focus, &-main:active:focus {
+
+                }
+            }
+        }
+    }
+
+    &-title {
+
+    }
+}

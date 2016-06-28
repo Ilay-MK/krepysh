@@ -1,0 +1,43 @@
+
+    <!-- build:js js/vendor.js -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- FancyBox -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>-->
+
+    <!-- bower:js -->
+    <!-- endbower -->
+
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <!-- endbuild -->
+
+    <script>
+        function loadStyle(l) {
+            var a = document.createElement("link");
+            a.rel = "stylesheet";
+            a.type = "text/css";
+            a.href = l;
+            document.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function downloadJSAtOnload(l) {
+            var element = document.createElement("script");
+            element.src = l;
+            document.getElementsByTagName("body")[0].appendChild(element)
+        }
+        $(document).ready(function () {
+		    /*loadStyle('css/main.css?v=0.0.1');*/
+            downloadJSAtOnload('assets/js/main.js?v=1.0.2');
+        });
+    </script>
+
+</body>
+
+</html>
