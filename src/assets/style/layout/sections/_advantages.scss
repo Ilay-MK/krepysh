@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+#advantages {
+    color: #000; /*TEMP*/
+
+    .photos {
+        overflow: hidden;
+        margin: 30px auto;
+    }
+
+    &-carousel-photos {
+
+    }
+
+    .carousel {
+
+        &-indicators {
+
+        }
+
+        &-inner {
+
+            .item {
+
+                a {
+                    display: block;
+                    margin: 0;
+
+                    img {
+
+                    }
+                }
+            }
+        }
+
+        &-control {
+            padding-top:10%;
+            width:5%;
+        }
+    }
+}
