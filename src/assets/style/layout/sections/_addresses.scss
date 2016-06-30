@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+#addresses {
+    color: #000; /*TEMP*/
+
+    dl {
+
+        dt {
+            margin-top: 15px;
+
+            &:after {
+                content: " р-он: ";
+            }
+        }
+
+        dd {
+            margin-left: 40px;
+
+            .address {
+
+                &:after {
+                    content: ": ";
+                }
+            }
+
+            .workingTime {
+
+                ul {
+
+                    li {
+                        font-style: italic;
+
+                        &:after {
+                            content: ";";
+                        }
+
+                        &:last-child {
+
+                            &:after {
+                                content: ".";
+                            }
+                        }
+
+                        span {
+                            text-transform: lowercase;
+                            /*font-style: italic;*/
+
+                            &:after {
+                                content: ": ";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
