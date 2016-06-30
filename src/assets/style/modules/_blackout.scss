@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 .blackout {
-    background-color: map-get($colors, "bbo");
+    /*background-color: map-get($colors, "bbo");*/
+    background: rgba(map-get($colors, "bb"), 0.6);
     /*background-image: url(../img/blackout.png);*/ /*img для кроссбраузерности, браузеры не поддерживающие rgba*/
     position: absolute;
     bottom: 0;
