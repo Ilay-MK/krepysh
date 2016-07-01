@@ -1,14 +1,23 @@
 @charset "UTF-8";
 
 $colors: (
-    "c_w" : $c_w,
-    "bp"  : $bp,
-    "bpo" : $bpo,
-    "bb"  : $bb,
-    "bbo" : $bbo,
-    "bs"  : $bs,
-    "bso" : $bso
+    "b_w" : $base-white,       /*#fff*/
+    "b_b" : $base-black,       /*#000*/
+    "bp1" : $brand-primary1,   /*#ffd800*/
+    "bp2" : $brand-primary2,   /*#1DB79C*/
+    "bp3" : $brand-primary3,   /*#3B6E8B*/
+    "bs1" : $brand-secondary1, /*#333333*/
+    "bs2" : $brand-secondary2, /*#666666*/
+    "bs3" : $brand-secondary3, /*#CCCCCC*/
+    "bb"  : $brand-blackout,   /*#0088CB*/
+    "err" : $error,            /*#a94442*/
+    "suc" : $success,          /*#3c763d*/
+    "ot1" : $other1,           /*#fb7db5*/
+    "ot2" : $other2,           /*#187DBD*/
+    "ot3" : $other3            /*#1ed0d6*/
 );
+
+$c-gr-top: darken(map-get($colors, "b_w"), 2.8%);
 
 $fz-button: 1.3em;
 $fz-text-second: 1.6em;

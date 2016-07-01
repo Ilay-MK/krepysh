@@ -55,6 +55,7 @@ $(document).ready(function () {
     $(document).scroll(function () {
         var parallaxBg = $('.parallaxBg');
 
+        parallax_bg($('#problems .problems-result'));
         /*parallax_bg($('#header'));*/
     });
 

@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
 #coaches {
-    background-color: #3b6e8b;
+    background-color: map-get($colors, "bp3");
 
     .tmm-row {
         /*margin-right: -20px;
         margin-left: -20px;*/
 
         &-main {
-            border-bottom: 3px solid #1db79c;
+            border-bottom: 3px solid map-get($colors, "bp2");
             margin-bottom: 30px;
         }
 
         .item-square-3 {
-            background-color: #fff;
+            background-color: map-get($colors, "b_w");
             display: inline-block;
             overflow: hidden;
             padding: 10px;
@@ -24,7 +24,7 @@
             width: 274px;
 
             &:nth-child(2n) {
-                background-color: #cccccc;
+                background-color: map-get($colors, "bs3");
             }
 
             &:hover {
@@ -74,7 +74,7 @@
                 }
 
                 .social-icons {
-                    background-color: #666666;
+                    background-color: map-get($colors, "bs2");
                     padding: 7px 12px;
                     position: absolute;
                     bottom: 0;
@@ -89,23 +89,23 @@
                         &:hover {
                             &:nth-child(1) {
                                 a {
-                                    color: #187dbd;
+                                    color: map-get($colors, "ot1");
                                 }
                             }
                             &:nth-child(2) {
                                 a {
-                                    color: #1ed0d6;
+                                    color: map-get($colors, "ot2");
                                 }
                             }
                             &:nth-child(3) {
                                 a {
-                                    color: #fb7db5;
+                                    color: map-get($colors, "ot3");
                                 }
                             }
                         }
 
                         a {
-                            color: #fff;
+                            color: map-get($colors, "b_w");
                             font-size: 24px;
                             cursor: pointer;
                         }
@@ -114,7 +114,7 @@
             }
 
             .item-content {
-                color: #333333;
+                color: map-get($colors, "bs1");
                 font-family: "Open Sans", sans-serif;
                 font-weight: 400;
                 text-align: left;
@@ -133,7 +133,7 @@
 
                     p {
                         font-size: 12px;
-                        color: #333333;
+                        color: map-get($colors, "bs1");
                         text-align: left;
                         padding-bottom: 10px;
                         transition: transform 1s linear;
@@ -155,7 +155,7 @@
                 &:hover {
                     .spiner {
                         transform: rotate(1800deg);
-                        border-color: transparent #1db79c #1db79c transparent;
+                        border-color: transparent map-get($colors, "bp2") map-get($colors, "bp2") transparent;
                         transition: transform 10000ms cubic-bezier(0.250, 0.250, 0.750, 0.750), border-color .35s ease;
                     }
                 }
@@ -170,7 +170,7 @@
                 }
 
                 .spiner {
-                    border-color: transparent #ffd800 #ffd800 transparent;
+                    border-color: transparent map-get($colors, "bp1") map-get($colors, "bp1") transparent;
                     -moz-border-bottom-colors: none;
                     -moz-border-left-colors: none;
                     -moz-border-right-colors: none;
@@ -208,7 +208,7 @@
                     }
 
                     a {
-                        color: #fff;
+                        color: map-get($colors, "b_w");
                         cursor: pointer;
                         font-size: 24px;
                     }
@@ -216,7 +216,7 @@
             }
 
             .item-content {
-                color: #fff;
+                color: map-get($colors, "b_w");
                 font-family: "Open Sans", sans-serif;
                 font-weight: 400;
                 text-align: center;
@@ -228,7 +228,7 @@
                 }
 
                 p {
-                    color: #fff;
+                    color: map-get($colors, "b_w");
                     font-size: 12px;
                     text-align: center;
                 }

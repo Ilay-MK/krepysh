@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+.btn {
+
+    &:link, &:visited, &:hover, &:active, &:focus, &:focus:active {
+        @extend %outline_boxShadow_none;
+    }
+
+    border-radius: 0;
+    color: map-get($colors, "bs1");
+    font-size: 0.9em;
+    padding: 14px 41px 13px 42px;
+    text-shadow: 0px 0px 1px map-get($colors, "b_b");
+    text-transform: uppercase;
+    transition: All 300ms ease;
+
+    @media only screen and (max-width: 479px) {
+        min-width: 100%;
+    }
+
+    &:link, &:visited {
+
+    }
+
+    &:hover, &:focus {
+
+    }
+
+    &:active, &:focus:active {
+
+    }
+
+    &-light_yellow {
+
+        &:link, &:visited, &:hover, &:active, &:focus, &:focus:active {
+
+        }
+
+        background-color: transparent;
+        border: 1px solid map-get($colors, "bp1");
+        color: map-get($colors, "bp1");
+
+        &:link, &:visited {
+            background-color: transparent;
+            border: 1px solid map-get($colors, "bp1");
+            color: map-get($colors, "bp1");
+        }
+
+        &:hover, &:focus {
+            background-color: rgba(map-get($colors, "bp1"), 0.4);
+            border: 1px solid rgba(map-get($colors, "bp1"), 0.5);
+            color: map-get($colors, "b_w");
+        }
+
+        &:active, &:focus:active {
+            border-color: transparent;
+            background-color: rgba(map-get($colors, "b_w"), 0.2);
+            color: map-get($colors, "b_w");
+        }
+    }
+
+    &-primary1 {
+        text-shadow: none;
+
+        &:link, &:visited, &:hover, &:active, &:focus, &:focus:active {
+            text-shadow: none;
+        }
+
+        background-color: rgba(map-get($colors, "bp1"), 1);
+        border: 1px solid map-get($colors, "bp1");
+        color: map-get($colors, "bp3");
+
+        &:link, &:visited {
+           background-color: rgba(map-get($colors, "bp1"), 1);
+            border: 1px solid map-get($colors, "bp1");
+            color: map-get($colors, "bp3");
+        }
+
+        &:hover, &:focus {
+            background-color: rgba(map-get($colors, "bp1"), 0.4);
+            border: 1px solid rgba(map-get($colors, "bp1"), 0.5);
+            color: map-get($colors, "b_w");
+        }
+
+        &:active, &:focus:active {
+            border-color: transparent;
+            background-color: rgba(map-get($colors, "b_w"), 0.2);
+            color: map-get($colors, "b_w");
+            text-shadow: 0px 0px 1px map-get($colors, "b_b");
+        }
+    }
+
+    &-primary2 {
+        text-shadow: none;
+
+        &:link, &:visited, &:hover, &:active, &:focus, &:focus:active {
+            text-shadow: none;
+        }
+
+        background-color: rgba(map-get($colors, "bp2"), 1);
+        border: 1px solid map-get($colors, "bp2");
+        color: map-get($colors, "b_w");
+
+        &:link, &:visited {
+           background-color: rgba(map-get($colors, "bp2"), 1);
+            border: 1px solid map-get($colors, "bp2");
+            color: map-get($colors, "b_w");
+        }
+
+        &:hover, &:focus {
+            background-color: rgba(map-get($colors, "bp2"), 0.4);
+            border: 1px solid rgba(map-get($colors, "bp2"), 0.5);
+            color: map-get($colors, "bp1");
+        }
+
+        &:active, &:focus:active {
+            border-color: transparent;
+            background-color: rgba(map-get($colors, "b_w"), 0.2);
+            color: map-get($colors, "b_w");
+            text-shadow: 0px 0px 1px map-get($colors, "b_b");
+        }
+    }
+
+    &-primary3 {
+        text-shadow: none;
+
+        &:link, &:visited, &:hover, &:active, &:focus, &:focus:active {
+            text-shadow: none;
+        }
+
+        background-color: rgba(map-get($colors, "bp3"), 1);
+        border: 1px solid map-get($colors, "bp3");
+        color: map-get($colors, "bp1");
+
+        &:link, &:visited {
+           background-color: rgba(map-get($colors, "bp3"), 1);
+            border: 1px solid map-get($colors, "bp3");
+            color: map-get($colors, "bp1");
+        }
+
+        &:hover, &:focus {
+            background-color: rgba(map-get($colors, "bp3"), 0.4);
+            border: 1px solid rgba(map-get($colors, "bp3"), 0.5);
+            color: map-get($colors, "b_w");
+        }
+
+        &:active, &:focus:active {
+            border-color: transparent;
+            background-color: rgba(map-get($colors, "b_w"), 0.2);
+            color: map-get($colors, "b_w");
+            text-shadow: 0px 0px 1px map-get($colors, "b_b");
+        }
+    }
+
+    &-main {
+
+        &:link, &:visited, &:hover, &:active, &:focus, &:focus:active {
+
+        }
+
+        background-color: rgba(map-get($colors, "bs1"), 0.2);
+        border: 1px solid rgba(map-get($colors, "b_b"), 0.3);
+        color: map-get($colors, "bp1");
+
+        &:link, &:visited {
+            background-color: rgba(map-get($colors, "b_b"), 0.2);
+            border: 1px solid rgba(map-get($colors, "b_b"), 0.3);
+            color: map-get($colors, "bp1");
+        }
+
+        &:hover, &:focus {
+
+        }
+
+        &:active, &:focus:active {
+
+        }
+    }
+
+    &-second {
+
+        &:link, &:visited, &:hover, &:active, &:focus, &:focus:active {
+
+        }
+
+        background-color: rgba(map-get($colors, "bp1"), 0.2);
+        border: 1px solid rgba(map-get($colors, "bp1"), 0.3);
+        color: map-get($colors, "b_w");
+
+        &:link, &:visited {
+            background-color: rgba(map-get($colors, "b_b"), 0.2);
+            border: 1px solid rgba(map-get($colors, "b_b"), 0.3);
+            color: map-get($colors, "bp1");
+        }
+
+        &:hover, &:focus {
+
+        }
+
+        &:active, &:focus:active {
+
+        }
+    }
+}

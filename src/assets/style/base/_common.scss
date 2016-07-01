@@ -2,7 +2,7 @@
 
 /* Custom */
 @include placeholder {
-    @extend %transition300ease;
+    color: map-get($colors, "bs2");
     opacity: 1;
     text-overflow: ellipsis;
     text-indent: 0px;
@@ -10,7 +10,7 @@
 }
 
 @include plhdr(":focus") {
-    /*text-indent: 500px;*/
+    text-indent: 500px;
 }
 
 * {
@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    color: map-get($colors, "c_w");
+    color: map-get($colors, "b_w");
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -48,7 +48,7 @@ a {
     text-decoration: none;
     transition: color .35s ease-out;
 
-    &:link, &:visited , &:hover, &:active, &:focus {
+    &:link, &:visited , &:hover, &:active, &:focus, &:focus:active {
         display: inline-block;
         text-decoration: none;
     }
@@ -100,22 +100,27 @@ h6 {
     line-height: 1.3em;
 }
 
+h1 {
+    font-size: 2.4em;
+}
+
 section {
+    padding: 50px 0;
     position: relative;
 }
 
 // Extras
 // -- Highlight Color Customization
 @include highlight-color {
-    color: #fff;
-    background-color: #000;
+    color: map-get($colors, "b_w");
+    background-color: map-get($colors, "b_b");
     /*background-color: transparent;*/
     text-shadow: none;
 }
 
 img {
     @include highlight-color-append {
-        color: #fff;
+        color: map-get($colors, "b_w");
         background: transparent;
     }
 }

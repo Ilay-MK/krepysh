@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #addresses {
-    color: #000; /*TEMP*/
+    color: map-get($colors, "bs1"); /*TEMP*/
 
     dl {
 

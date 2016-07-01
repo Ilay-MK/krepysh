@@ -11,20 +11,11 @@
 
 // --------------------------------------- //
 
-%transition300ease {
-    -webkit-transition: All 300ms ease;
-       -moz-transition: All 300ms ease;
-         -o-transition: All 300ms ease;
-            transition: All 300ms ease;
-}
-
 %outline_boxShadow_none {
     box-shadow: 0 0 0 0 transparent;
     box-shadow: none;
     outline: 0 solid transparent;
     outline: none;
 }
-
-// --------------------------------------- //
 
 // --------------------------------------- //

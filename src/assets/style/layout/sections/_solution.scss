@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
 #solution {
-    color: #000; /*TEMP*/
+    color: map-get($colors, "bs1"); /*TEMP*/
 
 }

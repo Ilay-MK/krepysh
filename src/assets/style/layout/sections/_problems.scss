@@ -1,6 +1,57 @@
 @charset "UTF-8";
 
 #problems {
-    color: #000; /*TEMP*/
+    /*background-image: url('../img/problems/bg_1.jpg');*/
+    /*background-color: rgba(map-get($colors, "bp1"), 0.3);*/
+    color: map-get($colors, "bp3");
 
+    .blackout {
+        /*background: rgba(map-get($colors, "bp1"), 0.3);*/
+        background: none;
+    }
+
+    .title {
+        /*color: map-get($colors, "bs1");*/
+    }
+
+    .problems {
+        &-list {
+
+            ul {
+
+                li {
+
+                    img, .icon-font {
+
+                    }
+
+                    .icon-font {
+                        color: map-get($colors, "bp2");
+
+                        &.fa-stack {
+
+                        }
+                    }
+
+                    span {
+
+                    }
+                }
+            }
+        }
+
+        &-result {
+            color: map-get($colors, "b_w");
+            background-color: rgba(map-get($colors, "bp2"), 0.5);
+            padding: 20px;
+
+            h3 {
+                text-align: left;
+            }
+
+            p {
+
+            }
+        }
+    }
 }

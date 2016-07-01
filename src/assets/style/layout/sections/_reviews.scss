@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 #reviews {
-    background-color: #3b6e8b;
+    background-color: map-get($colors, "bp3");
     padding: 50px 0;
 
     &-carousel-slider {

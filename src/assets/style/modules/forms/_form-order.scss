@@ -17,20 +17,25 @@
     .has-success {
 
         input {
-            /*border: 1px solid green;*/
+            border: 1px solid map-get($colors, "suc");
             /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
+            color: map-get($colors, "suc");
+
+            @include plhdr("&") {
+                color: map-get($colors, "suc");
+            }
         }
     }
 
     .has-error {
 
         input {
-            /*border: 1px solid red;*/
+            border: 1px solid map-get($colors, "err");
             /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075);*/
-            /*color: red;*/
+            color: map-get($colors, "err");
 
             @include plhdr("&") {
-                color: red;
+                color: map-get($colors, "err");
             }
         }
 

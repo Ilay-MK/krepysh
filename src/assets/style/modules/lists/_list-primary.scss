@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.list-primary {
+    list-style: none;
+
+    li {
+        font-size: 1.05em;
+        line-height: 1.3em;
+        margin-bottom: 15px;
+
+        img, .icon-font {
+            float: left;
+            margin: 0 10px 0 0;
+            padding: 0;
+        }
+
+        .icon-font {
+            font-size: 2.4em;
+
+            &.fa-stack {
+                width: 1em;
+                height: 1em;
+                line-height: 1em;
+            }
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+}

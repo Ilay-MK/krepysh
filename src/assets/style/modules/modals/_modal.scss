@@ -7,7 +7,7 @@
         .modal-header {
 
             .close {
-                @extend %transition300ease;
+                transition: all .3s ease;
 
                 &:focus, &:active:focus {
                     @extend %outline_boxShadow_none;

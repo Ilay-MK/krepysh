@@ -18,11 +18,10 @@
             .close {
                 font-size: 3em;
                 font-weight: 100;
-                transition: all 300ms ease;
             }
 
             .modal-title {
-                color: map-get($colors, "bs");
+                color: map-get($colors, "bs1");
                 font-size: 1.71428571em;
             }
         }
@@ -32,13 +31,13 @@
             .btn {
 
                 &-main {
-                    background-color: map-get($colors, "bpo");
-                    color: map-get($colors, "bs");
+                    /*background-color: rgba(map-get($colors, "bp1"), 0.5);*/
+                    /*color: map-get($colors, "bs1");*/
                     min-width: 100%;
 
                     &:hover {
-                        background-color: map-get($colors, "bp");
-                        color: map-get($colors, "c_w");
+                        /*background-color: map-get($colors, "bp1");*/
+                        /*color: map-get($colors, "b_w");*/
                     }
                 }
             }

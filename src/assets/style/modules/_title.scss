@@ -6,6 +6,7 @@
     h2 {
         font-family: 'Roboto Slab', serif;
         font-weight: 100;
+        line-height: 1em;
 
         @media only screen and (max-width: 767px) {
 
@@ -24,6 +25,7 @@
             font-family: 'Roboto Mono', sans-serif;
             font-size: 1.5em;
             font-weight: 100;
+            line-height: 1.3em;
             text-transform: uppercase;
         }
     }

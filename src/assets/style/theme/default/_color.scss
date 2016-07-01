@@ -1,41 +1,61 @@
 @charset "UTF-8";
 
-$color-white: #fff;
-
-$colors-Gorse                   : rgb(255, 221, 50);       /*#FFDD32*/
-$colors-Gorse-opacity           : rgba(255, 221, 50, 0.5); /*#48bfc1 50%*/
-$colors-PacificBlue             : rgb(0, 136, 203);        /*#0088CB*/
-$colors-PacificBlue-opacity     : rgba(0, 136, 203, 0.6);  /*#2a2a35 60%*/
-$colors-NightRider              : rgb(53, 53, 53);         /*#353535*/
-$colors-NightRider-opacity      : rgba(53, 53, 53, 0.6);   /*#353535 60%*/
-
-/*employees*/
-$colors-Astral                  : rgb(59, 110, 139);       /*#3B6E8B*/
-$colors-LightSeaGreen           : rgb(29, 183, 156);       /*#1DB79C*/
-$colors-VeryLightGrey           : rgb(204, 204, 204);      /*#CCCCCC*/
-$colors-DimGray                 : rgb(102, 102, 102);      /*#666666*/
-
-/*socials*/
-$colors-Denim                   : rgb(24, 125, 189);       /*#187DBD*/
-$colors-DarkTurquoise           : rgb(30, 208, 214);       /*#1ed0d6*/
-$colors-PersianPink             : rgb(251, 125, 181);      /*#fb7db5*/
-
-
-// --------- //
-
-$brand-primary                  : $colors-Gorse;
-$brand-primary-opacity          : $colors-Gorse-opacity;
-$brand-blackout                 : $colors-PacificBlue;
-$brand-blackout-opacity         : $colors-PacificBlue-opacity;
-$brand-secondary                : $colors-NightRider;
-$brand-secondary-opacity        : $colors-NightRider-opacity ;
+$base-white             : rgb(255, 255, 255); /*base of white*/
+$base-black             : rgb(0, 0, 0);       /*base for lighen*/
 
 // ------------------------------- //
 
-$c_w : $color-white;
-$bp  : $brand-primary;
-$bpo : $brand-primary-opacity;
-$bb  : $brand-blackout;
-$bbo : $brand-blackout-opacity;
-$bs  : $brand-secondary;
-$bso : $brand-secondary-opacity;
+/*Red*/
+$color-PersianPink      : rgb(251, 125, 181); /*#fb7db5*/ /*soc*/
+$color-RoofTerracotta   : rgb(169, 68, 66);   /*#a94442*/ /*! error */
+
+/*Green*/
+$color-LightSeaGreen    : rgb(29, 183, 156);  /*#1DB79C*/ /*! primary */
+$color-JapaneseLaurel   : rgb(60, 118, 61);   /*#3c763d*/ /*! success */
+
+/*Blue*/
+$color-PacificBlue      : rgb(0, 136, 203);   /*#0088CB*/ /*! blackout */
+$color-Denim            : rgb(24, 125, 189);  /*#187DBD*/ /*soc*/
+$color-Astral           : rgb(59, 110, 139);  /*#3B6E8B*/ /*! primary */
+
+/*Blue-green*/
+$color-DarkTurquoise    : rgb(30, 208, 214);  /*#1ed0d6*/ /*soc*/
+
+/*Yellow*/
+$color-SchoolBusYellow  : rgb(255, 216, 0);   /*#ffd800*/ /*! primary */
+$color-Gorse            : rgb(255, 221, 50);  /*#FFDD32*/
+
+/*Gray*/ /*! secondary */
+$color-VeryLightGrey    : rgb(204, 204, 204); /*#CCCCCC*/ /*lighten($color,80%)*/
+$color-DimGray          : rgb(102, 102, 102); /*#666666*/ /*lighten($color,40%)*/
+$color-NightRider       : rgb(51, 51, 51);    /*#333333*/ /*lighten($color,20%)*/
+
+// ------------------------------- //
+
+$brand-primary-yellow   : $color-SchoolBusYellow;
+$brand-primary-green    : $color-LightSeaGreen;
+$brand-primary-blue     : $color-Astral;
+
+$brand-secondary-dark   : $color-NightRider;
+$brand-secondary-normal : $color-DimGray;
+$brand-secondary-light  : $color-VeryLightGrey;
+
+// --------- //
+
+
+$brand-primary1         : $brand-primary-yellow;
+$brand-primary2         : $brand-primary-green;
+$brand-primary3         : $brand-primary-blue;
+
+$brand-secondary1       : $brand-secondary-dark;
+$brand-secondary2       : $brand-secondary-normal;
+$brand-secondary3       : $brand-secondary-light;
+
+$brand-blackout         : $color-PacificBlue;
+
+$error                  : $color-RoofTerracotta;
+$success                : $color-JapaneseLaurel;
+
+$other1                 : $color-PersianPink;
+$other2                 : $color-Denim;
+$other3                 : $color-DarkTurquoise;
