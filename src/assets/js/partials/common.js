@@ -2,6 +2,8 @@
  Third party
  */
 
+"use strict";
+
 $(function () {
     /*console.log('in common.js! ');*/
 })
@@ -55,8 +57,8 @@ $(document).ready(function () {
     $(document).scroll(function () {
         var parallaxBg = $('.parallaxBg');
 
-        parallax_bg($('#problems .problems-result'));
-        /*parallax_bg($('#header'));*/
+        /*parallax($('#problems-result'));*/
+        /*parallax($('#header', "bg"));*/
     });
 
     $('.modal-vertical-centered').on('show.bs.modal', centerModal);
@@ -83,6 +85,76 @@ $(document).ready(function () {
     $('#modalOrder').on('hidden.bs.modal', function (event) {
         /*$('#placeInModal>.form-order').detach().prependTo('#placeInFooter');*/  // перемещаем форму из модального окна в футер
     });
+
+    $.fn.extend({
+        animateCss: function (animationName) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+            });
+        }
+    });
+
+    $(".youtube").each(function () {
+        // Based on the YouTube ID, we can easily find the thumbnail image
+        $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
+
+        // Overlay the Play icon to make it look like a video player
+        $(this).append($('<div/>', {'class': 'play'}));
+
+        $(document).delegate('#'+this.id, 'click', function() {
+            // Create an iFrame with autoplay set to true
+            var iframe_url = "https://www.youtube.com/embed/" + this.id + "?autoplay=1&autohide=1";
+            if ($(this).data('params')) iframe_url+='&'+$(this).data('params');
+
+            // The height and width of the iFrame should be the same as parent
+            var iframe = $('<iframe/>', {'frameborder': '0', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
+
+            // Replace the YouTube thumbnail with YouTube HTML5 Player
+            $(this).replaceWith(iframe);
+        });
+    });
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* - - - - - - - - - - - - - - - - HEADER - - - - - - - - - - - - - - - - */
+
+    $('#header').animate({
+        opacity: 1
+    }, 1000);
+
+    setTimeout(function () {
+        $('#header .offer').css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
+    }, 1100);
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* - - - - - - - - - - - - - - - - ADVANTAGES - - - - - - - - - - - - - - */
+    /*var video = JSON.parse("../json/video.json"),*/
+    var video = [
+            "<iframe width=\"auto\" height=\"auto\" src=\"https://www.youtube.com/embed/CUiQh_9k7q0\" frameborder=\"0\" allowfullscreen=\"\"></iframe>",
+            "<iframe width=\"auto\" height=\"auto\" src=\"https://www.youtube.com/embed/qbpNv4gI14o\" frameborder=\"0\" allowfullscreen=\"\"></iframe>",
+            "<iframe width=\"auto\" height=\"auto\" src=\"https://www.youtube.com/embed/CUiQh_9k7q0\" frameborder=\"0\" allowfullscreen=\"\"></iframe>"
+        ],
+        video_current = 0;
+
+    /*CUiQh_9k7q0
+    qbpNv4gI14o
+    https://www.youtube.com/embed/*/
+    setTimeout(function () {
+        $('#advantages .video').each(function () {
+            $(this).prepend(video[video_current]);
+            video_current++;
+        });
+    }, 4000);
+
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
+
+   /* setTimeout(function () {
+        $('#yMap').prepend(
+            "<script type=\"text/javascript\" charset=\"utf-8\" async src=\"https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=9z5AVEb4vNtxVCjxmjZiM2u_YRbneKxM&width=100%&height=400&lang=ru_RU&sourceType=constructor&scroll=false\"></script>"
+        );
+    }, 5000);*/
 
     /* ------------ */
     /* Примеры скриптов */
@@ -131,16 +203,16 @@ $(document).ready(function () {
 });
 
 //Parallax effect background
-function parallax_bg(parallaxBg) {
+function parallax(object, effect) {
     if (getPageSize()[2] < 768) {
         return;
     }
     var currScrollPos = +$(document).scrollTop(),
-        offsetFromTop = parallaxBg.offset(),
+        offsetFromTop = object.offset(),
         currToBlock   = +offsetFromTop.top - currScrollPos,
         maxOffsetAnim = +100,
         hOffset       = currToBlock/6, /*currToBlock/4*/
-        unit          = "%";
+        unit          = "px";
 
     /*console.log(currToBlock);*/
 
@@ -149,7 +221,14 @@ function parallax_bg(parallaxBg) {
 
     /*console.log(hOffset);*/
 
-    parallaxBg.css('background-position', '50% ' + hOffset + unit);
+    if(effect == "bg") {
+        unit = "%";
+        object.css('background-position', '50% ' + hOffset + unit);
+    }
+    else {
+        object.css('position', 'relative');
+        object.css('top', -hOffset*2 + unit);
+    }
 }
 
 function checkingVisible(elem) {

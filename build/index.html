@@ -58,7 +58,7 @@
 
 <header id="header" class="bg-cover">
 
-    <div class="blackout"></div>
+    <!--<div class="blackout"></div>-->
 
     <div class="header-top">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -97,14 +97,17 @@
     </div>
 
     <div class="header-content">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-7 col-lg-offset-5 col-md-8 col-md-offset-4"><!-- col-lg-6 col-lg-offset-6 col-md-8 col-md-offset-4 -->
-                    <h1>
-                        Ваш ребенок получит ровную осанку и гибкость, друзей по спорту, укрепит иммунитет<br /><br />
-                        Обучаясь у тренера-чемпиона по гимнастике, по самой низкой цене в Минске, в 15 минутах ходьбы от дома
-                    </h1>
+                    <div class="offer">
+                        <h1>
+                            Ваш ребенок получит ровную осанку и гибкость, друзей по спорту, укрепит иммунитет<br /><br />
+                            Обучаясь у тренера-чемпиона по гимнастике, по самой низкой цене в Минске, в 15 минутах ходьбы от дома
+                        </h1>
+                    </div>
                 </div>
+
                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                     <div class="title">
                         <h2>
@@ -180,7 +183,7 @@
         </div>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-6 text-right">
-                <div class="problems-result">
+                <div class="problems-result" id="problems-result">
                     <h3>В итоге:</h3>
                     <p>
                         ваш ребенок обучается посредственной технике исполнения элементов у тренера по физкультуре, за тридевять земель, постепенно теряя интерес к занятиям, а не из-за того, что кружок ему не подходит.
@@ -319,19 +322,20 @@
             <div class="col-md-4">
                 <h3 class="text-center">Видео о центре Крепыш</h3>
                 <div class="video video-responsive">
-                    <iframe width="auto" height="auto" src="https://www.youtube.com/embed/CUiQh_9k7q0" frameborder="0" allowfullscreen=""></iframe>
+                    <!--<div class="youtube"
+                         id="CUiQh_9k7q0"
+                         data-params="modestbranding=1&showinfo=0&controls=0&vq=hd720">
+                    </div>-->
                 </div>
             </div>
             <div class="col-md-4">
                 <h3 class="text-center">Видеоотзыв о тренере</h3>
                 <div class="video video-responsive">
-                    <iframe width="auto" height="auto" src="https://www.youtube.com/embed/qbpNv4gI14o" frameborder="0" allowfullscreen=""></iframe>
                 </div>
             </div>
             <div class="col-md-4">
                 <h3 class="text-center">Тренировка глазами ребенка</h3>
                 <div class="video video-responsive">
-                    <iframe width="auto" height="auto" src="https://www.youtube.com/embed/qbpNv4gI14o" frameborder="0" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
@@ -562,8 +566,8 @@
                             <tr>
                                 <th class="text-center">#</th>
                                 <th>Абонемент</th>
-                                <th>4 занятий в месяц</th>
-                                <th>8 занятий в месяц</th>
+                                <th>4 занятий в месяц, руб.</th>
+                                <th>8 занятий в месяц, руб.</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -574,42 +578,48 @@
                                     <hr />для 2 детей из одной семьи
                                 </td>
                                 <td>
-                                    240 000
-                                    <hr />380 000
+                                    24<span class="oldCurrency">240 000</span>
+                                    <!--<hr />240 000-->
                                 </td>
                                 <td>
-                                    440 000
-                                    <hr />680 000
+                                    44<span class="oldCurrency">440 000</span>
+                                    <hr />68<span class="oldCurrency">680 000</span>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td>
-                                    3 месяц
-                                    <hr /> для 2 детей из одной семьи
+                                    3 месяца
                                 </td>
                                 <td>
-                                    700 000
-                                    <hr />1 200 000
+                                    70<span class="oldCurrency">70 000</span>
                                 </td>
                                 <td>
-                                    1 300 000
-                                    <hr />2 300 000
+                                    114<span class="oldCurrency">1 140 000</span> <div class="sale">-6<span class="oldCurrency">-60 000</span> в месяц</div>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
                                 <td>
-                                    6 месяц
-                                    <hr /> для 2 детей из одной семьи
+                                    6 месяцев
                                 </td>
                                 <td>
-                                    1 300 000
-                                    <hr />2 000 000
+                                    130<span class="oldCurrency">1 300 000</span>
                                 </td>
                                 <td>
-                                    2 500 000
-                                    <hr />4 500 000
+                                    216<span class="oldCurrency">2 160 000</span> <div class="sale">-8<span class="oldCurrency">-80 000</span> в месяц</div>
+                                </td>
+                            </tr>
+                            <tr class="nonStriped">
+                                <th colspan="4"><hr /></th>
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <td>
+                                    Индивидуальное занятие
+                                </td>
+                                <td colspan="2">
+                                    39.9<span class="oldCurrency">399 000</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -625,7 +635,7 @@
                         Оставить заявку на бесплатное занятие и участвовать в розыгрыше 3х абонементов
                     </h3>
                     <p>
-                        <button type="button" class="btn btn-main" data-toggle="modal" data-target="#modalOrder" data-service="[Цены] - Узнать подробнее (Заявка на бесплатное занятие и розыгрыш 3x абонементов)" role="button">Узнать подробнее</button>
+                        <button type="button" class="btn btn-primary3" data-toggle="modal" data-target="#modalOrder" data-service="[Цены] - Узнать подробнее (Заявка на бесплатное занятие и розыгрыш 3x абонементов)" role="button">Узнать подробнее</button>
                     </p>
                 </div>
             </div>

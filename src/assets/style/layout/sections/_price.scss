@@ -8,5 +8,25 @@
         hr {
             margin: 5px 0;
         }
+
+        td {
+            vertical-align: middle;
+        }
+    }
+
+    .nonStriped {
+        background-color: inherit;
+    }
+
+    .oldCurrency {
+        &:before {
+            content: " ( ";
+        }
+        &:after {
+            content: " )";
+        }
+
+        color: map-get($colors, "bs3");
+        font-size: 0.8em;
     }
 }
