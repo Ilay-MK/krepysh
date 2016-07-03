@@ -57,7 +57,7 @@ $(document).ready(function () {
     $(document).scroll(function () {
         var parallaxBg = $('.parallaxBg');
 
-        /*parallax($('#problems-result'));*/
+        parallax($('#problems-result'));
         /*parallax($('#header', "bg"));*/
     });
 
@@ -132,6 +132,7 @@ $(document).ready(function () {
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - - ADVANTAGES - - - - - - - - - - - - - - */
+
     /*var video = JSON.parse("../json/video.json"),*/
     var video = [
             "<iframe width=\"auto\" height=\"auto\" src=\"https://www.youtube.com/embed/CUiQh_9k7q0\" frameborder=\"0\" allowfullscreen=\"\"></iframe>",
@@ -150,6 +151,19 @@ $(document).ready(function () {
         });
     }, 4000);
 
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* - - - - - - - - - - - - - - - - PROBLEMS - - - - - - - - - - - - - - - */
+
+    /* Разовое исполнение */
+    $('#problems-result').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
+    });
+
+    /* Разовое исполнение */
+    $('#problems .list-primary li').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('bounceInLeft'); /*slideInLeft|fadeInLeft*/
+    });
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
@@ -231,7 +245,7 @@ function parallax(object, effect) {
     }
     else {
         object.css('position', 'relative');
-        object.css('top', -hOffset*2 + unit);
+        object.css('top', hOffset-100 + unit);
     }
 }
 

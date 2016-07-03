@@ -16,10 +16,12 @@
 
     .problems {
         &-list {
+            font-size: 1.2em;
 
             ul {
 
                 li {
+                    opacity: 0;
 
                     img, .icon-font {
 
@@ -34,23 +36,28 @@
                     }
 
                     span {
-
+                        color: map-get($colors, "bp2");
                     }
                 }
             }
         }
 
         &-result {
-            color: map-get($colors, "b_w");
             background-color: rgba(map-get($colors, "bp2"), 0.5);
+            color: map-get($colors, "b_w");
+            font-size: 1.2em;
+            line-height: 1.3em;
+            margin-right: -15px;
+            opacity: 0;
             padding: 20px;
 
             h3 {
+                color: map-get($colors, "bp2");
                 text-align: left;
             }
 
             p {
-
+                color: map-get($colors, "bs2");
             }
         }
     }
