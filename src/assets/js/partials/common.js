@@ -123,8 +123,12 @@ $(document).ready(function () {
     }, 1000);
 
     setTimeout(function () {
-        $('#header .offer').css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
-    }, 1100);
+        $('#header .offer-right').css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
+    }, 2000);
+
+    setTimeout(function () {
+        $('#header .offer-bottom').css("opacity", 1).animateCss('fadeInUp'); /*slideInUp*/
+    }, 3000);
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - - ADVANTAGES - - - - - - - - - - - - - - */
