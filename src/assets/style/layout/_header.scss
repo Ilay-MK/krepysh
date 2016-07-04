@@ -75,6 +75,11 @@
                             @media only screen and (max-width: 767px) {
                                 display: inline-block;
                             }
+
+                            .fa {
+                                color: map-get($colors, "bp1");
+                                font-size: 1.3em;
+                            }
                         }
                     }
 
@@ -91,7 +96,7 @@
                     }
 
                     .btn {
-                        padding: 15px 15px 15px;
+                        padding: 14px 15px 14px;
                     }
                 }
             }
