@@ -207,6 +207,14 @@ $(document).ready(function () {
         $(this).css("opacity", 1).animateCss('rotateInUpRight');
     });
 
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* - - - - - - - - - - - - - - - SERVICES - - - - - - - - - - - - - - - */
+
+    $('#reviews-carousel-slider').on('slid.bs.carousel', function () {
+        var curRw = $(this).find('.item.active .numberReview').text();
+        $('#currentReview').html(curRw);
+    })
+
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
 
