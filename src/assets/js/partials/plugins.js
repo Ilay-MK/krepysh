@@ -17,8 +17,17 @@ $(document).ready(function() {
 		return false;
 	});*/
 
-    /* mask of inputs */
+    $(document).ready(function() {
+		$(".fancybox").fancybox({
+            helpers : {
+                title : {
+                    type : 'over'
+                }
+            }
+        });
+	});
 
+    /* mask of inputs */
     $.mask.definitions['~']='[+-]';
     $.mask.definitions['h'] = "[2349]";
     $.mask.definitions['!'] = "[0-9]";

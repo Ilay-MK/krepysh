@@ -58,6 +58,7 @@ $(document).ready(function () {
         var parallaxBg = $('.parallaxBg');
 
         parallax($('#problems-result'));
+        parallax($('#advantages-result'));
         /*parallax($('#header', "bg"));*/
     });
 
@@ -131,7 +132,39 @@ $(document).ready(function () {
     }, 3000);
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* - - - - - - - - - - - - - - - - PROBLEMS - - - - - - - - - - - - - - - */
+
+    /* Разовое исполнение */
+    $('#problems .list-primary li').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('bounceInLeft'); /*slideInLeft|fadeInLeft*/
+    });
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - - ADVANTAGES - - - - - - - - - - - - - - */
+
+    /* Разовое исполнение */
+    $('#advantages .list-primary li').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('bounceInLeft'); /*slideInLeft|fadeInLeft*/
+    });
+
+    /* Разовое исполнение */
+    $('#advantages .photos').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('fadeInRight'); /*slideInLeft|fadeInLeft*/
+    });
+
+    /* Разовое исполнение */
+    /*$('#advantages .video').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('bounceIn');
+    });*/
+
+    /* inview  */
+    jQuery('#advantages .video').bind('inview', function (event, visible) {
+        if (visible) {
+            $(this).animateCss('bounceIn');
+        } else {
+            /*$(this).stop().removeClass("animated bounceIn");*/
+        }
+    });
 
     /*var video = JSON.parse("../json/video.json"),*/
     var video = [
@@ -151,22 +184,35 @@ $(document).ready(function () {
         });
     }, 4000);
 
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
 
-    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-    /* - - - - - - - - - - - - - - - - PROBLEMS - - - - - - - - - - - - - - - */
+
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* - - - - - - - - - - - - - - - - - COMMON - - - - - - - - - - - - - -  */
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* - - - - - - - - - - - - - - - - LST_RESULT - - - - - - - - - - - - -  */
 
     /* Разовое исполнение */
-    $('#problems-result').one('inview', function (event) {
+    $('.lst_result-result').one('inview', function (event) {
         $(this).css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
     });
 
-    /* Разовое исполнение */
-    $('#problems .list-primary li').one('inview', function (event) {
-        $(this).css("opacity", 1).animateCss('bounceInLeft'); /*slideInLeft|fadeInLeft*/
+    /* inview  */
+    jQuery('.list-primary li .icon-font').bind('inview', function (event, visible) {
+        if (visible) {
+            $(this).animateCss('bounceIn');
+        } else {
+            /*$(this).stop().removeClass("animated bounceIn");*/
+        }
     });
 
+
+
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-    /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
+    /* - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - */
 
    /* setTimeout(function () {
         $('#yMap').prepend(

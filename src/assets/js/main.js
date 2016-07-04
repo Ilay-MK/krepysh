@@ -14,7 +14,30 @@
 
 //= ../../../bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js
 
-/*//= ../assets/libs/fancybox/jquery.fancybox.pack.js*/
+/*//= ../libs/fancybox/source/jquery.fancybox.pack.js*/
+
+/* FANCYBOX */
+/* Add mousewheel plugin (this is optional) */
+/*//= ../../../bower_components/fancybox/lib/jquery.mousewheel-3.0.6.pack.js*/
+/* Add fancyBox main JS and CSS files */
+/*//= ../../../bower_components/fancybox/source/jquery.fancybox.pack.js*/
+/* Add Button helper (this is optional) */
+/*//= ../../../bower_components/fancybox/source/helpers/jquery.fancybox-buttons.js*/
+/* Add Thumbnail helper (this is optional) */
+/*//= ../../../bower_components/fancybox/source/helpers/jquery.fancybox-thumbs.js*/
+/* Add Media helper (this is optional) */
+/*//= ../../../bower_components/fancybox/source/helpers/jquery.fancybox-media.js*/
+
+/* Add mousewheel plugin (this is optional) */
+//= ../libs/fancybox/lib/jquery.mousewheel-3.0.6.pack.js
+/* Add fancyBox main JS and CSS files */
+//= ../libs/fancybox/source/jquery.fancybox.pack.js
+/* Add Button helper (this is optional) */
+//= ../libs/fancybox/source/helpers/jquery.fancybox-buttons.js
+/* Add Thumbnail helper (this is optional) */
+//= ../libs/fancybox/source/helpers/jquery.fancybox-thumbs.js
+/* Add Media helper (this is optional) */
+//= ../libs/fancybox/source/helpers/jquery.fancybox-media.js
 
 $(function(){
    /* console.log('in main.js! ');*/

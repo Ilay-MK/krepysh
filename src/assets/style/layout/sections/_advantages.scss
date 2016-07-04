@@ -1,9 +1,52 @@
 @charset "UTF-8";
 
 #advantages {
-    color: map-get($colors, "bs1"); /*TEMP*/
+    color: map-get($colors, "bp2");
+    padding-top: 0;
+
+    .lst_result {
+
+        &-list {
+
+            ul {
+
+                li {
+
+                    img, .icon-font {
+
+                    }
+
+                    .icon-font {
+                        color: map-get($colors, "bp3");
+
+                        &.fa-stack {
+
+                        }
+                    }
+
+                    span, h3 {
+                        color: map-get($colors, "bp3");
+                    }
+                }
+            }
+        }
+
+        &-result {
+            background-color: rgba(map-get($colors, "bp3"), 0.5);
+            color: map-get($colors, "b_w");
+
+            h3 {
+                color: map-get($colors, "bp3");
+            }
+
+            p {
+                color: map-get($colors, "bs2");
+            }
+        }
+    }
 
     .photos {
+        opacity: 0;
         overflow: hidden;
         margin: 30px auto;
     }
@@ -37,5 +80,9 @@
             padding-top: 10%;
             width: 5%;
         }
+    }
+
+    .video {
+        /*opacity: 0;*/
     }
 }

@@ -14,6 +14,21 @@
 
 /*@import url(../assets/libs/fancybox/jquery.fancybox.css);*/
 
+/* FANCYBOX */
+/* Add fancyBox main JS and CSS files */
+/*@import "../../../bower_components/fancybox/source/jquery.fancybox.css";*/
+/* Add Button helper (this is optional) */
+/*@import "../../../bower_components/fancybox/source/helpers/jquery.fancybox-buttons.css";*/
+/* Add Thumbnail helper (this is optional) */
+/*@import "../../../bower_components/fancybox/source/helpers/jquery.fancybox-thumbs.css";*/
+
+/* Add fancyBox main JS and CSS files */
+@import "../libs/fancybox/source/jquery.fancybox.css";
+/* Add Button helper (this is optional) */
+@import "../libs/fancybox/source/helpers/jquery.fancybox-buttons.css";
+/* Add Thumbnail helper (this is optional) */
+@import "../libs/fancybox/source/helpers/jquery.fancybox-thumbs.css";
+
 /*
 * Custom
 */

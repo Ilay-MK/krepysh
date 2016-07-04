@@ -4,6 +4,7 @@
     /*background-image: url('../img/problems/bg_1.jpg');*/
     /*background-color: rgba(map-get($colors, "bp1"), 0.3);*/
     color: map-get($colors, "bp3");
+    padding-bottom: 0;
 
     .blackout {
         /*background: rgba(map-get($colors, "bp1"), 0.3);*/
@@ -14,14 +15,14 @@
         /*color: map-get($colors, "bs1");*/
     }
 
-    .problems {
+    .lst_result {
+
         &-list {
             font-size: 1.2em;
 
             ul {
 
                 li {
-                    opacity: 0;
 
                     img, .icon-font {
 
@@ -35,7 +36,7 @@
                         }
                     }
 
-                    span {
+                    span, h3 {
                         color: map-get($colors, "bp2");
                     }
                 }
@@ -45,15 +46,9 @@
         &-result {
             background-color: rgba(map-get($colors, "bp2"), 0.5);
             color: map-get($colors, "b_w");
-            font-size: 1.2em;
-            line-height: 1.3em;
-            margin-right: -15px;
-            opacity: 0;
-            padding: 20px;
 
             h3 {
                 color: map-get($colors, "bp2");
-                text-align: left;
             }
 
             p {
