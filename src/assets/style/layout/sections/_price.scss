@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
 #price {
-    color: map-get($colors, "bs1"); /*TEMP*/
+    background-color: rgba(map-get($colors, "bp3"), 0.1);
+    border-bottom: 3px solid #1db79c;
+    border-top: 3px solid #1db79c;
+    color: map-get($colors, "bs1");
 
     .table {
 
