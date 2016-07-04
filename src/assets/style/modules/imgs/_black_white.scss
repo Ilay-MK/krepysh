@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+img {
+    &.black_white {
+        /*-webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: gray;*/ /* IE 6-9 */
+        filter: grayscale(100%);
+        transition: All 700ms ease;
+    }
+}

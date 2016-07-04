@@ -3,13 +3,52 @@
 #coaches {
     background-color: map-get($colors, "bp3");
 
+    .gallery {
+
+        &-row {
+            margin: 10px 0;
+
+            a {
+                position: relative;
+
+                &:hover {
+
+                    .blackout {
+                        background-color: transparent;
+                    }
+
+                    img {
+
+                        &.black_white {
+                            filter: none;
+                        }
+                    }
+                }
+
+                .blackout {
+                    background-color: rgba(map-get($colors, "bs1"), 0.5);
+                    margin: 7px;
+                    transition: background 700ms ease;
+                    z-index: 99;
+                }
+
+                img {
+
+                }
+            }
+        }
+    }
+
+    .line {
+        border-bottom: 3px solid map-get($colors, "bp2");
+        margin-bottom: 30px;
+    }
+
     .tmm-row {
         /*margin-right: -20px;
         margin-left: -20px;*/
 
         &-main {
-            border-bottom: 3px solid map-get($colors, "bp2");
-            margin-bottom: 30px;
         }
 
         .item-square-3 {
