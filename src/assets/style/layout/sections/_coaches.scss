@@ -147,6 +147,16 @@
                             color: map-get($colors, "b_w");
                             font-size: 24px;
                             cursor: pointer;
+
+                            &.btn {
+                                color: map-get($colors, "bp1");
+                                font-size: 0.8em;
+                                padding: 5px 15px;
+
+                                &:hover {
+                                    color: map-get($colors, "b_w");
+                                }
+                            }
                         }
                     }
                 }
@@ -232,7 +242,8 @@
             .social-icons {
                 background-color: transparent;
                 padding: 0;
-                left: 65px;
+                /*left: 65px;*/
+                left: 58px;
                 position: absolute;
                 top: 180px;
 
@@ -243,13 +254,27 @@
                     transition: all .35s ease;
 
                     &:hover {
-                        transform: scale(1.3);
+                        transform: scale(1.2);
                     }
 
                     a {
                         color: map-get($colors, "b_w");
                         cursor: pointer;
                         font-size: 24px;
+
+                            &.btn {
+                                border-radius: 50%;
+                                /*border-radius: 10px;*/
+                                color: map-get($colors, "bp1");
+                                /*font-size: 0.55em;*/
+                                font-size: 0.58em;
+                                /*padding: 5px 5px 4px;*/
+                                padding: 7px 9px 6px;
+
+                                &:hover {
+                                    color: map-get($colors, "b_w");
+                                }
+                            }
                     }
                 }
             }

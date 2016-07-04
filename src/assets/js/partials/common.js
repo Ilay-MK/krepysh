@@ -184,6 +184,29 @@ $(document).ready(function () {
         });
     }, 4000);
 
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* - - - - - - - - - - - - - - - - COACHES - - - - - - - - - - - - - - */
+
+    /* Разовое исполнение */
+    $('#coaches .item-square-3').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('rotateInUpLeft');
+    });
+
+    /* inview  */
+    jQuery('#coaches .gallery .gallery-item').bind('inview', function (event, visible) {
+        if (visible) {
+            $(this).animateCss('flipInY');
+        } else {
+            /*$(this).stop().removeClass("animated bounceIn");*/
+        }
+    });
+
+    /* Разовое исполнение */
+    $('#coaches .item-circled-3').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('rotateInUpRight');
+    });
+
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
 
