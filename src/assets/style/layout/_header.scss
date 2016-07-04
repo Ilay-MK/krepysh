@@ -8,6 +8,31 @@
     overflow: hidden;
     position: relative;
 
+    h1, h2 {
+
+    }
+
+    .offer {
+
+        &-right {
+
+            h2 {
+                color: map-get($colors, "bp3");
+                text-align: right;
+            }
+        }
+
+        &-bottom {
+            .title {
+
+                h2 {
+                    /*font-family: 'Roboto', sans-serif;*/
+                    font-family: 'Roboto Condensed', sans-serif;
+                }
+            }
+        }
+    }
+
     .header {
 
         &-top {
