@@ -55,7 +55,21 @@ $(document).ready(function () {
     }
 
     $(document).scroll(function () {
-        var parallaxBg = $('.parallaxBg');
+        var currScrollPos = +$(document).scrollTop(),
+            parallaxBg = $('.parallaxBg');
+
+        if(currScrollPos >= 500) {
+            $("#descr").css("display", "none");
+            $("#callMe").css("display", "none");
+            $("#utpScroll").fadeIn();
+            $("#utpScroll-btn").fadeIn();
+        }
+        else {
+            $("#descr").fadeIn();
+            $("#callMe").fadeIn();
+            $("#utpScroll").css("display", "none");
+            $("#utpScroll-btn").css("display", "none");
+        }
 
         parallax($('#problems-result'));
         parallax($('#advantages-result'));
