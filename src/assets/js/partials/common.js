@@ -215,6 +215,24 @@ $(document).ready(function () {
         $('#currentReview').html(curRw);
     })
 
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* - - - - - - - - - - - - - - - SOLUTION - - - - - - - - - - - - - - - */
+
+    /* inview  */
+    jQuery('#solution .solution').bind('inview', function (event, visible) {
+        if (visible) {
+            $(this).animateCss('bounceIn');
+        } else {
+            /*$(this).stop().removeClass("animated bounceIn");*/
+        }
+    });
+
+    /* Разовое исполнение */
+    $('#solution .solution-result').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('fadeInRight');
+    });
+
+
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
 
