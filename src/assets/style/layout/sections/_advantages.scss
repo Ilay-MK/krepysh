@@ -49,6 +49,7 @@
         opacity: 0;
         overflow: hidden;
         margin: 30px auto;
+        padding: 19px 5% 29px;
     }
 
     &-carousel-photos {
@@ -58,7 +59,7 @@
     .carousel {
 
         &-indicators {
-
+            bottom: -33px;
         }
 
         &-inner {
@@ -78,7 +79,25 @@
 
         &-control {
             padding-top: 10%;
+            border-radius: 4px;
             width: 5%;
+
+            &.left {
+                margin-left: -5%;
+            }
+
+            &.right {
+                margin-right: -5%;
+            }
+
+            span {
+                /*font-size: 1em;
+                font-weight: 100;*/
+
+                &:before {
+                    margin: 0;
+                }
+            }
         }
     }
 
