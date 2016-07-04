@@ -12,10 +12,27 @@
 
         &-top {
 
+            @media only screen and (max-width: 991px) {
+                text-align: center;
+            }
+
             .navbar {
 
                 #utpScroll-btn {
                     display: none;
+                }
+
+                #callMe {
+                    @media only screen and (max-width: 991px) {
+                        display: inline-block ;
+                    }
+                }
+
+                #descr {
+
+                    @media only screen and (max-width: 479px) {
+                        display: none !important;
+                    }
                 }
 
                 &-brand {
@@ -38,6 +55,10 @@
                         display: none;
                         float: right;
                         text-align: right;
+
+                        @media only screen and (max-width: 479px) {
+                            display: none !important;
+                        }
                     }
                 }
 
@@ -45,6 +66,28 @@
 
                     &.phones {
 
+                        .phone {
+
+                            @media only screen and (max-width: 991px) {
+                                display: none;
+                            }
+
+                            @media only screen and (max-width: 767px) {
+                                display: inline-block;
+                            }
+                        }
+                    }
+
+                    li {
+
+                        a {
+
+                            @media only screen and (max-width: 1199px) {
+                                font-size: 0.9em;
+                                line-height: 30px;
+                                padding: 10px 10px;
+                            }
+                        }
                     }
 
                     .btn {
@@ -70,6 +113,10 @@
                 overflow: hidden;
                 text-shadow: 1px 1px 0px map-get($colors, "bs1");
 
+                @media only screen and (max-width: 991px) {
+                    margin-right: auto;
+                }
+
                 &-right {
                     padding: 30px 20px 20px 20px;
                 }
@@ -84,6 +131,10 @@
 
                 h2, p {
                     max-width: 715px; /*525px*/
+
+                    @media only screen and (max-width: 991px) {
+                        min-width: 100%;
+                    }
                 }
             }
 
@@ -92,6 +143,10 @@
                 //max-width: 565px; /*845px|710px*/
                 max-width: 715px; /*525px*/
                 text-transform: uppercase;
+
+                @media only screen and (max-width: 991px) {
+                    min-width: 100%;
+                }
             }
 
             .title {

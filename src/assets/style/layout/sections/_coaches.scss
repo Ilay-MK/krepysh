@@ -8,6 +8,14 @@
         &-row {
             margin: 10px 0;
 
+            @media only screen and (max-width: 1199px) {
+                margin: 40px 0;
+            }
+
+            @media only screen and (max-width: 991px) {
+                margin: 10px 0;
+            }
+
             a {
                 position: relative;
 

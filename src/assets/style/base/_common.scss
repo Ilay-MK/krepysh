@@ -39,7 +39,11 @@ body {
     -webkit-font-smoothing: antialiased;
 
     @media only screen and (max-width: 320px) {
-        /*font-size: 12px;*/
+        font-size: 10px;
+    }
+
+    @media only screen and (max-width: 479px) {
+        font-size: 12px;
     }
 }
 
@@ -102,6 +106,10 @@ h6 {
 
 .h1, h1 {
     font-size: 2.3em; /*2.4em*/
+
+    @media only screen and (max-width: 320px) {
+        font-size: 1.5em;
+    }
 }
 .h2, h2 {
 
