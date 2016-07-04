@@ -28,4 +28,14 @@
     &-title {
 
     }
+
+    .btn {
+
+        &-primary1 {
+
+            &:hover {
+                color: map-get($colors, "bp3");
+            }
+        }
+    }
 }
