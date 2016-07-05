@@ -88,7 +88,7 @@
 
                     #utpScroll {
                         display: none;
-                        float: right;
+                        float: left;
                         text-align: right;
 
                         @media only screen and (max-width: 479px) {
@@ -129,10 +129,10 @@
                             }
                         }
                     }
+                }
 
-                    .btn {
-                        padding: 14px 15px 14px;
-                    }
+                .btn {
+                    padding: 14px 15px 14px;
                 }
             }
         }
