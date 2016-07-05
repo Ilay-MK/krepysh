@@ -31,16 +31,19 @@
         }
 
         &-result {
-            background-color: rgba(map-get($colors, "bp3"), 0.5);
+            background-color: lighten(map-get($colors, "bp3"), 5%);
             color: map-get($colors, "b_w");
             margin-bottom: 50px;
 
             h3 {
-                color: map-get($colors, "bp3");
+                /*color: map-get($colors, "bp3");*/
+                /*color: lighten(map-get($colors, "bp3"), 20%);*/
+                color: lighten(map-get($colors, "bp2"), 20%);
             }
 
             p {
-                color: map-get($colors, "bs2");
+                /*color: map-get($colors, "bs2");*/
+                /*color: lighten(map-get($colors, "bp2"), 30%);*/
             }
         }
     }
