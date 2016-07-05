@@ -208,16 +208,23 @@ $(document).ready(function () {
     /* - - - - - - - - - - - - - - - - COACHES - - - - - - - - - - - - - - */
 
     /* Разовое исполнение */
-    $('#coaches .item-square-3').one('inview', function (event) {
+    /*$('#coaches .item-square-3').one('inview', function (event) {
         $(this).css("opacity", 1).animateCss('rotateInUpLeft');
-    });
+    });*/
 
     /* inview  */
-    jQuery('#coaches .gallery .gallery-item').bind('inview', function (event, visible) {
+    /*jQuery('#coaches .gallery .gallery-item').bind('inview', function (event, visible) {
         if (visible) {
             $(this).animateCss('flipInY');
         } else {
-            /*$(this).stop().removeClass("animated bounceIn");*/
+
+        }
+    });*/
+    jQuery('#coaches .item-square-3').bind('inview', function (event, visible) {
+        if (visible) {
+            $(this).animateCss('flipInY');
+        } else {
+            /*$(this).stop().removeClass("animated flipInY");*/
         }
     });
 
@@ -255,7 +262,19 @@ $(document).ready(function () {
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
 
-
+    /* Разовое исполнение */
+    /*$('#addresses dt').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('zoomIn');
+    });
+    */
+    /* inview  */
+    jQuery('#addresses dd').bind('inview', function (event, visible) {
+        if (visible) {
+            $(this).animateCss('rotateInUpLeft');
+        } else {
+            /*$(this).stop().removeClass("animated rotateInUpLeft");*/
+        }
+    });
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - - COMMON - - - - - - - - - - - - - -  */
