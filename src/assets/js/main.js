@@ -39,6 +39,11 @@
 /* Add Media helper (this is optional) */
 //= ../libs/fancybox/source/helpers/jquery.fancybox-media.js
 
+/*Elastislide*/
+//= ../libs/elastislide/js/modernizr.custom.17475.js
+//= ../libs/elastislide/js/jquery.elastislide.js
+//= ../libs/elastislide/js/jquerypp.custom.js
+
 $(function(){
    /* console.log('in main.js! ');*/
 })
