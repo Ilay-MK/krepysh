@@ -32,11 +32,19 @@
         line-height: 1.3em;
         /*margin-right: -15px;*/
         opacity: 0;
-        padding: 20px;
+        padding: 30px;
+
+        box-shadow: 5px 5px 5px rgba(map-get($colors, "bs3"), 0.4);
+        transition: all .3s ease;
+
+        &:hover {
+            box-shadow: 5px 5px 3px rgba(map-get($colors, "bs3"), 0.6);
+        }
 
         h3 {
             font-weight: 700;
             text-align: left;
+            margin-top: 0;
         }
 
         p {

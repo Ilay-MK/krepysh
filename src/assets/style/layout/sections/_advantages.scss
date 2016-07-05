@@ -50,6 +50,13 @@
         overflow: hidden;
         margin: 0 auto 30px;
         padding: 19px 5% 29px;
+
+        box-shadow: 5px 5px 5px rgba(map-get($colors, "bs3"), 0.4);
+        transition: all .3s ease;
+
+        &:hover {
+            box-shadow: 5px 5px 3px rgba(map-get($colors, "bs3"), 0.6);
+        }
     }
 
     &-carousel-photos {
