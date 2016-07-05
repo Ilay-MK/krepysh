@@ -18,9 +18,9 @@
         $note = htmlspecialchars(trim($_POST["bsNote"]));
 	}
 
-    if (!empty($_POST["bsEmail"])) {
+    /*if (!empty($_POST["bsEmail"])) {
         $email = substr(htmlspecialchars(trim($_POST["bsEmail"])), 0, 255);
-	}
+	}*/
 
     /*if(empty($phone) && empty($email)) { $error = true; }*/
 
@@ -34,7 +34,7 @@
         $sitename = "krepysh.com";
 
         $pagetitle = "Новая заявка с сайта \"$sitename\"";
-        $message = "Имя: $name \nТелефон: $phone \nEmail: $email \nКуда кликнул: $whichService";
+        $message = "Имя: $name \nТелефон: $phone \nКуда кликнул: $whichService";
         mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
 
 	} else {

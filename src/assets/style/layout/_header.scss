@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 #header {
-    background-image: url('../img/header/bg_2.jpg'); /*krepysh-hero*/
+    background-image: url('../img/header/bg_3.jpg'); /*krepysh-hero*/
     background-attachment: fixed;
     /*box-shadow: inset 0 -15px 15px rgba(map-get($colors, "b_b"), 0.5);*/
     opacity: 0;
     overflow: hidden;
     position: relative;
 
-    h1, h2 {
+    h1 {
         font-weight: 700;
     }
 
@@ -17,7 +17,7 @@
         &-right {
 
             h2 {
-                color: map-get($colors, "bp3");
+                /*color: map-get($colors, "bp3");*/
                 text-align: right;
             }
         }
@@ -28,6 +28,7 @@
                 h2 {
                     /*font-family: 'Roboto', sans-serif;*/
                     font-family: 'Roboto Condensed', sans-serif;
+                    font-weight: 700;
                 }
             }
         }
@@ -36,6 +37,7 @@
     .header {
 
         &-top {
+            opacity: 0;
 
             @media only screen and (max-width: 991px) {
                 text-align: center;
@@ -62,7 +64,7 @@
 
                 &-brand {
                     font-family: 'Roboto Slab', serif;
-                    font-weight: 300;
+                    font-weight: 700;
                     font-size: 1em;
                     line-height: 1.2em;
                     padding: 8px 15px;

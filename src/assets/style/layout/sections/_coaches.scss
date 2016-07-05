@@ -34,8 +34,8 @@
                 }
 
                 .blackout {
-                    background-color: rgba(map-get($colors, "bs1"), 0.5);
-                    margin: 7px;
+                    /*background-color: rgba(map-get($colors, "bs1"), 0.5);*/
+                    margin: 10px;
                     transition: background 700ms ease;
                     z-index: 99;
                 }

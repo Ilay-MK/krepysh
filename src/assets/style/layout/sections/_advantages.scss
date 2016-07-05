@@ -2,7 +2,6 @@
 
 #advantages {
     color: map-get($colors, "bp2");
-    padding-top: 0;
 
     .lst_result {
 
@@ -34,6 +33,7 @@
         &-result {
             background-color: rgba(map-get($colors, "bp3"), 0.5);
             color: map-get($colors, "b_w");
+            margin-bottom: 50px;
 
             h3 {
                 color: map-get($colors, "bp3");
@@ -48,7 +48,7 @@
     .photos {
         opacity: 0;
         overflow: hidden;
-        margin: 30px auto;
+        margin: 0 auto 30px;
         padding: 19px 5% 29px;
     }
 
@@ -60,6 +60,14 @@
 
         &-indicators {
             bottom: -33px;
+
+            li {
+                border-color: map-get($colors, "bp2");
+
+                &.active {
+                    background-color: map-get($colors, "bp2");
+                }
+            }
         }
 
         &-inner {

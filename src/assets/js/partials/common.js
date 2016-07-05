@@ -71,8 +71,8 @@ $(document).ready(function () {
             $("#utpScroll-btn").css("display", "none");
         }
 
-        parallax($('#problems-result'));
-        parallax($('#advantages-result'));
+        /*parallax($('#problems-result'));*/
+        /*parallax($('#advantages-result'));*/
         /*parallax($('#header', "bg"));*/
     });
 
@@ -136,6 +136,11 @@ $(document).ready(function () {
     $('#header').animate({
         opacity: 1
     }, 1000);
+
+    setTimeout(function () {
+        $('#hTop').css("opacity", 1).animateCss('fadeInDownBig');
+    }, 1500);
+
 
     setTimeout(function () {
         $('#header .offer-right').css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
