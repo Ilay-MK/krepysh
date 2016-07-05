@@ -148,6 +148,9 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $('#header .offer-bottom').css("opacity", 1).animateCss('fadeInUp'); /*slideInUp*/
+        $('#header').animate({
+            "background-position-y": "-15%"
+        }, 1000);
     }, 3000);
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */

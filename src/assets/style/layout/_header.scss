@@ -4,10 +4,13 @@
     background-color: #fff;
     background-image: url('../img/header/bg_3.jpg'); /*krepysh-hero*/
     background-attachment: fixed;
+    background-position: 50% 0%;
     /*box-shadow: inset 0 -15px 15px rgba(map-get($colors, "b_b"), 0.5);*/
     opacity: 0;
     overflow: hidden;
     position: relative;
+
+    transform: all .7s ease;
 
     @media only screen and (max-width: 767px) {
         /*background-image: url('../img/header/bg_3.jpg');*/
