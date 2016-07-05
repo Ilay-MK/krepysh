@@ -55,31 +55,14 @@ $(document).ready(function () {
     }
 
     $(document).scroll(function () {
-        var currScrollPos = +$(document).scrollTop(),
-            parallaxBg = $('.parallaxBg');
-
-        if(currScrollPos >= 500) {
-            $("#descr").css("display", "none");
-            $("#callMe").css("display", "none");
-            $("#utpScroll").fadeIn();
-            $("#utpScroll-btn").fadeIn();
-        }
-        else {
-            $("#descr").fadeIn();
-            $("#callMe").fadeIn();
-            $("#utpScroll").css("display", "none");
-            $("#utpScroll-btn").css("display", "none");
-        }
-
-        /*parallax($('#problems-result'));*/
-        /*parallax($('#advantages-result'));*/
-        /*parallax($('#header', "bg"));*/
+        toDoScroll();
     });
 
     $('.modal-vertical-centered').on('show.bs.modal', centerModal);
 
     $(window).on("resize", function () {
         $('.modal-vertical-centered:visible').each(centerModal);
+        toDoScroll();
     });
 
     $('#modalOrder').on('show.bs.modal', function (event) {
@@ -358,6 +341,73 @@ $(document).ready(function () {
     });*/
 
 });
+
+
+function toDoScroll() {
+        var currScrollPos = +$(document).scrollTop(),
+            parallaxBg = $('.parallaxBg');
+
+        if(currScrollPos >= 500) {
+            $("#descr").css("display", "none");
+            $("#callMe").css("display", "none");
+            $("#utpScroll").fadeIn();
+            $("#utpScroll-btn").fadeIn();
+
+            /*
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                padding: 14px 9px;
+            }
+            @media only screen and (min-width: 768px) and (max-width: 1199px) {
+                display: none;
+            }
+            */
+
+            /*if (getPageSize()[2] < 1200 && getPageSize()[2] > 991) {
+                $("#header img.logo").css("display", "none");
+            }
+            else if (getPageSize()[2] > 1199) {
+                $("#header img.logo").fadeIn();
+            }
+
+            if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
+                $("#utpScroll").css("display", "none");
+                $("#header .phone a .fa").fadeIn();
+            }
+            else {
+                $("#utpScroll").fadeIn();
+            }
+
+            if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
+                $("#header img.logo").css("display", "none");
+            }*/
+        }
+        else {
+            if (getPageSize()[2] > 767) {
+                $("#descr").fadeIn();
+            }
+
+            if ((getPageSize()[2] < 992 && getPageSize()[2] > 767) || (getPageSize()[2] < 417)) {
+                $("#callMe").css("display", "none");
+            }
+            else {
+                $("#callMe").css("display", "inline-block");
+            }
+            $("#utpScroll").css("display", "none");
+            $("#utpScroll-btn").css("display", "none");
+
+            /*if (getPageSize()[2] < 1200 && getPageSize()[2] > 991) {
+                $("#header img.logo").fadeIn();
+            }
+
+            if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
+                $("#header img.logo").fadeIn();
+            }*/
+        }
+
+        /*parallax($('#problems-result'));*/
+        /*parallax($('#advantages-result'));*/
+        /*parallax($('#header', "bg"));*/
+    }
 
 //Parallax effect background
 function parallax(object, effect) {

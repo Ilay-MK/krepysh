@@ -47,7 +47,7 @@
     <!-- endbuild -->
 
     <!-- build:css css/main.css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css?v=0.0.2" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css?v=0.0.3" />
     <!-- endbuild -->
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic,400italic,700|Roboto+Condensed:300,700|Roboto+Mono:400,100,700|Roboto+Slab:100,300,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
@@ -67,12 +67,12 @@
                     <div class="col-xs-12">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
-                            </button>
+                            </button>-->
                             <a href="." class="navbar-brand">
                                 <img src="assets/img/logo.png" alt="krepysh" class="logo">
                                 <span id="descr" class="">
@@ -84,11 +84,10 @@
                                     розыгрыше 3х абонементов.
                                 </span>
                             </a>
-                                <button type="button" id="utpScroll-btn" class="btn btn-primary1" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - Записаться на пробное занятие" role="button">Записаться на пробное занятие</button>
+                            <button type="button" id="utpScroll-btn" class="btn btn-primary1" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - Записаться на пробное занятие" role="button">Записаться на пробное занятие</button>
                         </div>
 
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <div>
                             <ul class="nav navbar-nav navbar-right phones">
                                 <li class="phone animated infinite hinge.tmp">
                                     <a href="tel:+375299856533" class="btn btn-default"><i class="fa fa-phone" aria-hidden="true"></i> +375 29 985-65-33</a>
@@ -97,9 +96,13 @@
                                     <a href="tel:+375295072418" class="btn btn-default"><i class="fa fa-phone" aria-hidden="true"></i> +375 29 507-24-18</a>
                                 </li>
                                 <li id="callMe">
-                                    <button type="button" class="btn btn-primary1" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - Перезвонить мне" role="button">Перезвонить мне</button>
+                                    <button type="button" class="btn btn-primary1" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - Перезвонить мне" role="button"><i class="fa fa-phone" aria-hidden="true"></i> <span>Перезвонить мне</span></button>
                                 </li>
                             </ul>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
                         </div>
                         <!-- /.navbar-collapse -->
                     </div>
@@ -109,7 +112,7 @@
     </div>
 
     <div class="header-content">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-6 col-md-8 col-md-offset-4">
                     <!-- col-lg-6 col-lg-offset-6 col-md-8 col-md-offset-4 -->
@@ -123,6 +126,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-6 col-md-8 col-md-offset-4">
                     <div class="offer offer-bottom">
@@ -1142,7 +1146,7 @@ table-condensed
         }
         $(document).ready(function () {
 		    /*loadStyle('css/main.css?v=0.0.1');*/
-            downloadJSAtOnload('assets/js/main.js?v=0.0.2');
+            downloadJSAtOnload('assets/js/main.js?v=0.0.3');
         });
     </script>
 
