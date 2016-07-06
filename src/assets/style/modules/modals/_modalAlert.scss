@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
 .modalAlert {
+    color: map-get($colors, "suc");
 
+    .modal {
+
+        &-header {
+            /*border-bottom: none;*/
+
+            .close {
+                font-size: 3em;
+                font-weight: 100;
+            }
+
+            .modal-title {
+                font-size: 1.71428571em;
+            }
+        }
+
+        &-body {
+
+            .h2 {
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
