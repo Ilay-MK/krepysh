@@ -31,9 +31,7 @@ $(document).ready(function () {
         var formGroup = $(this).parents('.form-group');
 
         formGroup.removeClass('has-error has-success');
-        $('#formOrder .form-control-feedback-message-success').animate({
-            opacity: 0
-        }, 300);
+        $('#formOrder .form-control-feedback-message-success').removeClass("flex-center");
 
         $(this).closest('form').find('.submit').prop('disabled', false);
     })
@@ -43,9 +41,7 @@ $(document).ready(function () {
         var formGroup = $(this).parents('.form-group');
 
         formGroup.removeClass('has-error has-success');
-        $('#formOrder .form-control-feedback-message-success').animate({
-            opacity: 0
-        }, 300);
+        $('#formOrder .form-control-feedback-message-success').removeClass("flex-center");
 
         $(this).closest('form').find('.submit').prop('disabled', false);
     })
@@ -77,11 +73,14 @@ $(document).ready(function () {
         $('#whichService').val(recipient);
 
         /*$('#placeInFooter>.form-order').detach().prependTo('#placeInModal');*/  // перемещаем форму из футера в модальное окно
+        /*$('#placeMessageSuccess .form-control-feedback-message-success').detach().prependTo('#formOrder');*/
 
     });
 
     $('#modalOrder').on('hidden.bs.modal', function (event) {
         /*$('#placeInModal>.form-order').detach().prependTo('#placeInFooter');*/  // перемещаем форму из модального окна в футер
+        /*$('#formOrder .form-control-feedback-message-success').detach().prependTo('#placeMessageSuccess');*/
+        $('#formOrder .form-control-feedback-message-success').removeClass("flex-center");
     });
 
     $.fn.extend({
@@ -610,9 +609,7 @@ function ajax(ob) {
             /*$(ob).modal('hide');*/
             //отобразить сообщение об успехе
             /*$('#modalAlert-success').modal('show');*/
-            $(ob).find('.form-control-feedback-message-success').animate({
-                opacity: 1
-            }, 300);
+            $(ob).find('.form-control-feedback-message-success').addClass("flex-center");
             /*result.removeClass("text-danger bg-danger text-success bg-success").text("");*/
             /*$(ob).find('.submit').prop('disabled', false);*/
             $(ob).find('#whichService').val(""); /* нужно заменить на класс */

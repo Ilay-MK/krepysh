@@ -5,7 +5,7 @@
     $error = false;
 
     if (!empty($_POST["bsName"])) {
-        $name = substr(htmlspecialchars(trim($_POST["bsName"])), 0, 50);
+        $name = substr(htmlspecialchars(trim($_POST["bsName"])), 0, 250);
 	}
     else { $error = true; }
 
@@ -26,7 +26,7 @@
 
 
     if (!empty($_POST["whichService"])) {
-        $whichService = substr(htmlspecialchars(trim($_POST["whichService"])), 0, 50);
+        $whichService = substr(htmlspecialchars(trim($_POST["whichService"])), 0, 255);
 	}
 
  	if (!$error) {
