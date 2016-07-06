@@ -26,7 +26,7 @@
 
 
     if (!empty($_POST["whichService"])) {
-        $whichService = substr(htmlspecialchars(trim($_POST["whichService"])), 0, 50);
+        $whichService = substr(htmlspecialchars(trim($_POST["whichService"])), 0, 255);
 	}
 
  	if (!$error) {
