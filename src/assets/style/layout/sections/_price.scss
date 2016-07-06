@@ -32,4 +32,11 @@
         color: map-get($colors, "bs3");
         font-size: 0.8em;
     }
+
+    .bestPrice {
+        background-color: rgba(map-get($colors, "ot2"), 0.5);
+        color: map-get($colors, "b_w");
+        font-size: 1.1em;
+        animation-duration: 3s;
+    }
 }
