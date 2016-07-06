@@ -350,58 +350,116 @@ function toDoScroll() {
         if(currScrollPos >= 500) {
             $("#descr").css("display", "none");
             $("#callMe").css("display", "none");
-            $("#utpScroll").fadeIn();
-            $("#utpScroll-btn").fadeIn();
 
-            /*
-            @media only screen and (min-width: 992px) and (max-width: 1199px) {
-                padding: 14px 9px;
+            if (getPageSize()[2] > 1199) {
+                $("#header img.logo").css("display", "block");
+                $("#header .phone a .fa").css("display", "inline-block");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+                $(".navbar-brand").css("display", "inline-block");
             }
-            @media only screen and (min-width: 768px) and (max-width: 1199px) {
-                display: none;
-            }
-            */
 
-            /*if (getPageSize()[2] < 1200 && getPageSize()[2] > 991) {
+            if (getPageSize()[2] < 1200 && getPageSize()[2] > 991) {
                 $("#header img.logo").css("display", "none");
-            }
-            else if (getPageSize()[2] > 1199) {
-                $("#header img.logo").fadeIn();
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 9px");
+                $(".navbar-brand").css("display", "inline-block");
             }
 
-            if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
-                $("#utpScroll").css("display", "none");
-                $("#header .phone a .fa").fadeIn();
-            }
-            else {
+            if (getPageSize()[2] > 991) {
                 $("#utpScroll").fadeIn();
+                $("#utpScroll-btn").fadeIn();
             }
 
             if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
+                $("#header img.logo").css("display", "block");
+                $("#utpScroll").css("display", "none");
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+                $(".navbar-brand").css("display", "inline-block");
+            }
+
+            if (getPageSize()[2] > 767) {
+
+            }
+
+            if (getPageSize()[2] < 768 && getPageSize()[2] > 599) {
                 $("#header img.logo").css("display", "none");
-            }*/
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 9px");
+                $(".navbar-brand").css("display", "none");
+            }
+
+            if (getPageSize()[2] > 599) {
+                $("#utpScroll-btn").fadeIn();
+            }
+
+            if (getPageSize()[2] < 600 && getPageSize()[2] > 416) {
+                $("#callMe").css("display", "inline-block");
+                $(".navbar-brand").css("display", "inline-block");
+                $("#utpScroll-btn").css("display", "none");
+                $("#header img.logo").css("display", "block");
+            }
+
+            if (getPageSize()[2] < 417) {
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 9px");
+            }
         }
         else {
+            $("#utpScroll").css("display", "none");
+            $("#utpScroll-btn").css("display", "none");
+
+            if (getPageSize()[2] > 1199) {
+                $("#header img.logo").css("display", "block");
+                $("#header .phone a .fa").css("display", "inline-block");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+            }
+
+            if (getPageSize()[2] < 1200 && getPageSize()[2] > 991) {
+                $("#header img.logo").css("display", "block");
+                $("#header .phone a .fa").css("display", "inline-block");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+            }
+
+            if (getPageSize()[2] > 991) {
+                $("#callMe").css("display", "inline-block");
+            }
+
+            if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
+                $("#header img.logo").css("display", "none");
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+                $("#callMe").css("display", "none");
+            }
+
             if (getPageSize()[2] > 767) {
                 $("#descr").fadeIn();
             }
 
-            if ((getPageSize()[2] < 992 && getPageSize()[2] > 767) || (getPageSize()[2] < 417)) {
-                $("#callMe").css("display", "none");
-            }
-            else {
+            if (getPageSize()[2] < 768 && getPageSize()[2] > 599) {
+                $("#header .phone a.btn").css("padding", "14px 15px");
+                $("#header .phone a .fa").css("display", "inline-block");
+                $("#header img.logo").css("display", "block");
                 $("#callMe").css("display", "inline-block");
-            }
-            $("#utpScroll").css("display", "none");
-            $("#utpScroll-btn").css("display", "none");
-
-            /*if (getPageSize()[2] < 1200 && getPageSize()[2] > 991) {
-                $("#header img.logo").fadeIn();
+                $(".navbar-brand").css("display", "inline-block");
             }
 
-            if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
-                $("#header img.logo").fadeIn();
-            }*/
+            if (getPageSize()[2] < 600 && getPageSize()[2] > 416) {
+                $("#callMe").css("display", "inline-block");
+                $(".navbar-brand").css("display", "inline-block");
+                $("#utpScroll-btn").css("display", "none");
+                $("#header img.logo").css("display", "block");
+            }
+
+            if (getPageSize()[2] > 416) {
+                /*$("#callMe").css("display", "inline-block");*/
+            }
+
+            if (getPageSize()[2] < 417) {
+                $("#callMe").css("display", "none");
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 9px");
+            }
         }
 
         /*parallax($('#problems-result'));*/
