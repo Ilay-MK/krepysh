@@ -134,8 +134,8 @@ $(document).ready(function () {
         /*if (getPageSize()[2] > 767) {
             $('#header').animate({
                 "background-position-y": "-15%"
-            }, 1000);*/
-        }
+            }, 1000);
+        }*/
     }, 3000);
 
     setTimeout(function () {
