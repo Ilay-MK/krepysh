@@ -131,10 +131,10 @@ $(document).ready(function () {
     setTimeout(function () {
         $('#header .offer-bottom').css("opacity", 1).animateCss('fadeInUp'); /*slideInUp*/
 
-        if (getPageSize()[2] > 767) {
+        /*if (getPageSize()[2] > 767) {
             $('#header').animate({
                 "background-position-y": "-15%"
-            }, 1000);
+            }, 1000);*/
         }
     }, 3000);
 
