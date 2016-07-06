@@ -39,6 +39,32 @@
                     span, h3 {
                         color: map-get($colors, "bp2");
                     }
+
+                    .fa-ban-line {
+                        background-color: map-get($colors, "bp2");
+                        height: 2px;
+                        top: 13px;
+                        transform: rotate(-45deg);
+                        width: 100%;
+                    }
+
+                    .fa-tint {
+                        font-size: 0.4em;
+
+                        &:nth-child(2) {
+                            left: -7px;
+                            top: 5px;
+                        }
+
+                        &:nth-child(3) {
+                            left: 9px;
+                            top: 5px;
+                        }
+
+                        &:nth-child(4) {
+                            left: 1px;
+                        }
+                    }
                 }
             }
         }
