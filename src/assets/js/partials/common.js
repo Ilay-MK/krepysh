@@ -140,7 +140,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $("#header .container-bg").css("background-image", "url('assets/img/header/bg_3.jpg')");
-    }, 4500);
+    }, 4000);
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - - PROBLEMS - - - - - - - - - - - - - - - */
