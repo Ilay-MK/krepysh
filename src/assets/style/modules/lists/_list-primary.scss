@@ -10,13 +10,16 @@
         opacity: 0;
 
         img, .icon-font {
-            float: left;
+            /*float: left;*/
+            left: 0;
             margin: 0 10px 0 0;
             padding: 0;
+            position: absolute;
+            top: 0;
         }
 
         .icon-font {
-            font-size: 2.4em;
+            font-size: 1.2em;
 
             &.fa-stack {
                 width: 1em;
@@ -27,6 +30,15 @@
 
         span {
             font-weight: 700;
+        }
+
+        h3 {
+            padding-left: 40px;
+            position: relative;
+        }
+
+        p {
+           font-size: 1.1em;
         }
     }
 }
