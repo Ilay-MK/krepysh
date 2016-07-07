@@ -139,7 +139,7 @@ $(document).ready(function () {
     }, 3000);
 
     setTimeout(function () {
-        $("#header .container-bg").css("background-image", "url('assets/img/header/bg_3.jpg')");
+        $("#header .container-bg").css("background-image", "url('assets/img/header/bg_3-2.jpg')");
     }, 4000);
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
