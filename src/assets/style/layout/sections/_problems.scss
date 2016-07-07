@@ -64,6 +64,26 @@
                         &:nth-child(4) {
                             left: 1px;
                         }
+
+                        &-my {
+                            background-color: map-get($colors, "bp2");
+                            height: 7px;
+                            top: 25px;
+                            transform: rotate(-30deg);
+                            width: 2px;
+
+                            &:nth-child(2) {
+                                left: 10px;
+                            }
+
+                            &:nth-child(3) {
+                                left: 20px;
+                            }
+
+                            &:nth-child(4) {
+                                left: 30px;
+                            }
+                        }
                     }
                 }
             }
