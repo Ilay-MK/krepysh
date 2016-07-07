@@ -5,7 +5,7 @@
     $error = false;
 
     if (!empty($_POST["bsName"])) {
-        $name = substr(htmlspecialchars(trim($_POST["bsName"])), 0, 50);
+        $name = substr(htmlspecialchars(trim($_POST["bsName"])), 0, 250);
 	}
     else { $error = true; }
 
@@ -18,15 +18,15 @@
         $note = htmlspecialchars(trim($_POST["bsNote"]));
 	}
 
-    if (!empty($_POST["bsEmail"])) {
+    /*if (!empty($_POST["bsEmail"])) {
         $email = substr(htmlspecialchars(trim($_POST["bsEmail"])), 0, 255);
-	}
+	}*/
 
     /*if(empty($phone) && empty($email)) { $error = true; }*/
 
 
     if (!empty($_POST["whichService"])) {
-        $whichService = substr(htmlspecialchars(trim($_POST["whichService"])), 0, 50);
+        $whichService = substr(htmlspecialchars(trim($_POST["whichService"])), 0, 255);
 	}
 
  	if (!$error) {
@@ -34,7 +34,7 @@
         $sitename = "krepysh.com";
 
         $pagetitle = "Новая заявка с сайта \"$sitename\"";
-        $message = "Имя: $name \nТелефон: $phone \nEmail: $email \nКуда кликнул: $whichService";
+        $message = "Имя: $name \nТелефон: $phone \nКуда кликнул: $whichService";
         mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
 
 	} else {

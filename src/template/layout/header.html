@@ -2,21 +2,21 @@
 
     <!--<div class="blackout"></div>-->
 
-    <div class="header-top">
+    <div class="header-top" id="hTop">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
-                            </button>
+                            </button>-->
                             <a href="." class="navbar-brand">
-                                <img src="assets/img/logo.jpg" alt="krepysh" class="logo">
+                                <img src="assets/img/logo.png" alt="krepysh" class="logo">
                                 <span id="descr" class="">
                                     Центры оздоровительно-развивающей гимнастики в <br />
                                     каждом районе г.Минска. Для детей от 3 до 8 лет.
@@ -26,20 +26,25 @@
                                     розыгрыше 3х абонементов.
                                 </span>
                             </a>
+                            <button type="button" id="utpScroll-btn" class="btn btn-primary1" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - Записаться на пробное занятие" role="button">Записаться на пробное занятие</button>
+                        </div>
+
+                        <div>
+                            <ul class="nav navbar-nav navbar-right phones">
+                                <li class="phone animated infinite hinge.tmp">
+                                    <a href="tel:+375299856533" class="btn btn-default"><i class="fa fa-phone" aria-hidden="true"></i> +375 29 985-65-33</a>
+                                </li>
+                                <li class="phone animated infinite pulse.tmp">
+                                    <a href="tel:+375295072418" class="btn btn-default"><i class="fa fa-phone" aria-hidden="true"></i> +375 29 507-24-18</a>
+                                </li>
+                                <li id="callMe">
+                                    <button type="button" class="btn btn-primary1" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - Перезвонить мне" role="button"><i class="fa fa-phone" aria-hidden="true"></i> <span>Перезвонить мне</span></button>
+                                </li>
+                            </ul>
                         </div>
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav navbar-right phones">
-                                <li id="utpScroll-btn">
-                                    <button type="button" class="btn btn-primary2" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - Запись на пробное" role="button">Запись на пробное</button>
-                                </li>
-                                <li class="phone"><a href="tel:+375299856533">+375 29 985-65-33</a></li>
-                                <li class="phone"><a href="tel:+375295072418">+375 29 507-24-18</a></li>
-                                <li id="callMe">
-                                    <button type="button" class="btn btn-primary2" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - Перезвонить мне" role="button">Перезвонить мне</button>
-                                </li>
-                            </ul>
                         </div>
                         <!-- /.navbar-collapse -->
                     </div>
@@ -49,18 +54,21 @@
     </div>
 
     <div class="header-content">
-        <div class="container-fluid">
+        <div class="container container-bg">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-6 col-md-8 col-md-offset-4">
                     <!-- col-lg-6 col-lg-offset-6 col-md-8 col-md-offset-4 -->
                     <div class="offer offer-right">
                         <h1>
-                            Ваш ребенок получит ровную осанку и гибкость, друзей по спорту, укрепит иммунитет<br /><br />
-                            Обучаясь у тренера-чемпиона по гимнастике, по самой низкой цене в Минске, в 15 минутах ходьбы от дома
+                            Ваш ребенок получит ровную осанку и гибкость, друзей по спорту, укрепит иммунитет
                         </h1>
+                        <h2>
+                            Обучаясь у тренера-чемпиона по гимнастике, по самой низкой цене в Минске, в 15 минутах ходьбы от дома
+                        </h2>
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-6 col-md-8 col-md-offset-4">
                     <div class="offer offer-bottom">
@@ -77,7 +85,7 @@
 
                             <button type="button" class="btn btn-primary1" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - подробнее о розыгрыше." role="button">подробнее о розыгрыше</button>
                             <button type="button" class="btn btn-primary2" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - подробнее о розыгрыше." role="button">подробнее о розыгрыше</button>-->
-                            <button type="button" class="btn btn-primary3" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - подробнее о розыгрыше." role="button">подробнее о розыгрыше</button>
+                            <button type="button" class="btn btn-primary1" data-toggle="modal" data-target="#modalOrder" data-service="[Шапка] - подробнее о розыгрыше." role="button">подробнее о розыгрыше</button>
                         </p>
                     </div>
                 </div>

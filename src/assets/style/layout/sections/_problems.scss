@@ -18,7 +18,7 @@
     .lst_result {
 
         &-list {
-            font-size: 1.2em;
+            /*font-size: 1.2em;*/
 
             ul {
 
@@ -39,20 +39,47 @@
                     span, h3 {
                         color: map-get($colors, "bp2");
                     }
+
+                    .fa-ban-line {
+                        background-color: map-get($colors, "bp2");
+                        height: 2px;
+                        top: 13px;
+                        transform: rotate(-45deg);
+                        width: 100%;
+                    }
+
+                    .fa-tint {
+                        font-size: 0.4em;
+
+                        &:nth-child(2) {
+                            left: -7px;
+                            top: 5px;
+                        }
+
+                        &:nth-child(3) {
+                            left: 9px;
+                            top: 5px;
+                        }
+
+                        &:nth-child(4) {
+                            left: 1px;
+                        }
+                    }
                 }
             }
         }
 
         &-result {
-            background-color: rgba(map-get($colors, "bp2"), 0.5);
+            background-color: lighten(map-get($colors, "bp2"), 5%);
             color: map-get($colors, "b_w");
 
             h3 {
-                color: map-get($colors, "bp2");
+                /*color: map-get($colors, "bp2");*/
+                color: darken(map-get($colors, "bp3"), 5%);
             }
 
             p {
-                color: map-get($colors, "bs2");
+                /*color: map-get($colors, "bs2");*/
             }
         }
     }

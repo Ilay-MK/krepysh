@@ -3,75 +3,72 @@
 #coaches {
     background-color: map-get($colors, "bp3");
 
-    .gallery {
-
-        &-row {
-            margin: 10px 0;
-
-            @media only screen and (max-width: 1199px) {
-                margin: 40px 0;
-            }
-
-            @media only screen and (max-width: 991px) {
-                margin: 10px 0;
-            }
-
-            a {
-                position: relative;
-
-                &:hover {
-
-                    .blackout {
-                        background-color: transparent;
-                    }
-
-                    img {
-
-                        &.black_white {
-                            filter: none;
-                        }
-                    }
-                }
-
-                .blackout {
-                    background-color: rgba(map-get($colors, "bs1"), 0.5);
-                    margin: 7px;
-                    transition: background 700ms ease;
-                    z-index: 99;
-                }
-
-                img {
-
-                }
-            }
-        }
-    }
-
-    .line {
-        border-bottom: 3px solid map-get($colors, "bp2");
-        margin-bottom: 30px;
-    }
-
     .tmm-row {
-        /*margin-right: -20px;
-        margin-left: -20px;*/
+        text-align: center;
 
         &-main {
+
         }
 
         .item-square-3 {
             background-color: map-get($colors, "b_w");
             display: inline-block;
+            height: 450px;
             overflow: hidden;
+            margin: 5px;
             padding: 10px;
             position: relative;
-            /*margin: -2px;*/
-            margin-bottom: -3px;
             text-align: center;
+            vertical-align: middle;
             width: 274px;
 
-            &:nth-child(2n) {
+            box-shadow: 5px 5px 5px rgba(map-get($colors, "bs1"), 0.4);
+            transition: all .3s ease;
+
+            &-main {
+                background-color: map-get($colors, "bp1") !important;
+
+                .face-container {
+
+                    .face {
+                        /*height: 256px !important;*/
+
+                        img {
+                            /*max-height: auto !important;*/
+                        }
+                    }
+                }
+
+                .item-content {
+
+                    h4 {
+                        color: map-get($colors, "bp3");
+                        font-weight: 700;
+                    }
+
+                    .text {
+                        max-height: 110px !important;
+
+                        p {
+                            color: map-get($colors, "bp3") !important;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 5px 5px 3px rgba(map-get($colors, "bs1"), 0.6);
+            }
+
+            &:nth-child(2n+1) {
                 background-color: map-get($colors, "bs3");
+
+                .item-content {
+
+                    h4, .text p {
+                        /*color: map-get($colors, "b_w");*/
+                    }
+                }
             }
 
             &:hover {
@@ -79,8 +76,11 @@
                 .item-content {
 
                      .text p {
-                        transform: translateY(-80%);
-                        transition: transform 6s linear;
+
+                        @media only screen and (min-width: 768px) {
+                            /*transform: translateY(-80%);
+                            transition: transform 6s linear;*/
+                        }
                     }
                 }
             }
@@ -88,13 +88,17 @@
             .face-container {
                 padding: 0;
                 position: relative;
-                overflow: hidden;
+                /*overflow: hidden;*/
 
                 &:hover {
 
                     .social-icons {
-                        transform: translateX(0px);
-                        transition: all 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+                        @media only screen and (min-width: 768px) {
+                            /*transform: translateX(0px);*/
+                            /*transform: translateY(0px);
+                            transition: all 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550);*/
+                        }
                     }
                 }
 
@@ -106,8 +110,8 @@
                     &:hover {
 
                          img {
-                            transform: scale(1.2);
-                            transition: transform .35s ease;
+                            /*transform: scale(1.2);
+                            transition: transform .35s ease;*/
                         }
                     }
 
@@ -126,8 +130,17 @@
                     position: absolute;
                     bottom: 0;
                     right: 0;
-                    transform: translateX(145px);
+                    right: 30px;
+                    transform: translateY(30px);
+                    /*transform: translateY(60px);*/
                     transition: all 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+                    @media only screen and (min-width: 768px) {
+                        /*transform: translateX(145px);
+                        transition: all 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550);*/
+                        /*transform: translateY(30px);
+                        transition: all 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550);*/
+                    }
 
                     li {
                         display: inline-block;
@@ -179,14 +192,18 @@
                 h4 {
                     /*font-size: 18px;*/
                     text-transform: uppercase;
-                    padding-top: 14px;
+                    /*padding-top: 14px;*/
+                    padding-top: 30px;
+                    /*padding-top: 60px;*/
                 }
 
                 .text {
                     display: block;
                     overflow: hidden;
                     width: 100%;
-                    max-height: 60px;
+                    /*max-height: 60px;*/
+                    max-height: 110px;
+                    /*max-height: 94px;*/
 
                     p {
                         font-size: 12px;
@@ -197,115 +214,6 @@
                     }
                 }
             }
-        }
-
-        .item-circled-3 {
-            background-color: transparent;
-            text-align: center;
-            width: 232px;
-            display: inline-block;
-            position: relative;
-            margin: 0 15px;
-
-            .face-container {
-
-                &:hover {
-                    .spiner {
-                        transform: rotate(1800deg);
-                        border-color: transparent map-get($colors, "bp2") map-get($colors, "bp2") transparent;
-                        transition: transform 10000ms cubic-bezier(0.250, 0.250, 0.750, 0.750), border-color .35s ease;
-                    }
-                }
-
-                .face {
-                    width: 190px;
-                    height: 190px;
-                    overflow: hidden;
-                    margin: 0 auto;
-                    border: none;
-                    border-radius: 50%;
-                }
-
-                .spiner {
-                    border-color: transparent map-get($colors, "bp1") map-get($colors, "bp1") transparent;
-                    -moz-border-bottom-colors: none;
-                    -moz-border-left-colors: none;
-                    -moz-border-right-colors: none;
-                    -moz-border-top-colors: none;
-                    border-image: none;
-                    border-radius: 50%;
-                    border-style: solid;
-                    border-width: 50px;
-                    height: 235px;
-                    left: 0;
-                    opacity: .8;
-                    position: absolute;
-                    top: -15px;
-                    transform: rotate(45deg);
-                    transition: transform 1.5s cubic-bezier(0.250, 0.250, 0.750, 0.750), border-color .35s ease;
-                    width: 235px;
-                }
-            }
-
-            .social-icons {
-                background-color: transparent;
-                padding: 0;
-                /*left: 65px;*/
-                left: 58px;
-                position: absolute;
-                top: 180px;
-
-                li {
-                    display: inline-block;
-                    list-style: none;
-                    padding: 0;
-                    transition: all .35s ease;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
-
-                    a {
-                        color: map-get($colors, "b_w");
-                        cursor: pointer;
-                        font-size: 24px;
-
-                            &.btn {
-                                border-radius: 50%;
-                                /*border-radius: 10px;*/
-                                color: map-get($colors, "bp1");
-                                /*font-size: 0.55em;*/
-                                font-size: 0.58em;
-                                /*padding: 5px 5px 4px;*/
-                                padding: 7px 9px 6px;
-
-                                &:hover {
-                                    color: map-get($colors, "b_w");
-                                }
-                            }
-                    }
-                }
-            }
-
-            .item-content {
-                color: map-get($colors, "b_w");
-                font-family: "Open Sans", sans-serif;
-                font-weight: 400;
-                text-align: center;
-
-                h4 {
-                    /*font-size: 18px;*/
-                    padding-top: 40px;
-                    text-transform: uppercase;
-                }
-
-                p {
-                    color: map-get($colors, "b_w");
-                    font-size: 12px;
-                    text-align: center;
-                }
-            }
-
         }
     }
 

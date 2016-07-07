@@ -1,9 +1,33 @@
 @charset "UTF-8";
 
 nav {
-    font-family: 'Roboto Mono', sans-serif;
+    /*font-family: 'Roboto Mono', sans-serif;*/
 
-    a {
+    a, .btn {
+        border-top: none;
+        font-size: 1em;
+        font-weight: 700;
+        text-shadow: none;
+        line-height: 1.428571429em;
+    }
 
+    .phones {
+
+        .btn {
+            box-shadow: inset 0px -3px 0px rgba(map-get($colors, "bs1"), 0.5);
+
+            &:link, &:visited, &:focus {
+                box-shadow: inset 0px -3px 0px rgba(map-get($colors, "bs1"), 0.5);
+            }
+
+            &:hover {
+                box-shadow: inset 0px -5px 0px rgba(map-get($colors, "bs1"), 0.5);
+            }
+
+            &:active {
+                box-shadow: none;
+                padding: 16px 41px 15px 42px;
+            }
+        }
     }
 }

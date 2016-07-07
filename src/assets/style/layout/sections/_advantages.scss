@@ -32,70 +32,71 @@
         }
 
         &-result {
-            background-color: rgba(map-get($colors, "bp3"), 0.5);
+            background-color: lighten(map-get($colors, "bp3"), 5%);
             color: map-get($colors, "b_w");
+            margin-bottom: 30px;
 
             h3 {
-                color: map-get($colors, "bp3");
+                /*color: map-get($colors, "bp3");*/
+                /*color: lighten(map-get($colors, "bp3"), 20%);*/
+                color: lighten(map-get($colors, "bp2"), 20%);
             }
 
             p {
-                color: map-get($colors, "bs2");
+                /*color: map-get($colors, "bs2");*/
+                /*color: lighten(map-get($colors, "bp2"), 30%);*/
             }
         }
     }
 
-    .photos {
-        opacity: 0;
-        overflow: hidden;
-        margin: 30px auto;
-        padding: 19px 5% 29px;
+    #carousel {
+        /*max-height: 100% !important;*/
+        margin-bottom: 3px;
     }
 
-    &-carousel-photos {
+    .elastislide {
 
-    }
-
-    .carousel {
-
-        &-indicators {
-            bottom: -33px;
+        &-horizontal {
+            padding: 10px 37px;
+            border-radius: 10px/90px;
+            box-shadow:
+                0 1px 3px rgba(0, 0, 0, 0.1),
+                inset -2px 0 3px 2px rgba(255, 255, 255, 0.6),
+                inset 2px 0 3px 2px rgba(255, 255, 255, 0.6),
+                inset -10px 0 10px 1px rgba(155, 155, 155, 0.1),
+                inset 10px 0 10px 1px rgba(155, 155, 155, 0.1);
+            margin-bottom: 30px;
         }
 
-        &-inner {
+        &-wrapper {
 
-            .item {
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                z-index: -2;
+                bottom: 15px;
+                left:  20px;
+                width: 50%;
+                height: 20%;
+                border-radius: 10px/90px;
+                box-shadow: 0 15px 10px rgba(0,0,0,0.7);
+                transform: rotate(-3deg);
+            }
 
-                a {
-                    display: block;
-                    margin: 0;
+            &:after {
+                right: 20px;
+                left: auto;
+                transform: rotate(3deg);
+            }
 
-                    img {
+            ul {
 
+                li {
+
+                    a {
+                        margin: 0;
                     }
-                }
-            }
-        }
-
-        &-control {
-            padding-top: 10%;
-            border-radius: 4px;
-            width: 5%;
-
-            &.left {
-                margin-left: -5%;
-            }
-
-            &.right {
-                margin-right: -5%;
-            }
-
-            span {
-                /*font-size: 1em;
-                font-weight: 100;*/
-
-                &:before {
-                    margin: 0;
                 }
             }
         }

@@ -3,6 +3,10 @@
 .form-group {
     /*position: relative;*/
 
+    &.has-feedback {
+        /*position: static;*/
+    }
+
     &-main {
 
     }
@@ -48,7 +52,67 @@
         }
 
         &-message-success {
+            background: map-get($colors, "b_w");
+            bottom: -1px;
             color: map-get($colors, "suc");
+            display: none;
+            font-size: 1.8em;
+            left: -5px;
+            line-height: 1.2em;
+            opacity: 1;
+            right: -5px;
+            top: -1px;
+            z-index: 999;
+
+            @media only screen and (max-width: 479px) {
+                font-size: 1.6em;
+            }
+
+            /*background: map-get($colors, "b_w");
+            bottom: -100px;
+            display: none;
+            font-size: 2em;
+            line-height: 1.2em;
+            padding: 40px 20px;
+            right: 0px;
+            z-index: 99;*/
+
+            /*@media only screen and (min-width: 566px) and (max-width: 767px) {
+                bottom: -80px;
+            }
+
+            @media only screen and (min-width: 525px) and (max-width: 565px) {
+                bottom: -90px;
+            }
+
+            @media only screen and (min-width: 497px) and (max-width: 526px) {
+                bottom: -130px;
+            }
+
+            @media only screen and (min-width: 496px) and (max-width: 566px) {
+                padding: 40px 0px;
+            }
+
+            @media only screen and (min-width: 480px) and (max-width: 497px) {
+                bottom: -130px;
+                padding: 40px 0px;
+            }
+
+            @media only screen and (min-width: 435px) and (max-width: 476px) {
+                bottom: -80px;
+                font-size: 1.6em;
+            }
+
+            @media only screen and (min-width: 395px) and (max-width: 436px) {
+                bottom: -90px;
+                padding: 50px 20px;
+                font-size: 1.5em;
+            }
+
+            @media only screen and (max-width: 396px) {
+                font-size: 1.2em;
+                right: 0px;
+            }*/
         }
     }
 

@@ -31,9 +31,7 @@ $(document).ready(function () {
         var formGroup = $(this).parents('.form-group');
 
         formGroup.removeClass('has-error has-success');
-        $('#formOrder .form-control-feedback-message-success').animate({
-            opacity: 0
-        }, 300);
+        /*$('#formOrder .form-control-feedback-message-success').removeClass("flex-center");*/
 
         $(this).closest('form').find('.submit').prop('disabled', false);
     })
@@ -43,9 +41,7 @@ $(document).ready(function () {
         var formGroup = $(this).parents('.form-group');
 
         formGroup.removeClass('has-error has-success');
-        $('#formOrder .form-control-feedback-message-success').animate({
-            opacity: 0
-        }, 300);
+        /*$('#formOrder .form-control-feedback-message-success').removeClass("flex-center");*/
 
         $(this).closest('form').find('.submit').prop('disabled', false);
     })
@@ -55,31 +51,14 @@ $(document).ready(function () {
     }
 
     $(document).scroll(function () {
-        var currScrollPos = +$(document).scrollTop(),
-            parallaxBg = $('.parallaxBg');
-
-        if(currScrollPos >= 500) {
-            $("#descr").css("display", "none");
-            $("#callMe").css("display", "none");
-            $("#utpScroll").fadeIn();
-            $("#utpScroll-btn").fadeIn();
-        }
-        else {
-            $("#descr").fadeIn();
-            $("#callMe").fadeIn();
-            $("#utpScroll").css("display", "none");
-            $("#utpScroll-btn").css("display", "none");
-        }
-
-        parallax($('#problems-result'));
-        parallax($('#advantages-result'));
-        /*parallax($('#header', "bg"));*/
+        toDoScroll();
     });
 
     $('.modal-vertical-centered').on('show.bs.modal', centerModal);
 
     $(window).on("resize", function () {
         $('.modal-vertical-centered:visible').each(centerModal);
+        toDoScroll();
     });
 
     $('#modalOrder').on('show.bs.modal', function (event) {
@@ -94,11 +73,14 @@ $(document).ready(function () {
         $('#whichService').val(recipient);
 
         /*$('#placeInFooter>.form-order').detach().prependTo('#placeInModal');*/  // перемещаем форму из футера в модальное окно
+        /*$('#placeMessageSuccess .form-control-feedback-message-success').detach().prependTo('#formOrder');*/
 
     });
 
     $('#modalOrder').on('hidden.bs.modal', function (event) {
         /*$('#placeInModal>.form-order').detach().prependTo('#placeInFooter');*/  // перемещаем форму из модального окна в футер
+        /*$('#formOrder .form-control-feedback-message-success').detach().prependTo('#placeMessageSuccess');*/
+        /*$('#formOrder .form-control-feedback-message-success').removeClass("flex-center");*/
     });
 
     $.fn.extend({
@@ -138,12 +120,27 @@ $(document).ready(function () {
     }, 1000);
 
     setTimeout(function () {
+        $('#hTop').css("opacity", 1).animateCss('fadeInDownBig');
+    }, 1500);
+
+
+    setTimeout(function () {
         $('#header .offer-right').css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
     }, 2000);
 
     setTimeout(function () {
         $('#header .offer-bottom').css("opacity", 1).animateCss('fadeInUp'); /*slideInUp*/
+
+        /*if (getPageSize()[2] > 767) {
+            $('#header').animate({
+                "background-position-y": "-15%"
+            }, 1000);
+        }*/
     }, 3000);
+
+    setTimeout(function () {
+        $("#header .container-bg").css("background-image", "url('assets/img/header/bg_3-2.jpg')");
+    }, 4000);
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - - PROBLEMS - - - - - - - - - - - - - - - */
@@ -182,9 +179,9 @@ $(document).ready(function () {
 
     /*var video = JSON.parse("../json/video.json"),*/
     var video = [
-            "<iframe width=\"auto\" height=\"auto\" src=\"https://www.youtube.com/embed/CUiQh_9k7q0\" frameborder=\"0\" allowfullscreen=\"\"></iframe>",
-            "<iframe width=\"auto\" height=\"auto\" src=\"https://www.youtube.com/embed/qbpNv4gI14o\" frameborder=\"0\" allowfullscreen=\"\"></iframe>",
-            "<iframe width=\"auto\" height=\"auto\" src=\"https://www.youtube.com/embed/CUiQh_9k7q0\" frameborder=\"0\" allowfullscreen=\"\"></iframe>"
+            '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/CUiQh_9k7q0" frameborder="0" allowfullscreen=""></iframe>',
+            '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/qbpNv4gI14o" frameborder="0" allowfullscreen=""></iframe>',
+            '<iframe width="640" height="360" src="https://www.youtube.com/embed/mczuKRo5Nr8" frameborder="0" allowfullscreen></iframe>'
         ],
         video_current = 0;
 
@@ -203,16 +200,23 @@ $(document).ready(function () {
     /* - - - - - - - - - - - - - - - - COACHES - - - - - - - - - - - - - - */
 
     /* Разовое исполнение */
-    $('#coaches .item-square-3').one('inview', function (event) {
+    /*$('#coaches .item-square-3').one('inview', function (event) {
         $(this).css("opacity", 1).animateCss('rotateInUpLeft');
-    });
+    });*/
 
     /* inview  */
-    jQuery('#coaches .gallery .gallery-item').bind('inview', function (event, visible) {
+    /*jQuery('#coaches .gallery .gallery-item').bind('inview', function (event, visible) {
         if (visible) {
             $(this).animateCss('flipInY');
         } else {
-            /*$(this).stop().removeClass("animated bounceIn");*/
+
+        }
+    });*/
+    jQuery('#coaches .item-square-3').bind('inview', function (event, visible) {
+        if (visible) {
+            $(this).animateCss('flipInY');
+        } else {
+            /*$(this).stop().removeClass("animated flipInY");*/
         }
     });
 
@@ -250,7 +254,19 @@ $(document).ready(function () {
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
 
-
+    /* Разовое исполнение */
+    /*$('#addresses dt').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('zoomIn');
+    });
+    */
+    /* inview  */
+    jQuery('#addresses dd').bind('inview', function (event, visible) {
+        if (visible) {
+            $(this).animateCss('rotateInUpLeft');
+        } else {
+            /*$(this).stop().removeClass("animated rotateInUpLeft");*/
+        }
+    });
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - - COMMON - - - - - - - - - - - - - -  */
@@ -328,6 +344,131 @@ $(document).ready(function () {
     });*/
 
 });
+
+
+function toDoScroll() {
+        var currScrollPos = +$(document).scrollTop(),
+            parallaxBg = $('.parallaxBg');
+
+        if(currScrollPos >= 500) {
+            $("#descr").css("display", "none");
+            $("#callMe").css("display", "none");
+
+            if (getPageSize()[2] > 1199) {
+                $("#header img.logo").css("display", "block");
+                $("#header .phone a .fa").css("display", "inline-block");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+                $(".navbar-brand").css("display", "inline-block");
+            }
+
+            if (getPageSize()[2] < 1200 && getPageSize()[2] > 991) {
+                $("#header img.logo").css("display", "none");
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 9px");
+                $(".navbar-brand").css("display", "inline-block");
+            }
+
+            if (getPageSize()[2] > 991) {
+                $("#utpScroll").fadeIn();
+                $("#utpScroll-btn").fadeIn();
+            }
+
+            if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
+                $("#header img.logo").css("display", "block");
+                $("#utpScroll").css("display", "none");
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+                $(".navbar-brand").css("display", "inline-block");
+            }
+
+            if (getPageSize()[2] > 767) {
+
+            }
+
+            if (getPageSize()[2] < 768 && getPageSize()[2] > 599) {
+                $("#header img.logo").css("display", "none");
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 9px");
+                $(".navbar-brand").css("display", "none");
+            }
+
+            if (getPageSize()[2] > 599) {
+                $("#utpScroll-btn").fadeIn();
+            }
+
+            if (getPageSize()[2] < 600 && getPageSize()[2] > 416) {
+                $("#callMe").css("display", "inline-block");
+                $(".navbar-brand").css("display", "inline-block");
+                $("#utpScroll-btn").css("display", "none");
+                $("#header img.logo").css("display", "block");
+            }
+
+            if (getPageSize()[2] < 417) {
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 9px");
+            }
+        }
+        else {
+            $("#utpScroll").css("display", "none");
+            $("#utpScroll-btn").css("display", "none");
+
+            if (getPageSize()[2] > 1199) {
+                $("#header img.logo").css("display", "block");
+                $("#header .phone a .fa").css("display", "inline-block");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+            }
+
+            if (getPageSize()[2] < 1200 && getPageSize()[2] > 991) {
+                $("#header img.logo").css("display", "block");
+                $("#header .phone a .fa").css("display", "inline-block");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+            }
+
+            if (getPageSize()[2] > 991) {
+                $("#callMe").css("display", "inline-block");
+            }
+
+            if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
+                $("#header img.logo").css("display", "none");
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 15px");
+                $("#callMe").css("display", "none");
+            }
+
+            if (getPageSize()[2] > 767) {
+                $("#descr").fadeIn();
+            }
+
+            if (getPageSize()[2] < 768 && getPageSize()[2] > 599) {
+                $("#header .phone a.btn").css("padding", "14px 15px");
+                $("#header .phone a .fa").css("display", "inline-block");
+                $("#header img.logo").css("display", "block");
+                $("#callMe").css("display", "inline-block");
+                $(".navbar-brand").css("display", "inline-block");
+            }
+
+            if (getPageSize()[2] < 600 && getPageSize()[2] > 416) {
+                $("#callMe").css("display", "inline-block");
+                $(".navbar-brand").css("display", "inline-block");
+                $("#utpScroll-btn").css("display", "none");
+                $("#header img.logo").css("display", "block");
+            }
+
+            if (getPageSize()[2] > 416) {
+                /*$("#callMe").css("display", "inline-block");*/
+            }
+
+            if (getPageSize()[2] < 417) {
+                $("#callMe").css("display", "none");
+                $("#header .phone a .fa").css("display", "none");
+                $("#header .phone a.btn").css("padding", "14px 9px");
+            }
+        }
+
+        /*parallax($('#problems-result'));*/
+        /*parallax($('#advantages-result'));*/
+        /*parallax($('#header', "bg"));*/
+    }
 
 //Parallax effect background
 function parallax(object, effect) {
@@ -469,12 +610,11 @@ function ajax(ob) {
 
         setTimeout(function () {
             //сркыть модальное окно
-            /*$(ob).modal('hide');*/
+            /*$('#modalOrder').modal('hide');*/
+            $(ob).closest(".modal").modal('hide');
             //отобразить сообщение об успехе
-            /*$('#modalAlert-success').modal('show');*/
-            $(ob).find('.form-control-feedback-message-success').animate({
-                opacity: 1
-            }, 300);
+            $('#modalAlert-success').modal('show');
+            /*$(ob).find('.form-control-feedback-message-success').addClass("flex-center");*/
             /*result.removeClass("text-danger bg-danger text-success bg-success").text("");*/
             /*$(ob).find('.submit').prop('disabled', false);*/
             $(ob).find('#whichService').val(""); /* нужно заменить на класс */

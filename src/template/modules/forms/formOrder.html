@@ -25,14 +25,12 @@
             <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
             <span id="bsPhoneStatus" class="sr-only">(успех)</span>
         </div>
-        </div>
 
-        <div class="form-group form-group-main has-feedback">
-            <label class="control-label sr-only" for="bsEmail">Введите номер телефона</label>
-            <input type="email" class="validating form-control form-control-main" name="bsEmail" id="bsEmail" placeholder="Введите email" aria-describedby="bsEmailStatus" required="required" />
-            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-            <span id="bsPhoneStatus" class="sr-only">(успех)</span>
-            <div class="form-control-feedback-message-success">Заявка отправлена.</div>
+        <div class="form-group">
+            <div class="form-control-feedback-message-success" id="resultMesSuccOrder">
+                Спасибо, Ваша заявка принята. Мы свяжемся с вами в течении нескольких часов.
+    Если заявка отправлена после 20.00, то мы созвонимся с Вами завтра :)
+            </div>
         </div>
 
         <input type="hidden" name="whichService" id="whichService" class="form-control" value="Шапка">
