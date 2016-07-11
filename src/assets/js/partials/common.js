@@ -83,15 +83,6 @@ $(document).ready(function () {
         /*$('#formOrder .form-control-feedback-message-success').removeClass("flex-center");*/
     });
 
-    $.fn.extend({
-        animateCss: function (animationName) {
-            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-            $(this).addClass('animated ' + animationName).one(animationEnd, function() {
-                $(this).removeClass('animated ' + animationName);
-            });
-        }
-    });
-
     $(".youtube").each(function () {
         // Based on the YouTube ID, we can easily find the thumbnail image
         $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
@@ -122,7 +113,6 @@ $(document).ready(function () {
     setTimeout(function () {
         $('#hTop').css("opacity", 1).animateCss('fadeInDownBig');
     }, 1500);
-
 
     setTimeout(function () {
         $('#header .offer-right').css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
@@ -168,14 +158,16 @@ $(document).ready(function () {
         $(this).css("opacity", 1).animateCss('bounceIn');
     });*/
 
-    /* inview  */
-    jQuery('#advantages .video').bind('inview', function (event, visible) {
-        if (visible) {
-            $(this).animateCss('bounceIn');
-        } else {
-            /*$(this).stop().removeClass("animated bounceIn");*/
-        }
-    });
+    if (getPageSize()[2] > 767) {
+        /* inview  */
+        jQuery('#advantages .video').bind('inview', function (event, visible) {
+            if (visible) {
+                $(this).animateCss('bounceIn');
+            } else {
+                /*$(this).stop().removeClass("animated bounceIn");*/
+            }
+        });
+    }
 
     /*var video = JSON.parse("../json/video.json"),*/
     var video = [
@@ -195,7 +187,6 @@ $(document).ready(function () {
         });
     }, 4000);
 
-
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - COACHES - - - - - - - - - - - - - - */
 
@@ -212,13 +203,17 @@ $(document).ready(function () {
 
         }
     });*/
-    jQuery('#coaches .item-square-3').bind('inview', function (event, visible) {
-        if (visible) {
-            $(this).animateCss('flipInY');
-        } else {
-            /*$(this).stop().removeClass("animated flipInY");*/
-        }
-    });
+
+    if (getPageSize()[2] > 767) {
+        /* inview  */
+        jQuery('#coaches .item-square-3').bind('inview', function (event, visible) {
+            if (visible) {
+                $(this).animateCss('flipInY');
+            } else {
+                /*$(this).stop().removeClass("animated flipInY");*/
+            }
+        });
+    }
 
     /* Разовое исполнение */
     $('#coaches .item-circled-3').one('inview', function (event) {
@@ -236,20 +231,21 @@ $(document).ready(function () {
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - SOLUTION - - - - - - - - - - - - - - - */
 
-    /* inview  */
-    jQuery('#solution .solution').bind('inview', function (event, visible) {
-        if (visible) {
-            $(this).animateCss('bounceIn');
-        } else {
-            /*$(this).stop().removeClass("animated bounceIn");*/
-        }
-    });
+    if (getPageSize()[2] > 767) {
+        /* inview  */
+        jQuery('#solution .solution').bind('inview', function (event, visible) {
+            if (visible) {
+                $(this).animateCss('bounceIn');
+            } else {
+                /*$(this).stop().removeClass("animated bounceIn");*/
+            }
+        });
+    }
 
     /* Разовое исполнение */
     $('#solution .solution-result').one('inview', function (event) {
         $(this).css("opacity", 1).animateCss('fadeInRight');
     });
-
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - ADDRESSES - - - - - - - - - - - - - - */
@@ -259,17 +255,29 @@ $(document).ready(function () {
         $(this).css("opacity", 1).animateCss('zoomIn');
     });
     */
-    /* inview  */
-    jQuery('#addresses dd').bind('inview', function (event, visible) {
-        if (visible) {
-            $(this).animateCss('rotateInUpLeft');
-        } else {
-            /*$(this).stop().removeClass("animated rotateInUpLeft");*/
-        }
-    });
+
+    if (getPageSize()[2] > 767) {
+        /* inview  */
+        jQuery('#addresses dd').bind('inview', function (event, visible) {
+            if (visible) {
+                $(this).animateCss('rotateInUpLeft');
+            } else {
+                /*$(this).stop().removeClass("animated rotateInUpLeft");*/
+            }
+        });
+    }
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - - COMMON - - - - - - - - - - - - - -  */
+
+    $.fn.extend({
+        animateCss: function (animationName) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            $(this).addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+            });
+        }
+    });
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - LST_RESULT - - - - - - - - - - - - -  */
@@ -279,72 +287,30 @@ $(document).ready(function () {
         $(this).css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
     });
 
-    /* inview  */
-    jQuery('.list-primary li .icon-font').bind('inview', function (event, visible) {
-        if (visible) {
-            $(this).animateCss('bounceIn');
-        } else {
-            /*$(this).stop().removeClass("animated bounceIn");*/
-        }
-    });
-
-
+    if (getPageSize()[2] > 767) {
+        /* inview  */
+        jQuery('.list-primary li .icon-font').bind('inview', function (event, visible) {
+            if (visible) {
+                $(this).animateCss('bounceIn');
+            } else {
+                /*$(this).stop().removeClass("animated bounceIn");*/
+            }
+        });
+    }
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - */
 
-   /* setTimeout(function () {
+   /* setTimeout(function () { // нужно APIшку вставить.
         $('#yMap').prepend(
             "<script type=\"text/javascript\" charset=\"utf-8\" async src=\"https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=9z5AVEb4vNtxVCjxmjZiM2u_YRbneKxM&width=100%&height=400&lang=ru_RU&sourceType=constructor&scroll=false\"></script>"
         );
     }, 5000);*/
 
-    /* ------------ */
-    /* Примеры скриптов */
-
-    /*$(".lnk-inform").focusin(function () {
-        var target = $(this).attr("href");
-        $(target).toggle();
-    });
-
-    $(".lnk-inform").focusout(function () {
-        var target = $(this).attr("href");
-        $(target).css("display", "none");
-    });*/
-
-    /* смена фона кнопок в форме заяве */
-    /*$('#modalOrder .modal-footer .phone')
-        .mouseenter(function () {
-            $('#modalOrder .modal-footer .submit').removeClass("bg_h");
-            $(this).addClass("bg_h");
-        })
-        .mouseleave(function () {
-            $(this).removeClass("bg_h");
-            $('#modalOrder .modal-footer .submit').addClass("bg_h");
-        });*/
-
-    /* inview  */
-    /*jQuery('#benefits .ico img').bind('inview', function (event, visible) {
-        if (visible) {
-            $(this).stop().addClass("animated bounceIn");
-        } else {
-            $(this).stop().removeClass("animated bounceIn");
-        }
-    });*/
-
-    /* Разовое исполнение */
-    /*$('#carpark .car').one('inview', function (event) {
-
-        var Block = $(this);
-
-        // Show a smooth animation
-        Block.animate({
-            opacity: 1
-        }, 1500);
-    });*/
-
 });
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - - - - - - - - - - FUNCTION - - - - - - - - - - - - - - - - */
 
 function toDoScroll() {
         var currScrollPos = +$(document).scrollTop(),
@@ -465,9 +431,11 @@ function toDoScroll() {
             }
         }
 
-        /*parallax($('#problems-result'));*/
-        /*parallax($('#advantages-result'));*/
-        /*parallax($('#header', "bg"));*/
+        if (getPageSize()[2] > 767) {
+            /*parallax($('#problems-result'));*/
+            /*parallax($('#advantages-result'));*/
+            /*parallax($('#header', "bg"));*/
+        }
     }
 
 //Parallax effect background
@@ -497,12 +465,6 @@ function parallax(object, effect) {
         object.css('position', 'relative');
         object.css('top', hOffset-100 + unit);
     }
-}
-
-function checkingVisible(elem) {
-    var result = $(elem).is(":visible");
-
-    return result;
 }
 
 function centerModal() {
@@ -626,47 +588,6 @@ function ajax(ob) {
 
     return false;
 }
-
-/* create social networking pop-ups*/
-(function () {
-    // link selector and pop-up window size
-    var Config = {
-        Link: "a.share",
-        Width: 500,
-        Height: 500
-    };
-
-    // add handler links
-    var slink = document.querySelectorAll(Config.Link);
-    for (var a = 0; a < slink.length; a++) {
-        slink[a].onclick = PopupHandler;
-    }
-
-    // create popup
-    function PopupHandler(e) {
-        e = (e ? e : window.event);
-
-        var t = e.currentTarget;
-
-        var
-            px = Math.floor(((screen.availWidth || 1024) - Config.Width) / 2),
-            py = Math.floor(((screen.availHeight || 700) - Config.Height) / 2);
-
-        // open popup
-        var popup = window.open(t.href, "social",
-            "width=" + Config.Width + ",height=" + Config.Height +
-            ",left=" + px + ",top=" + py +
-            ",location=0,menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1");
-        if (popup) {
-            popup.focus();
-            if (e.preventDefault) e.preventDefault();
-            e.returnValue = false;
-        }
-
-        return !!popup;
-    }
-
-}());
 
 // Кроссбраузерное получение размеров окна на JS
 function getPageSize() {
