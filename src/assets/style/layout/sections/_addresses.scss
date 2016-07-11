@@ -7,8 +7,10 @@
     dl {
 
         dt {
+            color: map-get($colors, "bs2");
             margin-top: 15px;
             /*opacity: 0;*/
+            text-transform: uppercase;
 
             &:after {
                 content: " р-н: ";
@@ -19,6 +21,7 @@
             margin-left: 40px;
 
             .address {
+                font-weight: 700;
 
                 &:after {
                     content: ": ";
