@@ -170,22 +170,22 @@ $(document).ready(function () {
     }
 
     /*var video = JSON.parse("../json/video.json"),*/
-    var video = [
+    /*var video = [
             '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/CUiQh_9k7q0" frameborder="0" allowfullscreen=""></iframe>',
             '<iframe width="auto" height="auto" src="https://www.youtube.com/embed/qbpNv4gI14o" frameborder="0" allowfullscreen=""></iframe>',
             '<iframe width="640" height="360" src="https://www.youtube.com/embed/mczuKRo5Nr8" frameborder="0" allowfullscreen></iframe>'
         ],
-        video_current = 0;
+        video_current = 0;*/
 
     /*CUiQh_9k7q0
     qbpNv4gI14o
     https://www.youtube.com/embed/*/
-    setTimeout(function () {
+    /*setTimeout(function () {
         $('#advantages .video').each(function () {
             $(this).prepend(video[video_current]);
             video_current++;
         });
-    }, 4000);
+    }, 4000);*/
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - COACHES - - - - - - - - - - - - - - */
