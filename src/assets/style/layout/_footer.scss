@@ -7,4 +7,18 @@
     padding: 3em 0;
     position: relative;
     text-align: center;
+
+    p {
+        a {
+            color: map-get($colors, "b_w");
+
+            &:link, &:visited, &:active, &:focus, &:focus:active {
+                color: map-get($colors, "b_w");
+            }
+
+            &:hover {
+                color: darken(map-get($colors, "b_w"), 20%);
+            }
+        }
+    }
 }
