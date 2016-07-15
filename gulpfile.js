@@ -8,7 +8,7 @@ var
     gulpif          = require('gulp-if'),
     notify          = require('gulp-notify'),
     minifyCss       = require('gulp-minify-css'),
-    minifyHTML      = require('gulp-minify-html'),
+    minifyHTML      = require('gulp-htmlmin'),
     pngquant        = require('imagemin-pngquant'),
     prefixer        = require('gulp-autoprefixer'),
     reload          = browserSync.reload,
@@ -118,6 +118,7 @@ gulp.task('clean', function (cb) {
 gulp.task('build:html', function () {
     gulp.src(path.src.html)
         .pipe(rigger())
+        .pipe(minifyHTML({collapseWhitespace: true}))
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}))
         .pipe(notify('build:html Done!'));
