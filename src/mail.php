@@ -16,12 +16,6 @@
         $error = true;
     }
 
-    if (!empty($_POST["bsEmail"])) {
-        $email = substr(htmlspecialchars(trim($_POST["bsEmail"])), 0, 255);
-    } else {
-        $error = true;
-    }
-
     /**/
     $utm_sourceSTR = "";
     $utm_termSTR   = "";
@@ -45,7 +39,7 @@
         $sitename  = "krepysh.com";
         $pagetitle = "Новая заявка с сайта \"$sitename\"";
 
-        $message   = "Имя: $name \nТелефон: $phone \nEmail: $email \nКуда кликнул: $whichService $utm_sourceSTR $utm_termSTR";
+        $message   = "Имя: $name \nТелефон: $phone \n\nКуда кликнул: $whichService $utm_sourceSTR $utm_termSTR";
 
         mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
     } else {
