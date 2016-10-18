@@ -287,16 +287,16 @@ $(document).ready(function () {
         $(this).css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
     });
 
-    if (getPageSize()[2] > 767) {
-        /* inview  */
+    /*if (getPageSize()[2] > 767) {
+        // inview
         jQuery('.list-primary li .icon-font').bind('inview', function (event, visible) {
             if (visible) {
                 $(this).animateCss('bounceIn');
             } else {
-                /*$(this).stop().removeClass("animated bounceIn");*/
+                //$(this).stop().removeClass("animated bounceIn");
             }
         });
-    }
+    }*/
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - */
