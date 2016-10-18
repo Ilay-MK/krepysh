@@ -136,17 +136,17 @@ $(document).ready(function () {
     /* - - - - - - - - - - - - - - - - PROBLEMS - - - - - - - - - - - - - - - */
 
     /* Разовое исполнение */
-    $('#problems .list-primary li').one('inview', function (event) {
-        $(this).css("opacity", 1).animateCss('bounceInLeft'); /*slideInLeft|fadeInLeft*/
-    });
+    /*$('#problems .list-primary li').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('bounceInLeft'); //slideInLeft|fadeInLeft
+    });*/
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - - ADVANTAGES - - - - - - - - - - - - - - */
 
     /* Разовое исполнение */
-    $('#advantages .list-primary li').one('inview', function (event) {
-        $(this).css("opacity", 1).animateCss('bounceInLeft'); /*slideInLeft|fadeInLeft*/
-    });
+    /*$('#advantages .list-primary li').one('inview', function (event) {
+        $(this).css("opacity", 1).animateCss('bounceInLeft'); //slideInLeft|fadeInLeft
+    });*/
 
     /* Разовое исполнение */
     $('#advantages .photos').one('inview', function (event) {
