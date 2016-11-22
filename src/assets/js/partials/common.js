@@ -132,6 +132,26 @@ $(document).ready(function () {
         $("#header .container-bg").css("background-image", "url('assets/img/header/bg_3-2.jpg')");
     }, 4000);
 
+    $("#callMe button").click(function () {
+        yaCounter38441125.reachGoal('TOP-CALLME-BUTTON');
+    });
+
+    $("#utpScroll-btn").click(function () {
+        yaCounter38441125.reachGoal('TOP-SINGUP-TRIAL-BUTTON');
+    });
+
+    $("#top-phone-number-1").click(function () {
+        yaCounter38441125.reachGoal('TOP-PHONE-NUMBER-1-BUTTON');
+    });
+
+    $("#top-phone-number-2").click(function () {
+        yaCounter38441125.reachGoal('TOP-PHONE-NUMBER-2-BUTTON');
+    });
+
+    $("#hero-main-btn").click(function () {
+        yaCounter38441125.reachGoal('HERO-MAIN-BUTTON');
+    });
+
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - - PROBLEMS - - - - - - - - - - - - - - - */
 
@@ -220,6 +240,17 @@ $(document).ready(function () {
         $(this).css("opacity", 1).animateCss('rotateInUpRight');
     });
 
+    $("#coaches-main-button").click(function () {
+        yaCounter38441125.reachGoal('COACHES-MAIN-BUTTON');
+    });
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+    /* - - - - - - - - - - - - - - - PRICE - - - - - - - - - - - - - - - */
+
+    $("#price-main-button").click(function () {
+        yaCounter38441125.reachGoal('PRICE-MAIN-BUTTON');
+    });
+
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - SERVICES - - - - - - - - - - - - - - - */
 
@@ -266,6 +297,21 @@ $(document).ready(function () {
             }
         });
     }
+
+    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    /* - - - - - - - - - - - - - - - - FOOTER - - - - - - - - - - - - - - */
+
+    $("#footer-phone-number-1").click(function () {
+        yaCounter38441125.reachGoal('FOOTER-PHONE-NUMBER-1-BUTTON');
+    });
+
+    $("#footer-phone-number-2").click(function () {
+        yaCounter38441125.reachGoal('FOOTER-PHONE-NUMBER-2-BUTTON');
+    });
+
+    $("#footer-email").click(function () {
+        yaCounter38441125.reachGoal('FOOTER-EMAIL-BUTTON');
+    });
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - - COMMON - - - - - - - - - - - - - -  */
