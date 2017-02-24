@@ -9,13 +9,13 @@ $(function(){
 $(document).ready(function() {
 
     // Скроллинг
-    /*$(".scrollTo").click(function () {
+    $(".scrollTo").click(function () {
         $.scrollTo($(this).attr('href'), 800, {
-			offset: 0
+			offset: -51
 		});
         //$('.navbar-toggle').click();*/ /*для того, чтобы свернуть менюшку для удобства
 		return false;
-	});*/
+	});
 
     $(document).ready(function() {
 		$(".fancybox").fancybox({
