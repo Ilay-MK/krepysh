@@ -110,7 +110,7 @@
                     #utpScroll {
                         display: none;
                         float: left;
-                        text-align: right;
+                        text-align: center; /* right */
 
                         @media only screen and (max-width: 681px) {
                             display: none !important;
