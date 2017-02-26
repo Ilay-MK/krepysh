@@ -34,6 +34,7 @@ var path = {
         fonts: 'build/assets/fonts/',
         files: 'build/assets/files/',
         mail: 'build/',
+        version: 'build/',
         libs: 'build/assets/libs/'
     },
     src: {
@@ -47,6 +48,7 @@ var path = {
         fonts: 'src/assets/fonts/**/*.*',
         files: 'src/assets/files/**/*.*',
         mail: 'src/mail.php',
+        version: 'src/version',
         libs: 'src/assets/libs/**/*.*'
     },
     watch: {
@@ -58,6 +60,7 @@ var path = {
         fonts: 'src/assets/fonts/**/*.*',
         files: 'src/assets/files/**/*.*',
         mail: 'src/mail.php',
+        version: 'src/version',
         libs: 'src/assets/libs/**/*.*'
     },
     fontAwesomeDir: './bower_components/font-awesome/',
@@ -213,6 +216,12 @@ gulp.task('build:mail', function () {
         .pipe(notify('build:mail Done!'));
 });
 
+gulp.task('build:version', function () {
+    gulp.src(path.src.version)
+        .pipe(gulp.dest(path.build.version))
+        .pipe(notify('build:version Done!'));
+});
+
 gulp.task('build', [
     'build:html',
     'build:js',
@@ -221,6 +230,7 @@ gulp.task('build', [
     'build:files',
     'build:libs',
     'build:mail',
+    'build:version',
     'build:image'
 ]);
 
@@ -253,6 +263,9 @@ gulp.task('watch', function () {
     watch([path.watch.mail], function (event, cb) {
         gulp.start('build:mail');
     });
+    watch([path.watch.version], function (event, cb) {
+        gulp.start('build:version');
+    });
 });
 // Watch Wiredep
 gulp.task('watch-native', function () {
@@ -263,6 +276,7 @@ gulp.task('watch-native', function () {
     gulp.watch(path.watch.fonts, ['build:fonts']);
     gulp.watch(path.watch.files, ['build:files']);
     gulp.watch(path.watch.libs, ['build:libs']);
+    gulp.watch(path.watch.version, ['build:version']);
 });
 
 
