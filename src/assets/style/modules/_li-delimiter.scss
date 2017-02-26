@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.li-delimiter {
+    background-color: #eee;
+    list-style: none;
+    height: 1px;
+    margin: 5px 0 3px;
+    width: 50px;
+
+    &:after {
+        content: none;
+        display: none;
+    }
+}
