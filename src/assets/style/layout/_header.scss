@@ -288,6 +288,16 @@
                 }
             }
 
+            .hLnkToAddrs {
+                font-style: italic;
+                font-weight: bold;
+                text-decoration: underline;
+
+                &-container {
+                    color: #f8f8f8;
+                }
+            }
+
             .title {
                 margin: 30px auto 30px;
 
