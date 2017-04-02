@@ -27,6 +27,7 @@ var
 var path = {
     build: {
         html: 'build/',
+        php: 'build/',
         js: 'build/assets/js/',
         css: 'build/assets/css/',
         img: 'build/assets/img/',
@@ -41,6 +42,7 @@ var path = {
         html: 'src/*.html',
         htmlBase: './src/template/base/*.html',
         htmlToBase: './src/template/base/',
+        php: './src/*.php',
         js: 'src/assets/js/main.js',
         style: 'src/assets/style/main.scss',
         img: 'src/assets/img/**/*.*',
@@ -53,6 +55,7 @@ var path = {
     },
     watch: {
         html: 'src/**/*.html',
+        php: 'src/*.php',
         js: 'src/assets/js/**/*.js',
         style: 'src/assets/style/**/*.scss',
         img: 'src/assets/img/**/*.*',
@@ -210,10 +213,16 @@ gulp.task('build:libs', function () {
         .pipe(notify('build:libs Done!'));
 });
 
-gulp.task('build:mail', function () {
+/*gulp.task('build:mail', function () {
     gulp.src(path.src.mail)
         .pipe(gulp.dest(path.build.mail))
         .pipe(notify('build:mail Done!'));
+});*/
+
+gulp.task('build:php', function () {
+    gulp.src(path.src.php)
+        .pipe(gulp.dest(path.build.php))
+        .pipe(notify('build:php Done!'));
 });
 
 gulp.task('build:version', function () {
@@ -229,7 +238,7 @@ gulp.task('build', [
     'build:fonts',
     'build:files',
     'build:libs',
-    'build:mail',
+    'build:php',
     'build:version',
     'build:image'
 ]);
@@ -261,7 +270,7 @@ gulp.task('watch', function () {
         gulp.start('build:libs');
     });
     watch([path.watch.mail], function (event, cb) {
-        gulp.start('build:mail');
+        gulp.start('build:php');
     });
     watch([path.watch.version], function (event, cb) {
         gulp.start('build:version');
