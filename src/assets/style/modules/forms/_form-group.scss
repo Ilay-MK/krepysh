@@ -13,6 +13,18 @@
 
     .form-control {
 
+        &_new {
+            display: inline-block;
+            height: 50px !important;
+            margin-bottom: 0 !important;
+            width: 190px !important;
+
+            @media only screen and (max-width: 479px) {
+                margin-bottom: 10px !important;
+                width: 100% !important;
+            }
+        }
+
         &-main {
             border: 1px solid rgba(map-get($colors, "bs1"), 0.6);
             border-radius: 0;
@@ -33,7 +45,19 @@
     }
 
     .form-control-feedback {
-        top: 3px !important;
+        /*top: 3px !important;*/
+        height: 50px;
+        line-height: 50px;
+        width: 50px;
+
+        @media only screen and (min-width: 480px) {
+            display: none !important;
+        }
+
+        &::before {
+            vertical-align: middle;
+            line-height: inherit;
+        }
 
         &-icon, &-message-error, &-message-success {
             /*display: none;*/

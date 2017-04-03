@@ -18,7 +18,7 @@ $(document).ready(function () {
 	});
 
     $('.submit').click(function () {
-        var recipient = $(this).data('submit');
+        var recipient = $(this).closest(".order");
 
         $(recipient).submit();
         //ajax(recipient);

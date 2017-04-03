@@ -16,30 +16,40 @@
         $error = true;
     }
 
-    /**/
-    $utm_sourceSTR = "";
-    $utm_termSTR   = "";
+    /* Объявление переменных UTM меток */
+    $utm_source__value = "\n\nutm_source: ";
+    $utm_term__value   = "\n\nutm_term: ";
 
+    /* Получение значений UTM из формы заявки */
+    /*
     if (!empty($_POST["utm_source"])) {
         $utm_source    = htmlspecialchars(trim($_POST["utm_source"]));
-        $utm_sourceSTR = "\n\nutm_source: $utm_source;";
+        $utm_source__value .= $utm_source;
     }
 
     if (!empty($_POST["utm_term"])) {
         $utm_term    = htmlspecialchars(trim($_POST["utm_term"]));
-        $utm_termSTR = "\n\nutm_term: $utm_term;";
+        $utm_term__value .= $utm_term;
     }
 
     if (!empty($_POST["whichService"])) {
         $whichService = substr(htmlspecialchars(trim($_POST["whichService"])), 0, 255);
     }
+    */
+
+    /* -------------------------- */
+    /* Получение UTM меток */
+    $utm_source__value = UTMTags::getUtm(UTMTags::UTM_SOURCE);
+    $utm_term__value   = UTMTags::getUtm(UTMTags::UTM_TERM);
+
+    /* -------------------------- */
 
     if (!$error) {
-        $recepient = "krepysh.com@gmail.com, krepysh1@tut.by"; /* "MiKrob09@gmail.com" */
+        $recepient = "MiKrob09@gmail.com"; /* "krepysh.com@gmail.com, krepysh1@tut.by" */
         $sitename  = "krepysh.com";
         $pagetitle = "Новая заявка с сайта \"$sitename\"";
 
-        $message   = "Имя: $name \nТелефон: $phone \n\nКуда кликнул: $whichService $utm_sourceSTR $utm_termSTR";
+        $message   = "Имя: $name \nТелефон: $phone \n\nКуда кликнул: $whichService $utm_source__value $utm_term__value";
 
         mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
     } else {

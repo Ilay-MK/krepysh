@@ -90,6 +90,15 @@
             padding: 16px 41px 15px 42px;
             text-shadow: 1px 1px 1px map-get($colors, "b_b");
         }
+
+        &_new {
+            height: 50px !important;
+            width: 190px !important;
+
+            &:active {
+                padding: inherit !important;
+            }
+        }
     }
 
     &-primary2 {
