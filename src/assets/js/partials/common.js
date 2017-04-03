@@ -583,11 +583,11 @@ function ajax(ob) {
     }
 
     processor = "./mail.php";
-
+    alert($(ob).closest('.whichService').attr("data-nameForm"));
     $.ajax({
         type: "POST",
         url: processor,
-        data: $(ob).serialize(),
+        data: $(ob).serialize() + "&bsPhone=" + $(ob).find('.bsPhone').val() + "&whichService=" + $(ob).closest('.whichService').attr("data-nameForm"),
         beforeSend: function(data) { // сoбытиe дo oтпрaвки
             /*$(ob).find('input[type="submit"]').attr('disabled', 'disabled');*/ // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
             $(ob).find('.submit').attr('disabled', 'disabled');
