@@ -39,8 +39,8 @@
 
     /* -------------------------- */
     /* Получение UTM меток */
-    $utm_source__value = UTMTags::getUtm(UTMTags::UTM_SOURCE);
-    $utm_term__value   = UTMTags::getUtm(UTMTags::UTM_TERM);
+    $utm_source__value .= UTMTags::getUtm(UTMTags::UTM_SOURCE);
+    $utm_term__value   .= UTMTags::getUtm(UTMTags::UTM_TERM);
 
     /* -------------------------- */
 
