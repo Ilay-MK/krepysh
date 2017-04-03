@@ -29,7 +29,7 @@
 ?>
 
 <?php
-var_dump($array);
+
     if( isset( $_GET[UTMTags::UTM_SOURCE] ) )
         UTMTags::setUtm($_GET[UTMTags::UTM_SOURCE]);
     if( isset( $_GET[UTMTags::UTM_TERM]   ) )
