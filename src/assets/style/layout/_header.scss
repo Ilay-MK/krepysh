@@ -205,6 +205,21 @@
             position: relative;
             text-align: center;
 
+            .video {
+                margin-top: 115px;
+                height: 360px; /*480px*/
+
+                .youtube {
+                    height: 100%;
+                }
+
+                @media only screen and (max-width: 991px) {
+                    margin-left: -15px;
+                    margin-right: -15px;
+                    margin-top: 0;
+                }
+            }
+
             .offer {
                 background-color: rgba(map-get($colors, "bb"), 0.6);
                 /*border-radius: 50px 0 0 50px;*/
