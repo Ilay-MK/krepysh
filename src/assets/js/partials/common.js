@@ -587,7 +587,11 @@ function ajax(ob) {
     $.ajax({
         type: "POST",
         url: processor,
-        data: $(ob).serialize() + "&bsPhone=" + $(ob).find('.bsPhone').val() + "&whichService=" + $(ob).closest('.whichService').attr("data-nameForm"),
+        data: $(ob).serialize()
+            + "&bsPhone=" + $(ob).find('.bsPhone').val()
+            + "&whichService=" + $(ob).closest('.whichService').attr("data-nameForm")
+            + "&utm_source=" + $.getUrlVar('utm_source')
+            + "&utm_term=" + $.getUrlVar('utm_term'),
         beforeSend: function(data) { // сoбытиe дo oтпрaвки
             /*$(ob).find('input[type="submit"]').attr('disabled', 'disabled');*/ // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
             $(ob).find('.submit').attr('disabled', 'disabled');
@@ -712,7 +716,6 @@ $.extend({
 /*var allVars = $.getUrlVars();*/
 // Получит параметр URL по его имени
 /*var byName = $.getUrlVar('name');*/
-
 
 /// Перемещение объектов
 /// с условиями по ширине
