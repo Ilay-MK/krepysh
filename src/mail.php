@@ -8,8 +8,8 @@
     $whichService = "";
 
     /* Объявление переменных UTM меток */
-    $utm_source__value = "\n\nutm_source: ";
-    $utm_term__value   = "\n\nutm_term: ";
+    $utm_source__value = "\n\nИсточника трафика: ";
+    $utm_term__value   = "\nКлючевое слово: ";
 
 
     if (!empty($_POST["bsName"])) {
