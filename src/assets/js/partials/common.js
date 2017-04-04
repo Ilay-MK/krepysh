@@ -583,7 +583,7 @@ function ajax(ob) {
     }
 
     processor = "./mail.php";
-    alert($(ob).closest('.whichService').attr("data-nameForm"));
+
     $.ajax({
         type: "POST",
         url: processor,
