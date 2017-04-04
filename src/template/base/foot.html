@@ -61,14 +61,22 @@
             /*playerVars: { 'autoplay': 1, 'controls': 0 },*/
             events: {
                 'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
+                'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
+                'onStateChange': onPlayerStateChange,
+                'onError': onPlayerError
             }
         });
     }
 
+    /*
+        player.setPlaybackQuality(suggestedQuality:String):Void
+        suggestedQuality: small, medium, large, hd720, hd1080, highres или default
+    */
+
     /* 4. The API will call this function when the video player is ready. */
     function onPlayerReady(event) {
         event.target.setVolume(100);
+        player.setPlaybackQuality(default);
         event.target.playVideo();
     }
 
@@ -139,6 +147,21 @@
     function stopVideo() {
         player.stopVideo();
     }
+
+    function onPlayerPlaybackQualityChange() {
+
+    }
+
+    function onPlayerError() {
+        /*
+            2 - запрос содержит недопустимое значение параметра. Например, ошибка возникает при указании идентификатора видео, состоящего из менее 11 символов или содержащего недопустимые символы (восклицательный знак, символ звездочки и т. д.).
+            5 - ошибка воспроизведения запрошенного содержимого в проигрывателе HTML или другая ошибка, связанная с работой проигрывателя HTML.
+            100 - запрошенное видео не найдено. Эта ошибка возникает, если видео было удалено (по любой причине) или помечено как частное.
+            101 - владелец запрошенного видео запретил его воспроизведение во встроенных проигрывателях.
+            150 - ошибка, аналогичная ошибке 101. Это другой код для ошибки 101.
+        */
+    }
+
     /* -------------------------------------------------------------- */
 </script>
 
