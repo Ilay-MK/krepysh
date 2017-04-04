@@ -12,7 +12,7 @@
 
 //= ../../../bower_components/protonet/jquery.inview/jquery.inview.min.js
 
-/*//= ../../../bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js*/
+//= ../../../bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js
 
 /*//= ../libs/fancybox/source/jquery.fancybox.pack.js*/
 

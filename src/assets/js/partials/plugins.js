@@ -67,9 +67,9 @@ $(document).ready(function() {
     });
 
     /* mask of inputs */
-    /*$.mask.definitions['~']='[+-]';
+    $.mask.definitions['~']='[+-]';
     $.mask.definitions['h'] = "[1234579]";
-    $.mask.definitions['!'] = "[0-9]";*/
+    $.mask.definitions['!'] = "[0-9]";
 
-    /*$("#bsPhone").mask("+375 (hh) 999-99-99", { placeholder:"_" });*/
+    $(".bsPhone").mask("+375 (hh) 999-99-99", { placeholder:"_" });
 });
