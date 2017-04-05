@@ -363,6 +363,7 @@ $(document).ready(function () {
 
 });
 
+/*
 document.getElementsByClassName('bsPhone')[0].onkeypress = function (e) {
 
     e = e || event;
@@ -380,6 +381,7 @@ document.getElementsByClassName('bsPhone')[0].onkeypress = function (e) {
     }
 
 }
+*/
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 /* - - - - - - - - - - - - - - - - FUNCTION - - - - - - - - - - - - - - - - */
