@@ -110,13 +110,13 @@
         /* inview  */
         jQuery('#player').bind('inview', function (event, visible) {
             if (visible) {
-                console.log("vis: " + player.getPlayerState());
+                /*console.log("vis: " + player.getPlayerState());*/
 
                 if ( !(event.data == YT.PlayerState.PLAYING) ) {
                     playVideo();
                 }
             } else {
-                console.log("invis: " + player.getPlayerState());
+                /*console.log("invis: " + player.getPlayerState());*/
 
                 switch (player.getPlayerState()) {
                     case -1:
