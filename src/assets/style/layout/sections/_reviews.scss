@@ -163,10 +163,12 @@
     &__attachments {
 
         &-photos {
+            margin: 0 auto;
+            max-width: 300px;
 
             .thumbnail {
                 height: 56px;
-                margin: -1px 1px;
+                margin: 0 2px; /* -1px 1px */
                 overflow: hidden;
                 padding: 0;
                 width: 56px;
