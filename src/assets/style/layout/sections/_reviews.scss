@@ -164,10 +164,18 @@
 
         &-photos {
 
+            .thumbnail {
+                height: 56px;
+                margin: -1px 1px;
+                overflow: hidden;
+                padding: 0;
+                width: 56px;
+            }
         }
 
         &-photo {
-
+            min-height: 56px;
+            min-width: 56px;
         }
     }
 

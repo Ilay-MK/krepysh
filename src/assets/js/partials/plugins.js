@@ -346,7 +346,7 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
                     * this.access_key
                     */
 
-                    reviewsVK__attachmentsPhotos += '<a href="' + this.photo.photo_1280 + '" class="fancybox" rel="reviewsVK__attachments-photo_' + review_id + '" title="' + this.photo.text + '"><img src="' + this.photo.photo_75 + '" class="img-responsive reviewsVK__attachments-photo" alt=""></a>';
+                    reviewsVK__attachmentsPhotos += '<a href="' + this.photo.photo_1280 + '" class="thumbnail fancybox" rel="reviewsVK__attachments-photo_' + review_id + '" title="' + this.photo.text + '"><img src="' + this.photo.photo_75 + '" class="img-responsive reviewsVK__attachments-photo" alt=""></a>';
                 }
             });
         }
