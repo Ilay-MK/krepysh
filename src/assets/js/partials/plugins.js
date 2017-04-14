@@ -2,7 +2,8 @@
  Third party
  */
 
-var vk_comments_offset = 0;
+var vk_comments_offset  = 0;
+var reviewsCountRemove  = 0;          /* Кол-во удалённых из отображения отзывов */
 
 $(function(){
     /*console.log('in plugins.js! ');*/
@@ -132,6 +133,7 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
     var reviewsVK       = data.response;            /* объект response */
     var real_offset;                                /* текущее смещение */
     var $reviewsBlock   = $('#reviewsVK__reviews'); /*  */
+    var reviewscount    = reviewsVK.count;          /* Общее кол-во отзывов, с вычетом "ненужных" */
 
     /* ---------------------------------------------------------------------- */
 
@@ -252,7 +254,6 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
     * reviewsVK.real_offset (integer)
     */
 
-    $('#reviewsVK__count').text(" " + reviewsVK.count);
     jQuery.each(reviewsVK.items, function () {
         /*
         * this.id
@@ -298,6 +299,15 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
             review_first_name,
             review_last_name,
             review_photo;
+
+        if( (review_id_owner == 369583216) || (review_id_owner == -123321202) ) {
+            ++reviewsCountRemove;
+            console.log("-----");
+            console.log("reviewscount: " + reviewscount);
+            console.log("reviewsCountRemove: " + reviewsCountRemove);
+            console.log("-----");
+            return;
+        }
 
         var reviewsVK__attachmentsPhotos = "";
 
@@ -373,4 +383,8 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
         /*$reviewsBlock.append('<div class="reviewsVK__review"><div class="reviewsVK__owner"><img src="' + review_photo + '" alt="" class="reviewsVK__photo reviewsVK__photo_100"><p class="h3 reviewsVK__username"><span class="reviewsVK__name reviewsVK__name_first">' + review_first_name + '</span> <span class="reviewsVK__name reviewsVK__name_last">' + review_last_name + '</span><span class="reviewsVK__date">' + review_date + '</span></p></div><div class="reviewsVK__text">' + review_text + '</div></div>');*/
 
     });
+
+    console.log("reviewscount - reviewsCountRemove: " + reviewscount + " - " + reviewsCountRemove + " = " + (reviewscount - reviewsCountRemove));
+
+    $('#reviewsVK__count').text( " " + (reviewscount - reviewsCountRemove) );
 }
