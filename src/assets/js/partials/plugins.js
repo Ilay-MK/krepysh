@@ -321,6 +321,7 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
         });
 
         if (this.attachments) {
+            var attachments_big_photo;
             jQuery.each(this.attachments, function () {
                 /*
                 * this.type
@@ -346,7 +347,23 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
                     * this.access_key
                     */
 
-                    reviewsVK__attachmentsPhotos += '<a href="' + this.photo.photo_1280 + '" class="thumbnail fancybox" rel="reviewsVK__attachments-photo_' + review_id + '" title="' + this.photo.text + '"><img src="' + this.photo.photo_75 + '" class="img-responsive reviewsVK__attachments-photo" alt=""></a>';
+                    if(this.photo.photo_1280) {
+                        attachments_big_photo = this.photo.photo_1280;
+                    }
+                    else if(this.photo.photo_807) {
+                        attachments_big_photo = this.photo.photo_807;
+                    }
+                    else if(this.photo.photo_604) {
+                        attachments_big_photo = this.photo.photo_604;
+                    }
+                    else if(this.photo.photo_130) {
+                        attachments_big_photo = this.photo.photo_130;
+                    }
+                    else {
+                        attachments_big_photo = this.photo.photo_75;
+                    }
+
+                    reviewsVK__attachmentsPhotos += '<a href="' + attachments_big_photo + '" class="thumbnail fancybox" rel="reviewsVK__attachments-photo_' + review_id + '" title="' + this.photo.text + '"><img src="' + this.photo.photo_75 + '" class="img-responsive reviewsVK__attachments-photo" alt=""></a>';
                 }
             });
         }
