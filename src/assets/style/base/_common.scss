@@ -154,6 +154,8 @@ img {
     background: transparent;
 }*/
 
+@include webkit-scrollbar($thumb-color: #e0b126, $thumb-color-hover: #c4b178, $btn-height: 0px, $scrollbar-track: #fff);
+
 :focus {
 
 }
