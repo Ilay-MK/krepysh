@@ -1,13 +1,13 @@
-/*
- Third party
- */
+"use strict";
 
-var vk_comments_offset  = 0;
-var reviewsCountRemove  = 0;          /* Кол-во удалённых из отображения отзывов */
-
-$(function(){
-    /*console.log('in plugins.js! ');*/
-})
+/* Declaration of global variables */
+/* --- */
+var vk_comments_offset           = 0;
+var vk_comments_сountRemoveWhole = 0;  /* Кол-во удалённых из отображения отзывов */
+var vk_comments_сount            = 15; /* Кол-во сообщений для получения */
+var vk_comments_сountReceived    = 0;  /* Фактическое количество полученных сообщений,
+                                          за вычетом отфильтрованных */
+/* --- */
 
 $(document).ready(function() {
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
     /* ---------------------------------------------------------------------- */
 
-    vkBoard__getComments(vk_comments_offset);
+    vkBoard__getComments(vk_comments_offset, vk_comments_сount);
 
     /* ---------------------------------------------------------------------- */
 
@@ -84,12 +84,11 @@ $(document).ready(function() {
     $("#reviewsVK__getComments").click(function (e) {
         e.preventDefault();
 
-        vk_comments_offset += 15;
-        vkBoard__getComments(vk_comments_offset);
+        vkBoard__getComments(vk_comments_offset, vk_comments_сount);
     });
 });
 
-function vkBoard__getComments(real_offset) {
+function vkBoard__getComments(real_offset, count) {
     /* VK.COM */
     /*
     jQuery.get(url, [data], [callback], [dataType]): jqXHRv: 1.0
@@ -115,7 +114,7 @@ function vkBoard__getComments(real_offset) {
             need_likes          : 0,
             start_comment_id    : 0,
             offset              : real_offset,
-            count               : 15,
+            count               : count,
             extended            : 1,
             sort                : "desc",
             v                   : "5.63"
@@ -129,11 +128,12 @@ function vkBoard__getComments(real_offset) {
 function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
     // Здесь мы получаем данные, отправленные сервером и выводим их на экран
 
-    /*var reviewsVK     = jQuery.parseJSON(data);*/
-    var reviewsVK       = data.response;            /* объект response */
-    var real_offset;                                /* текущее смещение */
-    var $reviewsBlock   = $('#reviewsVK__reviews'); /*  */
-    var reviewscount    = reviewsVK.count;          /* Общее кол-во отзывов, с вычетом "ненужных" */
+    /*var reviewsVK         = jQuery.parseJSON(data);*/
+    var reviewsVK           = data.response;            /* объект response */
+    var $reviewsBlock       = $('#reviewsVK__reviews'); /*  */
+    var reviewscount        = reviewsVK.count;          /* общее кол-во отзывов, с вычетом "ненужных" */
+    var reviewsCountRemove  = 0;
+    var real_offset;                                    /* текущее смещение */
 
     /* ---------------------------------------------------------------------- */
 
@@ -254,6 +254,8 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
     * reviewsVK.real_offset (integer)
     */
 
+
+    if(!reviewsVK.items || reviewsVK.items == "") return null;
     jQuery.each(reviewsVK.items, function () {
         /*
         * this.id
@@ -276,7 +278,7 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
             "November",
             "December"
         ],
-        month_ru = [
+            month_ru = [
             "янв",
             "фев",
             "мар",
@@ -290,7 +292,7 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
             "ноя",
             "дек"
         ],
-        month = month_ru;
+            month    = month_ru;
 
         var review_id           = this.id,
             review_id_owner     = this.from_id,
@@ -302,10 +304,6 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
 
         if( (review_id_owner == 369583216) || (review_id_owner == -123321202) ) {
             ++reviewsCountRemove;
-            console.log("-----");
-            console.log("reviewscount: " + reviewscount);
-            console.log("reviewsCountRemove: " + reviewsCountRemove);
-            console.log("-----");
             return;
         }
 
@@ -382,9 +380,13 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
 
         /*$reviewsBlock.append('<div class="reviewsVK__review"><div class="reviewsVK__owner"><img src="' + review_photo + '" alt="" class="reviewsVK__photo reviewsVK__photo_100"><p class="h3 reviewsVK__username"><span class="reviewsVK__name reviewsVK__name_first">' + review_first_name + '</span> <span class="reviewsVK__name reviewsVK__name_last">' + review_last_name + '</span><span class="reviewsVK__date">' + review_date + '</span></p></div><div class="reviewsVK__text">' + review_text + '</div></div>');*/
 
+        ++vk_comments_сountReceived;
+
     });
 
-    console.log("reviewscount - reviewsCountRemove: " + reviewscount + " - " + reviewsCountRemove + " = " + (reviewscount - reviewsCountRemove));
+    vk_comments_offset           += vk_comments_сount;
+    vk_comments_сountRemoveWhole += reviewsCountRemove;
 
-    $('#reviewsVK__count').text( " " + (reviewscount - reviewsCountRemove) );
+    $('#reviewsVK__count-whole').text( reviewscount );
+    $('#reviewsVK__count').text( vk_comments_сountReceived );
 }
