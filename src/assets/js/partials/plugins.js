@@ -226,7 +226,7 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
     * reviewsVK.real_offset (integer)
     */
 
-    $('#reviewsVK__count').append(" " + reviewsVK.count);
+    $('#reviewsVK__count').text(" " + reviewsVK.count);
     jQuery.each(reviewsVK.items, function () {
         /*
         * this.id
