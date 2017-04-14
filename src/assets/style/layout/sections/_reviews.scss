@@ -78,3 +78,88 @@
     }
 
 }
+
+
+/* New. On The BEM Methodology css */
+
+.reviewsVK {
+
+    &__count {
+
+    }
+
+    &__reviews {
+        max-height: 500px;
+        overflow-y: scroll;
+        margin: 10px 0 30px;
+        padding-right: 30px;
+    }
+
+    /* --- */
+
+    &__review {
+        /*margin: 20px 0;*/
+        padding: 20px 0;
+
+        & + .reviewsVK__review {
+            border-top: 1px solid;
+        }
+    }
+
+    /* --- */
+
+    &__owner {
+
+    }
+
+    &__username {
+        display: inline-block;
+        line-height: 1.2em;
+        margin: 15px 0;
+        vertical-align: middle;
+    }
+
+    &__photo {
+        border-radius: 50%;
+        margin-right: 20px;
+        vertical-align: middle;
+
+        &_50 {
+
+        }
+
+        &_100 {
+
+        }
+    }
+
+    &__name {
+
+        &_first {
+
+        }
+
+        &_last {
+
+        }
+    }
+
+    &__date {
+        color: #204255; /* #a2a2a2 */
+        font-size: 14px;
+        line-height: 1.2em;
+        /*display: inline-block;*/
+        display: block;
+        /*padding: 0 10px;*/
+    }
+
+    &__text {
+        margin-top: 10px;
+    }
+
+    /* --- */
+
+    &__getComments {
+
+    }
+}
