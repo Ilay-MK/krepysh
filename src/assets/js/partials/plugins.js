@@ -19,19 +19,17 @@ $(document).ready(function() {
 		return false;
 	});
 
-    $(document).ready(function() {
-		$(".fancybox").fancybox({
-            helpers : {
-                title : {
-                    type : 'over'
-                },
-                thumbs	: {
-                    width	: 50,
-                    height	: 50
-                }
+    $(".fancybox").fancybox({
+        helpers : {
+            title : {
+                type : 'over'
+            },
+            thumbs	: {
+                width	: 50,
+                height	: 50
             }
-        });
-	});
+        }
+    });
 
     /*elastislide*/
     $( '#carousel' ).elastislide({
@@ -154,22 +152,22 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
     /* [ITEMS]
     * Комментарий в обсуждении
     * --------
-    * {id} (integer)                         — идентификатор комментария.
-    * {from_id} (integer)                    — автора комментария.
-    * {date} (integer)                       — дата создания (в формате Unixtime).
-    * {text} (string)                        — комментария.
+    * {id}          (integer)                — идентификатор комментария.
+    * {from_id}     (integer)                — автора комментария.
+    * {date}        (integer)                — дата создания (в формате Unixtime).
+    * {text}        (string)                 — комментария.
     * {attachments} (object)                 — комментария (фотографии, ссылки и т.п.).
-    * {likes} (object)                       — информация об отметках «Мне нравится» текущего комментария
+    * {likes}       (object)                 — информация об отметках «Мне нравится» текущего комментария
     *                                          (если был задан параметр need_likes)
-    * {can_edit} (integer, [0,1])            - может ли изменить комментарий свой (от себя описание),
+    * {can_edit}    (integer, [0,1])         - может ли изменить комментарий свой (от себя описание),
     *                                          (1 — может, 0 — не может).
     * [likes]
     * информация об отметках «Мне нравится» текущего комментария
     * -------
-    * {count} (integer)                      — число пользователей, которым понравился комментарий,
-    * {user_likes} (integer, [0,1])          — наличие отметки «Мне нравится» от текущего пользователя
+    * {count}       (integer)                — число пользователей, которым понравился комментарий,
+    * {user_likes}  (integer, [0,1])         — наличие отметки «Мне нравится» от текущего пользователя
     *                                          (1 — есть, 0 — нет),
-    * {can_like} (integer, [0,1])            — информация о том, может ли текущий пользователь поставить отметку
+    * {can_like}    (integer, [0,1])         — информация о том, может ли текущий пользователь поставить отметку
     *                                          «Мне нравится» (1 — может, 0 — не может).
     */
 
@@ -204,6 +202,34 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
     * 14. Товар                              (type = market)
     * 15. Подборка товаров                   (type = market_album)
     * 16. Стикер                             (type = sticker)
+    */
+
+    /* [ATTACHMENTS: TYPE = PHOTO}]
+    * Фотография
+    * --------
+    * {id}          (integer)                — идентификатор фотографии.
+    * {album_id}    (integer)                — идентификатор альбома, в котором находится фотография.
+    * {owner_id}    (integer)                — идентификатор владельца фотографии.
+    * {user_id}     (integer)                — идентификатор пользователя, загрузившего фото
+    *                                          (если фотография размещена в сообществе).
+    *                                          Для фотографий, размещенных от имени сообщества,
+    *                                          user_id = 100.
+    * {text}        (string)                 — текст описания фотографии.
+    * {date}        (integer)                — дата добавления в формате Unixtime.
+    * {sizes}       (array)                  — массив с копиями изображения в разных размерах.
+    *                                          Описание объекта находится на отдельной странице.
+    *                                          Поле возвращается только при передаче параметра
+    *                                          photo_sizes = 1 в запросе.
+    *                                          Если параметр не передан, вместо поля sizes
+    *                                          возвращаются поля, описанные ниже.
+    * {photo_75}    string)                  — URL копии фотографии с максимальным размером 75x75px.
+    * {photo_130}   (string)                 — URL копии фотографии с максимальным размером 130x130px.
+    * {photo_604}   (string)                 — URL копии фотографии с максимальным размером 604x604px.
+    * {photo_807}   (string)                 — URL копии фотографии с максимальным размером 807x807px.
+    * {photo_1280}  (string)                 — URL копии фотографии с максимальным размером 1280x1024px.
+    * {photo_2560}  (string)                 — URL копии фотографии с максимальным размером 2560x2048px.
+    * {width}       (integer)                — ширина оригинала фотографии в пикселах.
+    * {height}      (integer)                — высота оригинала фотографии в пикселах.
     */
 
     /* ---------------------------------------------------------------------- */
@@ -265,12 +291,15 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
         ],
         month = month_ru;
 
-        var review_id_owner     = this.from_id,
+        var review_id           = this.id,
+            review_id_owner     = this.from_id,
             review_date         = new Date(this.date * 1000),
             review_text         = this.text,
             review_first_name,
             review_last_name,
             review_photo;
+
+        var reviewsVK__attachmentsPhotos = "";
 
         review_date.toUTCString();
         d = review_date;
@@ -291,6 +320,40 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
             }
         });
 
-        $reviewsBlock.append('<div class="reviewsVK__review"><div class="reviewsVK__owner"><img src="' + review_photo + '" alt="" class="reviewsVK__photo reviewsVK__photo_100"><p class="h3 reviewsVK__username"><span class="reviewsVK__name reviewsVK__name_first">' + review_first_name + '</span> <span class="reviewsVK__name reviewsVK__name_last">' + review_last_name + '</span><span class="reviewsVK__date">' + review_date + '</span></p></div><div class="reviewsVK__text">' + review_text + '</div></div>');
+        if (this.attachments) {
+            jQuery.each(this.attachments, function () {
+                /*
+                * this.type
+                * this.photo
+                * остальные типы не трогаем пока.
+                */
+
+                if (this.type === "photo") {
+                    /*
+                    * this.id
+                    * this.album_id
+                    * this.owner_id
+                    * this.user_id
+                    * this.photo_75
+                    * this.photo_130
+                    * this.photo_604
+                    * this.photo_807
+                    * this.photo_1280
+                    * this.width
+                    * this.height
+                    * this.text
+                    * this.date
+                    * this.access_key
+                    */
+
+                    reviewsVK__attachmentsPhotos += '<a href="' + this.photo.photo_1280 + '" class="fancybox" rel="reviewsVK__attachments-photo_' + review_id + '" title="' + this.photo.text + '"><img src="' + this.photo.photo_75 + '" class="img-responsive reviewsVK__attachments-photo" alt=""></a>';
+                }
+            });
+        }
+
+        $reviewsBlock.append('<div class="reviewsVK__review" data-review-id="' + review_id + '"><div class="reviewsVK__owner"><img src="' + review_photo + '" alt="" class="reviewsVK__photo reviewsVK__photo_100"><p class="h3 reviewsVK__username"><span class="reviewsVK__name reviewsVK__name_first">' + review_first_name + '</span> <span class="reviewsVK__name reviewsVK__name_last">' + review_last_name + '</span><span class="reviewsVK__date">' + review_date + '</span></p></div><div class="reviewsVK__text">' + review_text + '</div><div class="reviewsVK__attachments"><div class="reviewsVK__attachments-photos">' + reviewsVK__attachmentsPhotos + '</div></div></div>');
+
+        /*$reviewsBlock.append('<div class="reviewsVK__review"><div class="reviewsVK__owner"><img src="' + review_photo + '" alt="" class="reviewsVK__photo reviewsVK__photo_100"><p class="h3 reviewsVK__username"><span class="reviewsVK__name reviewsVK__name_first">' + review_first_name + '</span> <span class="reviewsVK__name reviewsVK__name_last">' + review_last_name + '</span><span class="reviewsVK__date">' + review_date + '</span></p></div><div class="reviewsVK__text">' + review_text + '</div></div>');*/
+
     });
 }
