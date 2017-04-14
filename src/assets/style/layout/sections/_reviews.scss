@@ -161,9 +161,10 @@
     /* --- */
 
     &__attachments {
+        margin-top: 10px;
 
         &-photos {
-            margin: 0 auto;
+            /*margin: 0 auto;*/
             max-width: 300px;
 
             .thumbnail {
