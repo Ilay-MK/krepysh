@@ -79,15 +79,12 @@
 
 }
 
-#getMoreReviews {
-    margin-top: 20px;
+#reviewsVK__getComments {
     width: 100% !important;
-    /* width: auto !important; */
 }
 
 /* New. On The BEM Methodology css */
 .reviewsVK {
-    display: none;
     margin: 20px 0 0;
 
     &__count {
@@ -193,6 +190,6 @@
     /* --- */
 
     &__getComments {
-
+        width: 100% !important;
     }
 }
