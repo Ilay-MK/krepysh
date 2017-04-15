@@ -92,7 +92,6 @@
     $utm_array = array (
         UTMTags::getUtm(UTMTags::UTM_SOURCE),
         UTMTags::getUtm(UTMTags::UTM_TERM),
-        UTMTags::getUtm(UTMTags::UTM_MEDIUM),
         UTMTags::getUtm(UTMTags::UTM_CONTENT)
     );
 ?>
