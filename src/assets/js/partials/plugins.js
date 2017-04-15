@@ -2,11 +2,13 @@
 
 /* Declaration of global variables */
 /* --- */
+var reviewsOldCount              = 15;   /* Кол-во старых отзывов */
+var vk_comments_firstBatch       = true; /* булево значение первой партии получения сообщения из VK */
 var vk_comments_offset           = 0;
-var vk_comments_сountRemoveWhole = 0;  /* Кол-во удалённых из отображения отзывов */
-var vk_comments_сount            = 15; /* Кол-во сообщений для получения */
-var vk_comments_сountReceived    = 0;  /* Фактическое количество полученных сообщений,
-                                          за вычетом отфильтрованных */
+var vk_comments_сountRemoveWhole = 0;    /* Кол-во удалённых из отображения отзывов */
+var vk_comments_сount            = 15;   /* Кол-во сообщений для получения */
+var vk_comments_сountReceived    = 0;    /* Фактическое количество полученных сообщений,
+                                            за вычетом отфильтрованных */
 /* --- */
 
 $(document).ready(function() {
@@ -302,6 +304,8 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
             review_last_name,
             review_photo;
 
+        var reviewSTR           = "";
+
         if( (review_id_owner == 369583216) || (review_id_owner == -123321202) ) {
             ++reviewsCountRemove;
             return;
@@ -376,9 +380,16 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
             });
         }
 
-        $reviewsBlock.append('<div class="reviewsVK__review" data-review-id="' + review_id + '"><div class="reviewsVK__owner"><img src="' + review_photo + '" alt="" class="reviewsVK__photo reviewsVK__photo_100"><p class="h3 reviewsVK__username"><span class="reviewsVK__name reviewsVK__name_first">' + review_first_name + '</span> <span class="reviewsVK__name reviewsVK__name_last">' + review_last_name + '</span><span class="reviewsVK__date">' + review_date + '</span></p></div><div class="reviewsVK__text">' + review_text + '</div><div class="reviewsVK__attachments"><div class="reviewsVK__attachments-photos">' + reviewsVK__attachmentsPhotos + '</div></div></div>');
-
         /*$reviewsBlock.append('<div class="reviewsVK__review"><div class="reviewsVK__owner"><img src="' + review_photo + '" alt="" class="reviewsVK__photo reviewsVK__photo_100"><p class="h3 reviewsVK__username"><span class="reviewsVK__name reviewsVK__name_first">' + review_first_name + '</span> <span class="reviewsVK__name reviewsVK__name_last">' + review_last_name + '</span><span class="reviewsVK__date">' + review_date + '</span></p></div><div class="reviewsVK__text">' + review_text + '</div></div>');*/
+
+        reviewSTR = '<div class="reviewsVK__review" data-review-id="' + review_id + '"><div class="reviewsVK__owner"><img src="' + review_photo + '" alt="" class="reviewsVK__photo reviewsVK__photo_100"><p class="h3 reviewsVK__username"><span class="reviewsVK__name reviewsVK__name_first">' + review_first_name + '</span> <span class="reviewsVK__name reviewsVK__name_last">' + review_last_name + '</span><span class="reviewsVK__date">' + review_date + '</span></p></div><div class="reviewsVK__text">' + review_text + '</div><div class="reviewsVK__attachments"><div class="reviewsVK__attachments-photos">' + reviewsVK__attachmentsPhotos + '</div></div></div>'
+
+        if (vk_comments_firstBatch) {
+            $("#reviewsVK__reviews_firstBatch").append(reviewSTR);
+        }
+        else {
+            $reviewsBlock.append(reviewSTR);
+        }
 
         ++vk_comments_сountReceived;
 
@@ -387,6 +398,8 @@ function onAjaxSuccessFromVK(data, textStatus, jqXHR) {
     vk_comments_offset           += vk_comments_сount;
     vk_comments_сountRemoveWhole += reviewsCountRemove;
 
-    $('#reviewsVK__count-whole').text( reviewscount );
-    $('#reviewsVK__count').text( vk_comments_сountReceived );
+    vk_comments_firstBatch        = false;
+
+    $('#reviewsVK__count-whole').text( reviewscount + reviewsOldCount );
+    $('#reviewsVK__count').text( vk_comments_сountReceived + reviewsOldCount );
 }
