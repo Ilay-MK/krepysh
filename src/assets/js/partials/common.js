@@ -310,14 +310,7 @@ $(document).ready(function () {
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - REVIEWS - - - - - - - - - - - - - - - */
 
-    /// Событие click() с отменой перехода по ссылке
-    $("#getMoreReviews").click(function (e) {
-        e.preventDefault();
 
-        $(this).fadeOut();
-
-        $("#reviewsVK").slideToggle();
-    });
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - FOOTER - - - - - - - - - - - - - - */
