@@ -13,11 +13,13 @@
     foreach($utm_array as $e) {
 
         if(!empty($_GET[$e])) {
-            $$e = $_GET[$e];
+            $param = $_GET[$e];
 
             /*
+            $$e = $_GET[$e];
+
             $pos2 = stripos($mystring2, $findme);
-            f ($pos2 !== false) {
+            if ($pos2 !== false) {
                 echo "Нашел '$findme' в '$mystring2' в позиции $pos2";
             }
 
@@ -32,9 +34,22 @@
             // выводит: APPLE
             */
 
+            /*
             if (array_key_exists($$e, $dynamic_keywords)) {
                 $addH1_geoloc = $dynamic_keywords[$$e];
-                break; /* отобразить 1 вхождение/совпадение */
+                break; // отобразить 1 вхождение/совпадение
+            }
+            */
+
+            while ($dynamic_keyword = current($dynamic_keywords)) {
+
+                if( ($temp = stripos($param, key($dynamic_keywords))) !== false )
+                {
+                    $addH1_geoloc = $dynamic_keyword;
+                    break; // отобразить 1 вхождение/совпадение
+                }
+
+                next($dynamic_keywords);
             }
         }
     }
