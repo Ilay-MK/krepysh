@@ -43,7 +43,7 @@
 
             while ($dynamic_keyword = current($dynamic_keywords)) {
 
-                if( ($temp = stripos($param, key($dynamic_keywords))) !== false )
+                if( ($temp = mb_stripos($param, key($dynamic_keywords))) !== false )
                 {
                     $addH1_geoloc = $dynamic_keyword;
                     break; // отобразить 1 вхождение/совпадение
