@@ -9,6 +9,7 @@
 
 <?php
     $addH1_geoloc = null;
+    $found = false;
 
     foreach($utm_array as $e) {
 
@@ -43,15 +44,19 @@
 
             while ($dynamic_keyword = current($dynamic_keywords)) {
 
-                if( ($temp = mb_stripos($param, key($dynamic_keywords))) !== false )
+                if( (mb_stripos($param, key($dynamic_keywords))) !== false )
                 {
                     $addH1_geoloc = $dynamic_keyword;
+                    $found = true;
                     break; // отобразить 1 вхождение/совпадение
                 }
 
                 next($dynamic_keywords);
             }
         }
+
+        if ($found) break;
+        reset($dynamic_keywords);
     }
 ?>
 
