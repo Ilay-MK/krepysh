@@ -2,12 +2,12 @@
 
 /* Declaration of global variables */
 /* --- */
-var reviewsOldCount              = 15;   /* Кол-во старых отзывов */
-var vk_comments_firstBatch       = true; /* булево значение первой партии получения сообщения из VK */
-var vk_comments_offset           = 0;
-var vk_comments_сountRemoveWhole = 0;    /* Кол-во удалённых из отображения отзывов */
-var vk_comments_сount            = 15;   /* Кол-во сообщений для получения */
-var vk_comments_сountReceived    = 0;    /* Фактическое количество полученных сообщений,
+/*var reviewsOldCount              = 15;*/   /* Кол-во старых отзывов */
+/*var vk_comments_firstBatch       = true;*/ /* булево значение первой партии получения сообщения из VK */
+/*var vk_comments_offset           = 0;*/
+/*var vk_comments_сountRemoveWhole = 0;*/    /* Кол-во удалённых из отображения отзывов */
+/*var vk_comments_сount            = 15;*/   /* Кол-во сообщений для получения */
+/*var vk_comments_сountReceived    = 0;*/    /* Фактическое количество полученных сообщений,
                                             за вычетом отфильтрованных */
 /* --- */
 
@@ -78,16 +78,16 @@ $(document).ready(function() {
 
     /* ---------------------------------------------------------------------- */
 
-    vkBoard__getComments(vk_comments_offset, vk_comments_сount);
+    /*vkBoard__getComments(vk_comments_offset, vk_comments_сount);*/
 
     /* ---------------------------------------------------------------------- */
 
     /// Событие click() с отменой перехода по ссылке
-    $("#reviewsVK__getComments").click(function (e) {
+    /*$("#reviewsVK__getComments").click(function (e) {
         e.preventDefault();
 
         vkBoard__getComments(vk_comments_offset, vk_comments_сount);
-    });
+    });*/
 });
 
 function vkBoard__getComments(real_offset, count) {
