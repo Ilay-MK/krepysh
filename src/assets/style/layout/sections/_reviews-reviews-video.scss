@@ -2,4 +2,6 @@
 
 #reviews-reviews-video {
     background-color: map-get($colors, "bp3");
+    /*height: 515px;*/
+    overflow: hidden;
 }
