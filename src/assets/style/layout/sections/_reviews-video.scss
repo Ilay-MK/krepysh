@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#reviews-video {
+    padding-top: 0;
+}
+
+.reviewsVideo {
+    /*margin: 20px 0 0;*/
+
+    &__count {
+
+        &-whole {
+
+        }
+    }
+
+    &__reviews {
+        max-height: 300px;
+        overflow-y: scroll;
+        margin: 10px 30px 30px;
+        padding-right: 30px;
+    }
+
+    /* --- */
+
+    &__review {
+
+    }
+}
