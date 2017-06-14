@@ -118,16 +118,21 @@
 
     }
 
-    &__username {
+    &__visual {
         display: inline-block;
-        line-height: 1.2em;
-        margin: 15px 0;
-        vertical-align: middle;
+        padding-right: 20px;
+        vertical-align: top;
+        @include size(120px, 100px);
+    }
+
+    &__data {
+        display: inline-block;
+        width: calc(100% - 120px);
+        vertical-align: top;
     }
 
     &__photo {
         border-radius: 50%;
-        margin-right: 20px;
         vertical-align: middle;
 
         &_50 {
@@ -135,8 +140,13 @@
         }
 
         &_100 {
-
+            @include size(100px);
         }
+    }
+
+    &__username {
+        line-height: 1.2em;
+        margin: 0 0 15px;
     }
 
     &__name {
@@ -150,13 +160,22 @@
         }
     }
 
+    &__teaser {
+        color: map-get($colors, "bp1");
+
+        &:before {
+            content: "«";
+        }
+
+        &:after {
+            content: "»";
+        }
+    }
+
     &__date {
-        color: #fff; /* 204255 | #a2a2a2 */
+        color: #fff;
         font-size: 14px;
         line-height: 1.2em;
-        /*display: inline-block;*/
-        display: block;
-        /*padding: 0 10px;*/
     }
 
     &__text {
