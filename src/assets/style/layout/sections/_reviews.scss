@@ -2,80 +2,6 @@
 
 #reviews {
     padding-top: 0;
-
-    hr {
-        margin: 0;
-    }
-
-    &-carousel-slider {
-
-    }
-
-    .glyphicon {
-
-        &:before, &:after {
-            margin: 0;
-        }
-    }
-
-    .carousel {
-
-        &-inner {
-            font-style: italic;
-            font-weight: 300;
-            min-height: 160px;
-            margin: 0 auto;
-            width: 60%;
-
-            hr {
-                border-top-color: rgba(lighten(map-get($colors, "bp3"), 10%), 0.5);
-                border-top-width: 2px;
-                margin: 10px auto;
-            }
-        }
-
-        &-control {
-            /*border-radius: 50%;
-            height: 160px;
-            width: 160px;*/
-            background: none;
-
-            &.left {
-                /*border-radius: 100px 0 0 100px;*/
-                /*border-radius: 150px 0 0 100px;*/
-                /*border-radius: 50% 0 0 50%;*/
-                /*background-image: linear-gradient(
-                    to right,
-                    rgba(map-get($colors, "b_w"),.5) 0,
-                    rgba(map-get($colors, "b_w"),.0001) 100%
-                );*/
-            }
-
-            &.right {
-                /*border-radius: 0 100px 100px 0;*/
-                /*border-radius: 0 150px 100px 0;*/
-                /*border-radius: 0 50% 50% 0;*/
-                /*background-image: linear-gradient(
-                    to left,
-                    rgba(map-get($colors, "b_w"),.5) 0,
-                    rgba(map-get($colors, "b_w"),.0001) 100%
-                );*/
-            }
-
-            span {
-                left: 46%;
-                top: 46%;
-            }
-        }
-
-        .review-number {
-
-            .allReview {
-                font-size: 0.7em;
-            }
-        }
-    }
-
 }
 
 #reviewsVK__getComments {
@@ -84,7 +10,7 @@
 
 /* New. On The BEM Methodology css */
 .reviewsVK {
-    margin: 20px 0 0;
+    /*margin: 20px 0 0;*/
 
     &__count {
 
