@@ -24,6 +24,48 @@
     /* --- */
 
     &__review {
+        height: 190px;
+        overflow: hidden;
+        padding: 20px 0;
 
+        &_first {
+            height: 292px;
+        }
+
+        & + .reviewsVideo__review {
+            border-top: 1px solid;
+        }
+
+        &-owner {
+            margin-top: 0; /*10px*/
+
+            text-decoration: underline;
+
+            &:after {
+                content: ":";
+            }
+        }
+    }
+
+    &__video {
+        &-player-container {
+            max-height: 150px;
+            @include size(100%, 100%);
+
+            &_first {
+                max-height: 252px;
+            }
+        }
+
+        &-data {
+            overflow-y: auto;
+            height: 130px;
+            margin: 10px auto;
+            padding-right: 30px;
+
+            &_first {
+                height: 232px;
+            }
+        }
     }
 }
