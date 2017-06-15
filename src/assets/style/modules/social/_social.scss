@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/// @BemEntryName: -=[ social ]=-.
+/// @description: блок социалок.
+.social {
+    text-align: center;
+
+    &__elem {
+        margin: 15px;
+    }
+
+    &__label {
+
+    }
+
+    &__icon {
+        display: block;
+
+        &_vk {
+
+        }
+
+        &_inst {
+
+        }
+
+        &_odnok {
+
+        }
+
+        &_f {
+
+        }
+    }
+}
