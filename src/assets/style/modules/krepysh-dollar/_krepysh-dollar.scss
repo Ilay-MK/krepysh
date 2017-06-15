@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/// @BemEntryName: -=[ krepysh-dollar ]=-.
+/// @description: блок Крепыш.Доллар.
+.krepysh-dollar {
+
+    &__media-container {
+
+    }
+
+    &__arrow {
+        background-image: url(../img/krepysh-dollar/arrow.png);
+        @include size(496px, 271px);
+
+        &_up {
+            @extend .mirrorY;
+        }
+
+        &_left {
+            @extend .mirrorX;
+        }
+    }
+}
