@@ -1,16 +1,105 @@
 @charset "UTF-8";
 
+/// @BemEntryName: -=[ krepysh-dollar__arrow-width ]=-.
+/// @description: ширина блока стрелки.
+$krepysh-dollar__arrow-width: 300px; /* 496px */
+
+/// @BemEntryName: -=[ krepysh-dollar__arrow-height ]=-.
+/// @description: высота блока стрелки.
+$krepysh-dollar__arrow-height: 131px; /* 271px */
+
 /// @BemEntryName: -=[ krepysh-dollar ]=-.
 /// @description: блок Крепыш.Доллар.
 .krepysh-dollar {
 
-    &__media-container {
+    .title__header {
 
+        .title-big {
+            display: inline;
+        }
+    }
+
+    .form-row {
+        /*margin-top: 30px;*/
+    }
+
+    &__visual {
+        position: relative;
+        /*margin-top: $krepysh-dollar__arrow-height;*/
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__video {
+        height: 270px; /* 400px */
+    }
+
+    &__text {
+        font-size: 1.28571em;
+        line-height: 1.5em;
+        margin: 15px auto;
+        text-indent: 25px;
+
+        &-header {
+            font-size: 2.5em;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    &__list-of-gifts {
+        text-align: center;
+        margin: 15px auto;
+
+        /// @name: -=[ breakpoint ]=-;
+        /// @description: функция-помошник работы с медиа запросами (breakpoints);
+        /// @prop: xs, sm, md, lg (bootstrap);
+        /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
+        @include breakpoint($maxWidth: 1199px, $minWidth: 992px) {
+            margin-top: 29px;
+            text-align: right;
+        }
+
+        .btn {
+            /// @name: -=[ breakpoint ]=-;
+            /// @description: функция-помошник работы с медиа запросами (breakpoints);
+            /// @prop: xs, sm, md, lg (bootstrap);
+            /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
+            @include breakpoint($maxWidth: 1199px, $minWidth: 992px) {
+                margin-right: 69px;
+            }
+        }
+    }
+
+    &__form {
+        /*position: relative;
+        top: -30px;*/
+        margin: 30px auto 15px;
+
+        /// @name: -=[ breakpoint ]=-;
+        /// @description: функция-помошник работы с медиа запросами (breakpoints);
+        /// @prop: xs, sm, md, lg (bootstrap);
+        /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
+        @include breakpoint(lg) {
+            margin-top: 15px;
+        }
     }
 
     &__arrow {
         background-image: url(../img/krepysh-dollar/arrow.png);
-        @include size(496px, 271px);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include size($krepysh-dollar__arrow-width, $krepysh-dollar__arrow-height);
+        position: absolute;
+        right: -$krepysh-dollar__arrow-width/2;
+        top: -$krepysh-dollar__arrow-height;
 
         &_up {
             @extend .mirrorY;
