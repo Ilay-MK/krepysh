@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/// @BemEntryName: -=[ mirror ]=-.
+/// @description: зеркально отражение.
+.mirror {
+    transform: scale(-1, -1) // одновременное отражение по горизонтали и вертикали.
+
+    &Y {
+        transform: scale(1, -1); // отражение по вертикали
+    }
+
+    &X {
+        transform: scale(-1, 1); // отражение по горизонтали
+    }
+}
