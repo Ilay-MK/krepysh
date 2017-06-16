@@ -356,6 +356,20 @@ $(document).ready(function () {
         );
     }, 5000);*/
 
+    var navActive;
+
+    $('.lava .lava__elem').hover(
+        function () {
+            navActive = $('.lava .lava__elem.active');
+            navActive.removeClass("active");
+            $(this).addClass("active");
+        },
+        function () {
+            $(this).removeClass("active");
+            navActive.addClass("active");
+        }
+    );
+
 });
 
 /*
