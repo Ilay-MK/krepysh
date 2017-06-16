@@ -370,6 +370,48 @@ $(document).ready(function () {
         }
     );
 
+    /*$('#gallery .thumbnail').click(function (e) {
+        e.preventDefault();
+
+        $('#galleryModal .modal-body').empty();
+
+        var title = $(this).attr("title");
+
+        $('#galleryModal .modal-title').html(title);
+
+        $($(this).parents('div').html()).appendTo('#galleryModal .modal-body');
+
+        $('#galleryModal').modal({
+            show: true
+        });
+    });*/
+
+    $('#gallery__albums .thumbnail').click(function (e) {
+        e.preventDefault();
+        var target;
+
+        target = $(this).attr("data-target");
+
+        if(target === undefined || target == "") return;
+
+        $(this).closest("#gallery__albums").fadeOut();
+        $("#gallery__album_" + target).fadeIn();
+    });
+
+    $('#gallery .gallery__img_return').click(function (e) {
+        e.preventDefault();
+        var target;
+
+        target = $(this).attr("data-target");
+
+        $(this).closest(".gallery__container").fadeOut();
+        $("#gallery__albums").fadeIn();
+
+        $.scrollTo("#gallery__albums", 800, {
+			offset: -125
+		});
+    });
+
 });
 
 /*
