@@ -13,34 +13,6 @@
 
 $(document).ready(function() {
 
-    // Скроллинг
-    $(".scrollTo").click(function () {
-        $.scrollTo($(this).attr('href'), 800, {
-			offset: -51
-		});
-        //$('.navbar-toggle').click();*/ /*для того, чтобы свернуть менюшку для удобства
-		return false;
-	});
-
-    $(".fancybox").fancybox({
-        helpers : {
-            title : {
-                type : 'over'
-            },
-            thumbs	: {
-                width	: 50,
-                height	: 50
-            }
-        }
-    });
-
-    /* mask of inputs */
-    $.mask.definitions['~']='[+-]';
-    $.mask.definitions['h'] = "[1234579]";
-    $.mask.definitions['!'] = "[0-9]";
-
-    $(".bsPhone").mask("+375 (hh) 999-99-99", { placeholder:"_" });
-
     /* ---------------------------------------------------------------------- */
 
     /*vkBoard__getComments(vk_comments_offset, vk_comments_сount);*/
