@@ -1,1 +1,2 @@
-
+//= getUrlVars.js
+//= getPageSize.js
