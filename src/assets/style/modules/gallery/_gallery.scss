@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/// @varName: -=[ galleryImgs_count-* ]=-.
+/// @description: количество картинок.
+$galleryImgs_count-asanalieva: 15;
+$galleryImgs_count-pobediteley: 15;
+$galleryImgs_count-sedih: 13;
+$galleryImgs_count-slobodskaya: 13;
+$galleryImgs_count-vaneeva: 12;
+
+$galleryImgs_count-chailitko: 6;
+
+#gallery__albums {
+
+}
+
+#gallery__album {
+    &_asanalieva {
+
+    }
+    &_pobediteley {
+
+    }
+    &_sedih {
+
+    }
+    &_slobodskaya {
+
+    }
+    &_vaneeva {
+
+    }
+
+    &_chailitko {
+
+    }
+}
+
+/// @BemEntryName: -=[ gallery ]=-.
+/// @description: сущность галерея.
+.gallery {
+
+    &__container {
+
+    }
+
+    /* --- */
+    /* albums */
+    /* --- */
+
+    &__album {
+        &_asanalieva {
+            background-image: url(../img/gallery/asanalieva.jpg);
+        }
+        &_pobediteley {
+            background-image: url(../img/gallery/pobediteley.jpg);
+        }
+        &_sedih {
+            background-image: url(../img/gallery/sedih.jpg);
+        }
+        &_slobodskaya {
+            background-image: url(../img/gallery/slobodskaya.jpg);
+        }
+        &_vaneeva {
+            background-image: url(../img/gallery/vaneeva.jpg);
+        }
+
+        &_chailitko {
+            background-image: url(../img/gallery/chailitko.jpg);
+        }
+
+        /* --- */
+        &-photos {
+            display: none;
+        }
+    }
+
+    /* --- */
+    /* /albums */
+    /* --- */
+
+    &__img {
+        /*max-height: 350px;
+        max-width: 600px;*/
+        background-clip: content-box;
+        background-origin: content-box;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        margin: 10px;
+        @include size(calc(100% - 20px), 160px);
+        @include transition();
+
+        &:hover {
+            box-shadow: 0 0 10px 2px rgb(183, 183, 183);
+        }
+
+        &_return {
+            /*background-image: url(../imgs);*/
+            display: block;
+            font-size: 7.5em;
+            text-align: center;
+        }
+
+        /* --- */
+        /* album's photo */
+        /* --- */
+
+        /* asanalieva */
+        @for $i from 1 through $galleryImgs_count-asanalieva {
+            &_asanalieva_#{$i} {
+                background-image: url(../img/gallery/asanalieva/#{$i}.jpg);
+            }
+        }
+        /* pobediteley */
+        @for $i from 1 through $galleryImgs_count-pobediteley {
+            &_pobediteley_#{$i} {
+                background-image: url(../img/gallery/pobediteley/#{$i}.jpg);
+            }
+        }
+        /* sedih */
+        @for $i from 1 through $galleryImgs_count-sedih {
+            &_sedih_#{$i} {
+                background-image: url(../img/gallery/sedih/#{$i}.jpg);
+            }
+        }
+        /* slobodskaya */
+        @for $i from 1 through $galleryImgs_count-slobodskaya {
+            &_slobodskaya_#{$i} {
+                background-image: url(../img/gallery/slobodskaya/#{$i}.jpg);
+            }
+        }
+        /* vaneeva */
+        @for $i from 1 through $galleryImgs_count-vaneeva {
+            &_vaneeva_#{$i} {
+                background-image: url(../img/gallery/vaneeva/#{$i}.jpg);
+            }
+        }
+
+        /* chailitko */
+        @for $i from 1 through $galleryImgs_count-chailitko {
+            &_chailitko_#{$i} {
+                background-image: url(../img/gallery/chailitko/#{$i}.jpg);
+            }
+        }
+
+        /* --- */
+        /* / album's photo */
+        /* --- */
+    }
+}
