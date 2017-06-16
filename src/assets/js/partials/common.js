@@ -295,17 +295,6 @@ $(document).ready(function () {
     });
     */
 
-    if (getPageSize()[2] > 767) {
-        /* inview  */
-        jQuery('#addresses dd').bind('inview', function (event, visible) {
-            if (visible) {
-                $(this).animateCss('rotateInUpLeft');
-            } else {
-                /*$(this).stop().removeClass("animated rotateInUpLeft");*/
-            }
-        });
-    }
-
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - - REVIEWS - - - - - - - - - - - - - - - */
