@@ -3,5 +3,7 @@
 /// @sectionName: -=[ gallery ]=-.
 /// @description: секция галереи.
 #gallery {
-
+    color: map-get($colors, "bp2");
+    padding-top: 0;
+    /* --- */
 }
