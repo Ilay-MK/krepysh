@@ -3,8 +3,8 @@
 /// @description: lava.
 
 #menu_main {
-    background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);
-    background: -webkit-gradient(linear, left center, right center, from(red), color-stop(14%, orange), color-stop(28%, yellow), color-stop(42%, green), color-stop(56%, blue), color-stop(70%, indigo), to(violet));
+    background: -moz-linear-gradient(left, #c34e4e, #d09d40, #e2e23c, #3a933a, #4040b9, #613680, #d187d1);
+    background: -webkit-gradient(linear, left center, right center, from(#c34e4e), color-stop(14%, #d09d40), color-stop(28%, #e2e23c), color-stop(42%, #3a933a), color-stop(56%, #4040b9), color-stop(70%, #613680), to(#d187d1));
     text-align: center;
     width: 100%;
 }
@@ -23,11 +23,14 @@
         &.active {
 
             .lava__link {
-                background-color: rgba(0, 0, 217, 0.8) !important;
-                box-shadow: 0 0 10px 15px rgba(0, 0, 217, 0.8);
+                background-color: rgb(80, 82, 204) !important;
+                /*box-shadow: 0 0 10px 15px rgb(80, 82, 204);*/
+                box-shadow: 0 3px 6px 12px #5052cc;
                 color: map-get($colors, "bp1") !important;
-                padding: 5px 25px !important;
-                margin: 0 20px;
+                font-size: 16px;
+                font-weight: 700;
+                padding: 5px 20px !important;
+                margin: 0 15px;
                 transform: scale(1.1);
             }
         }
@@ -41,6 +44,7 @@
     }
     &__link {
         color: white !important;
+        font-size: 14px;
         padding: 5px 15px !important;
         transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
         transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
