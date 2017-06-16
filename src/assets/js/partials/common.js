@@ -408,6 +408,10 @@ function toDoScroll() {
                 $("#utpScroll-btn").fadeIn();
             }
 
+            if (getPageSize()[2] < 992) {
+                $("#utpScroll-btn").css("display", "none");
+            }
+
             if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
                 $("#header img.logo").css("display", "block");
                 $("#utpScroll").css("display", "none");
@@ -428,12 +432,12 @@ function toDoScroll() {
             }
 
             if (getPageSize()[2] > 599) {
-                $("#utpScroll-btn").fadeIn();
+                /*$("#utpScroll-btn").fadeIn();*/
             }
 
             if (getPageSize()[2] < 600 && getPageSize()[2] > 416) {
-                $("#callMe").css("display", "inline-block");
-                $(".navbar-brand").css("display", "inline-block");
+                $("#callMe").css("display", "none");
+                $(".navbar-brand").css("display", "none");
                 $("#utpScroll-btn").css("display", "none");
                 $("#header img.logo").css("display", "block");
             }
@@ -477,16 +481,16 @@ function toDoScroll() {
             if (getPageSize()[2] < 768 && getPageSize()[2] > 599) {
                 $("#header .phone a.btn").css("padding", "14px 15px");
                 $("#header .phone a .fa").css("display", "inline-block");
-                $("#header img.logo").css("display", "block");
+                $("#header img.logo").css("display", "none");
                 $("#callMe").css("display", "inline-block");
                 $(".navbar-brand").css("display", "inline-block");
             }
 
             if (getPageSize()[2] < 600 && getPageSize()[2] > 416) {
-                $("#callMe").css("display", "inline-block");
+                $("#callMe").css("display", "none");
                 $(".navbar-brand").css("display", "inline-block");
                 $("#utpScroll-btn").css("display", "none");
-                $("#header img.logo").css("display", "block");
+                $("#header img.logo").css("display", "none");
             }
 
             if (getPageSize()[2] > 416) {

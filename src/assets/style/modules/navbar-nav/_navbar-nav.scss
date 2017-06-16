@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/// @BemEntryName: -=[ navbar-nav ]=-.
+/// @description: навигационный бар.
+.navbar-nav {
+    @include transition();
+
+    &_nav {
+        display: inline-block;
+        float: none !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        padding: 15px 0;
+    }
+}
