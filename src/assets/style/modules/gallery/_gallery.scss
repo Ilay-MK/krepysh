@@ -3,10 +3,23 @@
 /// @varName: -=[ galleryImgs_count-* ]=-.
 /// @description: количество картинок.
 $galleryImgs_count-asanalieva: 15;
+$galleryImgs_count-bogdanovicha: 16;
+$galleryImgs_count-gerasimenko: 15;
+$galleryImgs_count-ilimskaya: 16;
+$galleryImgs_count-kalinovskogo: 17;
+$galleryImgs_count-kozlova: 16;
+$galleryImgs_count-landera: 13;
+$galleryImgs_count-mazurova: 12;
+$galleryImgs_count-mstislavca: 15;
+$galleryImgs_count-narodnaya: 15;
 $galleryImgs_count-pobediteley: 15;
+$galleryImgs_count-radialnaya: 16;
 $galleryImgs_count-sedih: 13;
+$galleryImgs_count-shirokaya: 13;
 $galleryImgs_count-slobodskaya: 13;
+$galleryImgs_count-uborevicha: 14;
 $galleryImgs_count-vaneeva: 12;
+$galleryImgs_count-yakubovskogo: 14;
 
 $galleryImgs_count-chailitko: 6;
 
@@ -52,21 +65,56 @@ $galleryImgs_count-chailitko: 6;
         &_asanalieva {
             background-image: url(../img/gallery/asanalieva.jpg);
         }
+        &_bogdanovicha {
+            background-image: url(../img/gallery/bogdanovicha.jpg);
+        }
+        &_gerasimenko {
+            background-image: url(../img/gallery/gerasimenko.jpg);
+        }
+        &_ilimskaya {
+            background-image: url(../img/gallery/ilimskaya.jpg);
+        }
+        &_kalinovskogo {
+            background-image: url(../img/gallery/kalinovskogo.jpg);
+        }
+        &_kozlova {
+            background-image: url(../img/gallery/kozlova.jpg);
+        }
+        &_landera {
+            background-image: url(../img/gallery/landera.jpg);
+        }
+        &_mazurova {
+            background-image: url(../img/gallery/mazurova.jpg);
+        }
+        &_mstislavca {
+            background-image: url(../img/gallery/mstislavca.jpg);
+        }
+        &_narodnaya {
+            background-image: url(../img/gallery/narodnaya.jpg);
+        }
         &_pobediteley {
             background-image: url(../img/gallery/pobediteley.jpg);
+        }
+        &_radialnaya {
+            background-image: url(../img/gallery/radialnaya.jpg);
         }
         &_sedih {
             background-image: url(../img/gallery/sedih.jpg);
         }
+        &_shirokaya {
+            background-image: url(../img/gallery/shirokaya.jpg);
+        }
         &_slobodskaya {
             background-image: url(../img/gallery/slobodskaya.jpg);
+        }
+        &_uborevicha {
+            background-image: url(../img/gallery/uborevicha.jpg);
         }
         &_vaneeva {
             background-image: url(../img/gallery/vaneeva.jpg);
         }
-
-        &_chailitko {
-            background-image: url(../img/gallery/chailitko.jpg);
+        &_yakubovskogo {
+            background-image: url(../img/gallery/yakubovskogo.jpg);
         }
 
         /* --- */
@@ -113,16 +161,82 @@ $galleryImgs_count-chailitko: 6;
                 background-image: url(../img/gallery/asanalieva/#{$i}.jpg);
             }
         }
+        /* bogdanovicha */
+        @for $i from 1 through $galleryImgs_count-bogdanovicha {
+            &_bogdanovicha_#{$i} {
+                background-image: url(../img/gallery/bogdanovicha/#{$i}.jpg);
+            }
+        }
+        /* gerasimenko */
+        @for $i from 1 through $galleryImgs_count-gerasimenko {
+            &_gerasimenko_#{$i} {
+                background-image: url(../img/gallery/gerasimenko/#{$i}.jpg);
+            }
+        }
+        /* ilimskaya */
+        @for $i from 1 through $galleryImgs_count-ilimskaya {
+            &_ilimskaya_#{$i} {
+                background-image: url(../img/gallery/ilimskaya/#{$i}.jpg);
+            }
+        }
+        /* kalinovskogo */
+        @for $i from 1 through $galleryImgs_count-kalinovskogo {
+            &_kalinovskogo_#{$i} {
+                background-image: url(../img/gallery/kalinovskogo/#{$i}.jpg);
+            }
+        }
+        /* kozlova */
+        @for $i from 1 through $galleryImgs_count-kozlova {
+            &_kozlova_#{$i} {
+                background-image: url(../img/gallery/kozlova/#{$i}.jpg);
+            }
+        }
+        /* landera */
+        @for $i from 1 through $galleryImgs_count-landera {
+            &_landera_#{$i} {
+                background-image: url(../img/gallery/landera/#{$i}.jpg);
+            }
+        }
+        /* mazurova */
+        @for $i from 1 through $galleryImgs_count-mazurova {
+            &_mazurova_#{$i} {
+                background-image: url(../img/gallery/mazurova/#{$i}.jpg);
+            }
+        }
+        /* mstislavca */
+        @for $i from 1 through $galleryImgs_count-mstislavca {
+            &_mstislavca_#{$i} {
+                background-image: url(../img/gallery/mstislavca/#{$i}.jpg);
+            }
+        }
+        /* narodnaya */
+        @for $i from 1 through $galleryImgs_count-narodnaya {
+            &_narodnaya_#{$i} {
+                background-image: url(../img/gallery/narodnaya/#{$i}.jpg);
+            }
+        }
         /* pobediteley */
         @for $i from 1 through $galleryImgs_count-pobediteley {
             &_pobediteley_#{$i} {
                 background-image: url(../img/gallery/pobediteley/#{$i}.jpg);
             }
         }
+        /* radialnaya */
+        @for $i from 1 through $galleryImgs_count-radialnaya {
+            &_radialnaya_#{$i} {
+                background-image: url(../img/gallery/radialnaya/#{$i}.jpg);
+            }
+        }
         /* sedih */
         @for $i from 1 through $galleryImgs_count-sedih {
-            &_sedih_#{$i} {
+            &_radialnaya_#{$i} {
                 background-image: url(../img/gallery/sedih/#{$i}.jpg);
+            }
+        }
+        /* shirokaya */
+        @for $i from 1 through $galleryImgs_count-shirokaya {
+            &_shirokaya_#{$i} {
+                background-image: url(../img/gallery/shirokaya/#{$i}.jpg);
             }
         }
         /* slobodskaya */
@@ -131,17 +245,22 @@ $galleryImgs_count-chailitko: 6;
                 background-image: url(../img/gallery/slobodskaya/#{$i}.jpg);
             }
         }
+        /* uborevicha */
+        @for $i from 1 through $galleryImgs_count-uborevicha {
+            &_uborevicha_#{$i} {
+                background-image: url(../img/gallery/uborevicha/#{$i}.jpg);
+            }
+        }
         /* vaneeva */
         @for $i from 1 through $galleryImgs_count-vaneeva {
             &_vaneeva_#{$i} {
                 background-image: url(../img/gallery/vaneeva/#{$i}.jpg);
             }
         }
-
-        /* chailitko */
-        @for $i from 1 through $galleryImgs_count-chailitko {
-            &_chailitko_#{$i} {
-                background-image: url(../img/gallery/chailitko/#{$i}.jpg);
+        /* yakubovskogo */
+        @for $i from 1 through $galleryImgs_count-yakubovskogo {
+            &_yakubovskogo_#{$i} {
+                background-image: url(../img/gallery/yakubovskogo/#{$i}.jpg);
             }
         }
 
