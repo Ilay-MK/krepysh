@@ -33,6 +33,37 @@
                 padding: 5px 20px !important;
                 margin: 0 15px;
                 transform: scale(1.1);
+
+                &_1 {
+                    background-color: #cccc50 !important;
+                    box-shadow: 0 3px 6px 12px #cccc50;
+                    color: #5052cc !important;
+                }
+                &_2 {
+                    background-color: #248d30 !important;
+                    box-shadow: 0 3px 6px 12px #248d30;
+                    color: #ffffff !important;
+                }
+                &_3 {
+                    background-color: #3C6E72 !important;
+                    box-shadow: 0 3px 6px 12px #3C6E72;
+                    color: #ffffff !important;
+                }
+                &_4 {
+                    background-color: rgb(80, 82, 204) !important;
+                    box-shadow: 0 3px 6px 12px #5052cc;
+                    color: map-get($colors, "bp1") !important;
+                }
+                &_5 {
+                    background-color: #551fd0 !important;
+                    box-shadow: 0 3px 6px 12px #551fd0;
+                    color: #ffffff !important
+                }
+                &_6 {
+                    background-color: #a150cc !important;
+                    box-shadow: 0 3px 6px 12px #a150cc;
+                    color: #ffffff !important;
+                }
             }
         }
 
