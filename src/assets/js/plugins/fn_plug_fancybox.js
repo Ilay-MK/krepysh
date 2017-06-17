@@ -12,6 +12,12 @@
 
 $(function () {
 
+    /*/// Событие click() с отменой перехода по ссылке
+    $(".fancybox-inner").click(function (e) {
+        e.preventDefault();
+
+    });*/
+
     /*
 
     	Advanced example - Customized layout
@@ -37,11 +43,54 @@ $(function () {
             'fullScreen',
         ],
         animationEffect: false,
+        // Закрывать при клике по свободной области за пределами
         closeClickOutside: false,
+        // Картинки
+        image: {
+            // Ожидать ли полной загрузки картинки перед показом
+            preload: "auto",
+            // Защитить картинки от скачивания правым кликом
+            protect: true
+        },
+
+        // Clicked on the content
+        clickContent : function( current, event ) {
+            return current.type === 'image' ? 'zoom' : false;
+        },
+
+        // Clicked on the slide
+        clickSlide : 'close',
+
+        // Clicked on the background (backdrop) element
+        clickOutside : 'false',
+
+        // Same as previous two, but for double click
+        dblclickContent : false,
+        dblclickSlide   : false,
+        dblclickOutside : false,
+
+
+        // Custom options when mobile device is detected
+        // =============================================
+
+        mobile : {
+            clickContent : function( current, event ) {
+                return current.type === 'image' ? 'toggleControls' : false;
+            },
+            clickSlide : function( current, event ) {
+                return current.type === 'image' ? 'toggleControls' : "close";
+            },
+            dblclickContent : function( current, event ) {
+                return current.type === 'image' ? 'zoom' : false;
+            },
+            dblclickSlide : function( current, event ) {
+                return current.type === 'image' ? 'zoom' : false;
+            }
+        },
 
         // Customize caption area - append an advertisement
         caption: function (instance) {
-            var advert = '<div class="ad"><p><a href="//fancyapps.com/fancybox/">fancyBox3</a> - touch enabled, responsive and fully customizable lightbox script</p></div>';
+            var advert = '<div class="ad"><button type="button" class="btn btn-primary1 center-block" data-toggle="modal" data-target="#modalOrder" data-service="Галерея" role="button" onclick="$.fancybox.close();"><span>Оставить заявку</span></button></div>';
 
             return advert + ($(this).data('caption') || '');
         }
