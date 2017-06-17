@@ -481,7 +481,7 @@ function toDoScroll() {
             }
 
             if (getPageSize()[2] < 768 && getPageSize()[2] > 599) {
-                $("#header img.logo").css("display", "none");
+                $("#header img.logo").css("display", "none !important");
                 $("#header .phone a .fa").css("display", "none");
                 $("#header .phone a.btn").css("padding", "14px 9px");
                 $(".navbar-brand").css("display", "none");
@@ -495,10 +495,11 @@ function toDoScroll() {
                 $("#callMe").css("display", "none");
                 $(".navbar-brand").css("display", "none");
                 $("#utpScroll-btn").css("display", "none");
-                $("#header img.logo").css("display", "block");
+                $("#header img.logo").css("display", "none !important");
             }
 
             if (getPageSize()[2] < 417) {
+                $("#header img.logo").css("display", "none !important");
                 $("#header .phone a .fa").css("display", "none");
                 $("#header .phone a.btn").css("padding", "14px 9px");
             }
@@ -537,7 +538,7 @@ function toDoScroll() {
             if (getPageSize()[2] < 768 && getPageSize()[2] > 599) {
                 $("#header .phone a.btn").css("padding", "14px 15px");
                 $("#header .phone a .fa").css("display", "inline-block");
-                $("#header img.logo").css("display", "none");
+                $("#header img.logo").css("display", "none !important");
                 $("#callMe").css("display", "inline-block");
                 $(".navbar-brand").css("display", "inline-block");
             }
@@ -546,7 +547,7 @@ function toDoScroll() {
                 $("#callMe").css("display", "none");
                 $(".navbar-brand").css("display", "inline-block");
                 $("#utpScroll-btn").css("display", "none");
-                $("#header img.logo").css("display", "none");
+                $("#header img.logo").css("display", "none !important");
             }
 
             if (getPageSize()[2] > 416) {
