@@ -154,7 +154,7 @@ $galleryImgs_count-chailitko: 6;
             /*background-image: url(../imgs);*/
             display: block;
             /*font-size: 7.5em;*/
-            font-size: 1.3em;
+            font-size: 1.53em;
             text-align: center;
 
             /// @name: -=[ breakpoint ]=-;
@@ -162,8 +162,16 @@ $galleryImgs_count-chailitko: 6;
             /// @prop: xs, sm, md, lg (bootstrap);
             /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
             @include breakpoint(xs) {
-                font-size: 1.1em;
+                font-size: 1.75em;
             }
+
+            /// @name: -=[ breakpoint ]=-;
+            /// @description: функция-помошник работы с медиа запросами (breakpoints);
+            /// @prop: xs, sm, md, lg (bootstrap);
+            /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
+            /*@include breakpoint($maxWidth: map-get($breakpoints, "md-max"), $minWidth: map-get($breakpoints, "sm-min")) {
+                font-size: 1.53em;
+            }*/
 
             .fa {
                 display: block;
