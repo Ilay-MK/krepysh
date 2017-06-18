@@ -90,7 +90,7 @@ $(function () {
 
         // Customize caption area - append an advertisement
         caption: function (instance) {
-            var advert = '<div class="ad"><button type="button" class="btn btn-primary1 center-block" data-toggle="modal" data-target="#modalOrder" data-service="Галерея" role="button" onclick="$.fancybox.close();"><span>Оставить заявку</span></button></div>';
+            var advert = '<div class="ad"><div class="h5 text-uppercase text-center">Записаться на пробное занятие</div><button type="button" class="btn btn-primary1 center-block" data-toggle="modal" data-target="#modalOrder" data-service="Галерея" role="button" onclick="$.fancybox.close();"><span>Оставить заявку</span></button></div>';
 
             return advert + ($(this).data('caption') || '');
         }

@@ -34,6 +34,7 @@
 	*/
 
 	.ad {
+        color: #000 !important;
 		display: none;
 	}
 
@@ -63,7 +64,8 @@
 			left: auto;
 			width: 300px;
 			padding: 0;
-			background: #FF6666;
+			background: #fff; /* #FF6666 */
+            color: #000;
 		}
 
 		/* Adjust content area and right arrow position */
@@ -77,6 +79,7 @@
 		.fancybox-custom-layout .fancybox-caption {
 		    padding: 30px 20px;
 		    border: 0;
+            color: #000;
 		}
 
 		/* Align buttons at the right side  */
