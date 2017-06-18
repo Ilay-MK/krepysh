@@ -24,7 +24,6 @@
 
             .lava__link {
                 background-color: #3E6088 !important;
-                opacity: 1;
                 /*box-shadow: 0 0 10px 15px #3E6088;*/
                 box-shadow: 0 3px 6px 12px #5052cc;
                 color: map-get($colors, "bp1") !important;
@@ -86,8 +85,6 @@
         &_6 {}
     }
     &__link {
-
-        opacity: 0.8;
         font-size: 14px;
         padding: 5px 15px !important;
         transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
