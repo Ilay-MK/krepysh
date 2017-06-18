@@ -372,6 +372,10 @@ $(document).ready(function () {
 
         $(this).closest("#gallery__albums").fadeOut();
         $("#gallery__album_" + target).fadeIn();
+
+        $.scrollTo("#gallery__album_" + target, 800, {
+			offset: -125
+		});
     });
 
     $('#gallery .gallery__img_return').click(function (e) {
