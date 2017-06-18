@@ -177,11 +177,6 @@ $(document).ready(function () {
     });*/
 
     /* Разовое исполнение */
-    $('#advantages .photos').one('inview', function (event) {
-        $(this).css("opacity", 1).animateCss('fadeInRight'); /*slideInLeft|fadeInLeft*/
-    });
-
-    /* Разовое исполнение */
     /*$('#advantages .video').one('inview', function (event) {
         $(this).css("opacity", 1).animateCss('bounceIn');
     });*/
@@ -234,19 +229,11 @@ $(document).ready(function () {
 
     if (getPageSize()[2] > 767) {
         /* inview  */
-        jQuery('#coaches .item-square-3').bind('inview', function (event, visible) {
-            if (visible) {
-                $(this).animateCss('flipInY');
-            } else {
-                /*$(this).stop().removeClass("animated flipInY");*/
-            }
+        /* Разовое исполнение */
+        jQuery('#coaches .item-square-3').one('inview', function (event) {
+            $(this).css("opacity", 1).animateCss('flipInY');
         });
     }
-
-    /* Разовое исполнение */
-    $('#coaches .item-circled-3').one('inview', function (event) {
-        $(this).css("opacity", 1).animateCss('rotateInUpRight');
-    });
 
     $("#coaches-main-button").click(function () {
         yaCounter38441125.reachGoal('COACHES-MAIN-BUTTON');
@@ -269,17 +256,6 @@ $(document).ready(function () {
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - SOLUTION - - - - - - - - - - - - - - - */
-
-    if (getPageSize()[2] > 767) {
-        /* inview  */
-        jQuery('#solution .solution').bind('inview', function (event, visible) {
-            if (visible) {
-                $(this).animateCss('bounceIn');
-            } else {
-                /*$(this).stop().removeClass("animated bounceIn");*/
-            }
-        });
-    }
 
     /* Разовое исполнение */
     $('#solution .solution-result').one('inview', function (event) {
