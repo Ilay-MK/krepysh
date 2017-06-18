@@ -374,7 +374,7 @@ $(document).ready(function () {
         $("#gallery__album_" + target).fadeIn();
 
         $.scrollTo("#gallery__album_" + target, 800, {
-			offset: -125
+			offset: -100
 		});
     });
 
@@ -388,7 +388,7 @@ $(document).ready(function () {
         $("#gallery__albums").fadeIn();
 
         $.scrollTo("#gallery__albums", 800, {
-			offset: -125
+			offset: -100
 		});
     });
 
