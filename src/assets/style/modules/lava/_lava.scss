@@ -25,53 +25,59 @@
             .lava__link {
                 background-color: #3E6088 !important;
                 /*box-shadow: 0 0 10px 15px #3E6088;*/
-                box-shadow: 0 3px 6px 12px #5052cc;
+                box-shadow: 0 1px 5px 3px #DED23D;
                 color: map-get($colors, "bp1") !important;
-                font-size: 16px;
                 font-weight: 700;
-                padding: 5px 20px !important;
-                margin: 0 15px;
-                transform: scale(1.1);
+
+                /// @name: -=[ breakpoint ]=-;
+                /// @description: функция-помошник работы с медиа запросами (breakpoints);
+                /// @prop: xs, sm, md, lg (bootstrap);
+                /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
+                @include breakpoint($minWidth: map-get($breakpoints, "md-min")) {
+                    box-shadow: 0 1px 5px 8px #5052cc;
+                    font-size: 16px;
+                    padding: 5px 20px !important;
+                }
 
                 &_1 {
                     background-color: #CC8345 !important;
-                    box-shadow: 0 3px 6px 12px #CC8345;
+                    box-shadow: 0 1px 5px 3px #CC8345;
                     color: #fff !important;
                 }
                 &_2 {
                     background-color: #DED23D !important;
-                    box-shadow: 0 3px 6px 12px #DED23D;
+                    box-shadow: 0 1px 5px 3px #DED23D;
                     color: #ffffff !important;
                 }
                 &_3 {
                     background-color: #61A53B !important;
-                    box-shadow: 0 3px 6px 12px #61A53B;
+                    box-shadow: 0 1px 5px 3px #61A53B;
                     color: #ffffff !important;
                 }
                 &_4 {
                     background-color: #3D6581 !important;
-                    box-shadow: 0 3px 6px 12px #3D6581;
+                    box-shadow: 0 1px 5px 3px #3D6581;
                     color: #ffffff !important;
                     /*color: map-get($colors, "bp1") !important;*/
                 }
                 &_5 {
                     background-color: #453FB0 !important;
-                    box-shadow: 0 3px 6px 12px #453FB0;
+                    box-shadow: 0 1px 5px 3px #453FB0;
                     color: #ffffff !important
                 }
                 &_6 {
                     background-color: #5E3785 !important;
-                    box-shadow: 0 3px 6px 12px #5E3785;
+                    box-shadow: 0 1px 5px 3px #5E3785;
                     color: #ffffff !important;
                 }
                 &_7 {
                     background-color: #8D56A0 !important;
-                    box-shadow: 0 3px 6px 12px #8D56A0;
+                    box-shadow: 0 1px 5px 3px #8D56A0;
                     color: #ffffff !important;
                 }
                 &_8 {
                     background-color: #B875BF !important;
-                    box-shadow: 0 3px 6px 12px #B875BF;
+                    box-shadow: 0 1px 5px 3px #B875BF;
                     color: #ffffff !important;
                 }
             }
