@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/// @BemEntryName: -=[ youtube-logo ]=-.
+/// @description: логотип youtube.
+.youtube-logo {
+    color: #000;
+    font-weight: 700;
+
+    &__tube {
+        background-color: #ff0000;
+        border-radius: 7px;
+        color: #fff;
+        margin-left: 2px;
+        padding: 2px 3px;
+    }
+}
