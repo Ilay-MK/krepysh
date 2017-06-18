@@ -3,8 +3,8 @@
 /// @description: lava.
 
 #menu_main {
-    background: -moz-linear-gradient(left, #c34e4e, #d09d40, #e2e23c, #3a933a, #4040b9, #613680, #d187d1);
-    background: -webkit-gradient(linear, left center, right center, from(#c34e4e), color-stop(14%, #d09d40), color-stop(28%, #e2e23c), color-stop(42%, #3a933a), color-stop(56%, #4040b9), color-stop(70%, #613680), to(#d187d1));
+    /*background: -moz-linear-gradient(left, #c34e4e, #d09d40, #e2e23c, #3a933a, #4040b9, #613680, #d187d1);
+    background: -webkit-gradient(linear, left center, right center, from(#c34e4e), color-stop(14%, #d09d40), color-stop(28%, #e2e23c), color-stop(42%, #3a933a), color-stop(56%, #4040b9), color-stop(70%, #613680), to(#d187d1));*/
     text-align: center;
     width: 100%;
 }
@@ -86,7 +86,7 @@
         &_6 {}
     }
     &__link {
-        color: white !important;
+
         opacity: 0.8;
         font-size: 14px;
         padding: 5px 15px !important;
