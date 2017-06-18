@@ -27,28 +27,6 @@ $galleryImgs_count-chailitko: 6;
 
 }
 
-#gallery__album {
-    &_asanalieva {
-
-    }
-    &_pobediteley {
-
-    }
-    &_sedih {
-
-    }
-    &_slobodskaya {
-
-    }
-    &_vaneeva {
-
-    }
-
-    &_chailitko {
-
-    }
-}
-
 /// @BemEntryName: -=[ gallery ]=-.
 /// @description: сущность галерея.
 .gallery {
@@ -271,7 +249,7 @@ $galleryImgs_count-chailitko: 6;
         }
         /* sedih */
         @for $i from 1 through $galleryImgs_count-sedih {
-            &_radialnaya_#{$i} {
+            &_sedih_#{$i} {
                 background-image: url(../img/gallery/sedih/#{$i}.jpg);
             }
         }
