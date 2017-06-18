@@ -77,8 +77,13 @@
     }
 
     &__photo {
+        background-image: url(../img/reviews/avatars/avatars_100.jpg);
+        background-position: 0 center;
+        background-repeat: no-repeat;
+        background-size: cover;
         border-radius: 50%;
         vertical-align: middle;
+        @include transition();
 
         &_50 {
 
@@ -86,6 +91,33 @@
 
         &_100 {
             @include size(100px);
+        }
+
+        /* --- */
+
+        /// @varName: -=[ reviews-text__count ]=-.
+        /// @description: кол-во текствовых отзывов.
+        $reviews-text__count: 30;
+
+        /// @varName: -=[ reviews-text__ava-sprite-length ]=-.
+        /// @description: размер одного элемента спрайта.
+        $reviews-text__ava-sprite-length: 100px;
+
+        &_1 {
+            background-image: url(https://pp.userapi.com/c837331/v837331613/23d4/vq9FaKBfVCs.jpg);
+            background-position-x: center;
+        }
+        &_2 {
+            background-image: url(https://pp.userapi.com/c604425/v604425283/3d303/i2FtWJs1p-U.jpg);
+            background-position-x: center;
+        }
+
+        /* reviewsVK__photo_n */
+        @for $i from 3 through $reviews-text__count {
+            &_#{$i} {
+                $length: -$reviews-text__ava-sprite-length * $i + $reviews-text__ava-sprite-length;
+                background-position-x: $length;
+            }
         }
     }
 
