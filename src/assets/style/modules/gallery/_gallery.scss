@@ -179,7 +179,13 @@ $galleryImgs_count-chailitko: 6;
 
             .fa {
                 display: block;
-                font-size: 7em;
+                font-size: 5em;
+
+                &:after {
+                    display: block;
+                    content: 'Вернуться к альбомам';
+                    font-size: 0.2em;
+                }
             }
         }
 
