@@ -42,5 +42,22 @@ var fn_plug_scrollTo = function (target, speed, offsetTop) {
 };
 
 $(function() {
-    fn_plug_scrollTo(".scrollTo", 800, -100);
+    if (getPageSize()[2] < 768) {
+        fn_plug_scrollTo(".scrollTo", 800, -50);
+    }
+    else {
+        fn_plug_scrollTo(".scrollTo", 800, -85);
+    }
+
+    /// Расширение функции
+    $.extend(true, $(window).resize(), $(window).resize(
+        function() {
+            if (getPageSize()[2] < 768) {
+                fn_plug_scrollTo(".scrollTo", 800, -50);
+            }
+            else {
+                fn_plug_scrollTo(".scrollTo", 800, -85);
+            }
+        }
+    ));
 });
