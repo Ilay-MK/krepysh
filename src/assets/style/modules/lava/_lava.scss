@@ -3,29 +3,31 @@
 /// @description: lava.
 
 #menu_main {
-    /*background: -moz-linear-gradient(left, #c34e4e, #d09d40, #e2e23c, #3a933a, #4040b9, #613680, #d187d1);
-    background: -webkit-gradient(linear, left center, right center, from(#c34e4e), color-stop(14%, #d09d40), color-stop(28%, #e2e23c), color-stop(42%, #3a933a), color-stop(56%, #4040b9), color-stop(70%, #613680), to(#d187d1));*/
     text-align: center;
     width: 100%;
 }
 
 .lava {
-    /*padding: 10px 0;*/
     padding: 0;
-    /*width: 100%;*/
     transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
     transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
 
+    &__link {
+        font-size: 14px;
+        padding: 5px 15px !important;
+        transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+        transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+    }
 
     &__elem {
         transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
         transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
 
-        &.active {
+        &.active,
+        &:hover {
 
             .lava__link {
                 background-color: #3E6088 !important;
-                /*box-shadow: 0 0 10px 15px #3E6088;*/
                 box-shadow: 0 1px 5px 3px #DED23D;
                 color: map-get($colors, "bp1") !important;
                 font-weight: 700;
@@ -83,25 +85,5 @@
                 }
             }
         }
-
-        &_1 {}
-        &_2 {}
-        &_3 {}
-        &_4 {}
-        &_5 {}
-        &_6 {}
-    }
-    &__link {
-        font-size: 14px;
-        padding: 5px 15px !important;
-        transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
-        transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
-
-        &_1 {}
-        &_2 {}
-        &_3 {}
-        &_4 {}
-        &_5 {}
-        &_6 {}
     }
 }

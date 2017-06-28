@@ -332,7 +332,7 @@ $(document).ready(function () {
         );
     }, 5000);*/
 
-    var navActive;
+    /*var navActive;
 
     $('.lava .lava__elem').hover(
         function () {
@@ -344,7 +344,7 @@ $(document).ready(function () {
             $(this).removeClass("active");
             navActive.addClass("active");
         }
-    );
+    );*/
 
     /*$('#gallery .thumbnail').click(function (e) {
         e.preventDefault();
