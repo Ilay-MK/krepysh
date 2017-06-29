@@ -128,9 +128,9 @@ $(document).ready(function () {
         }*/
     }, 3000);
 
-    /*setTimeout(function () {
+    setTimeout(function () {
         $("#header .container-bg").css("background-image", "url('assets/img/header/bg_3-2.jpg')");
-    }, 4000);*/
+    }, 4000);
 
     $("#callMe button").click(function () {
         yaCounter38441125.reachGoal('TOP-CALLME-BUTTON');

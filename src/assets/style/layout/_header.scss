@@ -31,7 +31,7 @@
 
         transition: background 0.3s linear;
 
-        @media only screen and (max-width: 767px) {
+        @media (max-width: 767px) {
             background-image: none !important;
         }
     }
