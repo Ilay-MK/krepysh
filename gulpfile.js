@@ -31,11 +31,13 @@ var path = {
         js: 'build/assets/js/',
         css: 'build/assets/css/',
         img: 'build/assets/img/',
+        img_favicon: 'build/',
         img_prettyPhoto: 'build/assets/img/prettyPhoto',
         fonts: 'build/assets/fonts/',
         files: 'build/assets/files/',
         mail: 'build/',
         version: 'build/',
+        htaccess: 'build/',
         libs: 'build/assets/libs/'
     },
     src: {
@@ -46,11 +48,13 @@ var path = {
         js: 'src/assets/js/main.js',
         style: 'src/assets/style/main.scss',
         img: 'src/assets/img/**/*.*',
+        img_favicon: 'src/assets/favicon/**/*.*',
         img_prettyPhoto: './bower_components/jquery-prettyPhoto/images/prettyPhoto/**/*.*',
         fonts: 'src/assets/fonts/**/*.*',
         files: 'src/assets/files/**/*.*',
         mail: 'src/mail.php',
         version: 'src/version',
+        htaccess: 'src/.htaccess',
         libs: 'src/assets/libs/**/*.*'
     },
     watch: {
@@ -59,11 +63,13 @@ var path = {
         js: 'src/assets/js/**/*.js',
         style: 'src/assets/style/**/*.scss',
         img: 'src/assets/img/**/*.*',
+        img_favicon: 'src/assets/favicon/**/*.*',
         img_prettyPhoto: './bower_components/jquery-prettyPhoto/images/prettyPhoto/**/*.*',
         fonts: 'src/assets/fonts/**/*.*',
         files: 'src/assets/files/**/*.*',
         mail: 'src/mail.php',
         version: 'src/version',
+        htaccess: 'src/.htaccess',
         libs: 'src/assets/libs/**/*.*'
     },
     fontAwesomeDir: './bower_components/font-awesome/',
@@ -189,6 +195,19 @@ gulp.task('build:image', function () {
         .pipe(notify('build:image Done!'));
 });
 
+gulp.task('build:image_favicon', function () {
+    gulp.src(path.src.img_favicon)
+        /*.pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()],
+            interlaced: true
+        }))*/
+        .pipe(gulp.dest(path.build.img_favicon))
+        .pipe(reload({stream: true}))
+        .pipe(notify('build:image_favicon Done!'));
+});
+
 gulp.task('build:fonts-awesome', function () {
     gulp.src(path.fontAwesomeFonts)
         .pipe(gulp.dest(path.build.fonts))
@@ -231,6 +250,12 @@ gulp.task('build:version', function () {
         .pipe(notify('build:version Done!'));
 });
 
+gulp.task('build:htaccess', function () {
+    gulp.src(path.src.htaccess)
+        .pipe(gulp.dest(path.build.htaccess))
+        .pipe(notify('build:htaccess Done!'));
+});
+
 gulp.task('build', [
     'build:html',
     'build:js',
@@ -240,6 +265,8 @@ gulp.task('build', [
     'build:libs',
     'build:php',
     'build:version',
+    'build:htaccess',
+    'build:image_favicon',
     'build:image'
 ]);
 
@@ -257,6 +284,9 @@ gulp.task('watch', function () {
     /*watch([path.watch.img_prettyPhoto], function (event, cb) {
         gulp.start('build:image_prettyPhoto');
     });*/
+    watch([path.watch.img_favicon], function (event, cb) {
+        gulp.start('build:image_favicon');
+    });
     watch([path.watch.img], function (event, cb) {
         gulp.start('build:image');
     });
@@ -275,17 +305,22 @@ gulp.task('watch', function () {
     watch([path.watch.version], function (event, cb) {
         gulp.start('build:version');
     });
+    watch([path.watch.htaccess], function (event, cb) {
+        gulp.start('build:htaccess');
+    });
 });
 // Watch Wiredep
 gulp.task('watch-native', function () {
     gulp.watch(path.watch.html, ['build:html']);
     gulp.watch(path.watch.style, ['build:style']);
     gulp.watch(path.build.js, ['build:js']);
+    gulp.watch(path.watch.img_favicon, ['build:image_favicon']);
     gulp.watch(path.watch.img, ['build:image']);
     gulp.watch(path.watch.fonts, ['build:fonts']);
     gulp.watch(path.watch.files, ['build:files']);
     gulp.watch(path.watch.libs, ['build:libs']);
     gulp.watch(path.watch.version, ['build:version']);
+    gulp.watch(path.watch.htaccess, ['build:htaccess']);
 });
 
 
