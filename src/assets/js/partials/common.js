@@ -362,36 +362,6 @@ $(document).ready(function () {
         });
     });*/
 
-    $('#gallery__albums .thumbnail').click(function (e) {
-        e.preventDefault();
-        var target;
-
-        target = $(this).attr("data-target");
-
-        if(target === undefined || target == "") return;
-
-        $(this).closest("#gallery__albums").fadeOut();
-        $("#gallery__album_" + target).fadeIn();
-
-        $.scrollTo("#gallery__album_" + target, 800, {
-			offset: -100
-		});
-    });
-
-    $('#gallery .gallery__img_return').click(function (e) {
-        e.preventDefault();
-        var target;
-
-        target = $(this).attr("data-target");
-
-        $(this).closest(".gallery__container").fadeOut();
-        $("#gallery__albums").fadeIn();
-
-        $.scrollTo("#gallery__albums", 800, {
-			offset: -100
-		});
-    });
-
 });
 
 /*
