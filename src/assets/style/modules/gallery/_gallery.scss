@@ -2,27 +2,7 @@
 
 /// @varName: -=[ galleryImgs_count-* ]=-.
 /// @description: количество картинок.
-$galleryImgs_count-asanalieva: 15;
-$galleryImgs_count-bogdanovicha: 16;
-$galleryImgs_count-bogdanovicha76: 14;
-$galleryImgs_count-gerasimenko: 15;
-$galleryImgs_count-ilimskaya: 16;
-$galleryImgs_count-kalinovskogo: 17;
-$galleryImgs_count-kozlova: 18;
-$galleryImgs_count-landera: 14;
-$galleryImgs_count-mazurova: 14;
-$galleryImgs_count-mstislavca: 14;
-$galleryImgs_count-narodnaya: 14;
-$galleryImgs_count-pobediteley: 15;
-$galleryImgs_count-radialnaya: 16;
-$galleryImgs_count-sedih: 13;
-$galleryImgs_count-shirokaya: 13;
-$galleryImgs_count-slobodskaya: 13;
-$galleryImgs_count-uborevicha: 13;
-$galleryImgs_count-vaneeva: 14;
-$galleryImgs_count-yakubovskogo: 12;
-
-$galleryImgs_count-chailitko: 6;
+$galleryImgs_count-baranovichi: 16;
 
 #gallery__albums {
 
@@ -42,76 +22,6 @@ $galleryImgs_count-chailitko: 6;
 
     &__album {
         position: relative;
-
-        &:hover {
-
-            .gallery__album-data {
-                opacity: 1;
-            }
-        }
-
-        &_asanalieva {
-            background-image: url(../img/gallery/asanalieva/cover.jpg);
-        }
-        &_bogdanovicha {
-            background-image: url(../img/gallery/bogdanovicha/cover.jpg);
-        }
-        &_bogdanovicha76 {
-            background-image: url(../img/gallery/bogdanovicha76/cover.jpg);
-        }
-        &_gerasimenko {
-            background-image: url(../img/gallery/gerasimenko/cover.jpg);
-        }
-        &_ilimskaya {
-            background-image: url(../img/gallery/ilimskaya/cover.jpg);
-        }
-        &_kalinovskogo {
-            background-image: url(../img/gallery/kalinovskogo/cover.jpg);
-        }
-        &_kozlova {
-            background-image: url(../img/gallery/kozlova/cover.jpg);
-        }
-        &_landera {
-            background-image: url(../img/gallery/landera/cover.jpg);
-        }
-        &_mazurova {
-            background-image: url(../img/gallery/mazurova/cover.jpg);
-        }
-        &_mstislavca {
-            background-image: url(../img/gallery/mstislavca/cover.jpg);
-        }
-        &_narodnaya {
-            background-image: url(../img/gallery/narodnaya/cover.jpg);
-        }
-        &_pobediteley {
-            background-image: url(../img/gallery/pobediteley/cover.jpg);
-        }
-        &_radialnaya {
-            background-image: url(../img/gallery/radialnaya/cover.jpg);
-        }
-        &_sedih {
-            background-image: url(../img/gallery/sedih/cover.jpg);
-        }
-        &_shirokaya {
-            background-image: url(../img/gallery/shirokaya/cover.jpg);
-        }
-        &_slobodskaya {
-            background-image: url(../img/gallery/slobodskaya/cover.jpg);
-        }
-        &_uborevicha {
-            background-image: url(../img/gallery/uborevicha/cover.jpg);
-        }
-        &_vaneeva {
-            background-image: url(../img/gallery/vaneeva/cover.jpg);
-        }
-        &_yakubovskogo {
-            background-image: url(../img/gallery/yakubovskogo/cover.jpg);
-        }
-
-        /* --- */
-        &-photos {
-            display: none;
-        }
 
         &-data {
             background-color: map-get($colors, "bp2");
@@ -155,166 +65,14 @@ $galleryImgs_count-chailitko: 6;
             box-shadow: 0 0 10px 2px rgb(183, 183, 183);
         }
 
-        /// @name: -=[ breakpoint ]=-;
-        /// @description: функция-помошник работы с медиа запросами (breakpoints);
-        /// @prop: xs, sm, md, lg (bootstrap);
-        /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
-        /*@include breakpoint($minWidth: map-get($breakpoints, "xs-min")) {
-            margin: 10px;
-            width: calc(100% - 20px);
-        }*/
-
-        &_return {
-            /*background-image: url(../imgs);*/
-            display: block;
-            /*font-size: 7.5em;*/
-            font-size: 1.53em;
-            text-align: center;
-
-            /// @name: -=[ breakpoint ]=-;
-            /// @description: функция-помошник работы с медиа запросами (breakpoints);
-            /// @prop: xs, sm, md, lg (bootstrap);
-            /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
-            @include breakpoint(xs) {
-                font-size: 1.75em;
-            }
-
-            /// @name: -=[ breakpoint ]=-;
-            /// @description: функция-помошник работы с медиа запросами (breakpoints);
-            /// @prop: xs, sm, md, lg (bootstrap);
-            /// @prop: ($maxWidth: x, $minWidth: x, $maxHeight: x, $minHeight: x), где x - число с "px";
-            /*@include breakpoint($maxWidth: map-get($breakpoints, "md-max"), $minWidth: map-get($breakpoints, "sm-min")) {
-                font-size: 1.53em;
-            }*/
-
-            .fa {
-                display: block;
-                font-size: 5em;
-
-                &:after {
-                    display: block;
-                    content: 'Вернуться к альбомам';
-                    font-size: 0.2em;
-                }
-            }
-        }
-
         /* --- */
         /* album's photo */
         /* --- */
 
-        /* asanalieva */
-        @for $i from 1 through $galleryImgs_count-asanalieva {
-            &_asanalieva_#{$i} {
-                background-image: url(../img/gallery/asanalieva/mini/#{$i}.jpg);
-            }
-        }
-        /* bogdanovicha */
-        @for $i from 1 through $galleryImgs_count-bogdanovicha {
-            &_bogdanovicha_#{$i} {
-                background-image: url(../img/gallery/bogdanovicha/mini/#{$i}.jpg);
-            }
-        }
-        /* bogdanovicha76 */
-        @for $i from 1 through $galleryImgs_count-bogdanovicha76 {
-            &_bogdanovicha76_#{$i} {
-                background-image: url(../img/gallery/bogdanovicha76/mini/#{$i}.jpg);
-            }
-        }
-        /* gerasimenko */
-        @for $i from 1 through $galleryImgs_count-gerasimenko {
-            &_gerasimenko_#{$i} {
-                background-image: url(../img/gallery/gerasimenko/mini/#{$i}.jpg);
-            }
-        }
-        /* ilimskaya */
-        @for $i from 1 through $galleryImgs_count-ilimskaya {
-            &_ilimskaya_#{$i} {
-                background-image: url(../img/gallery/ilimskaya/mini/#{$i}.jpg);
-            }
-        }
-        /* kalinovskogo */
-        @for $i from 1 through $galleryImgs_count-kalinovskogo {
-            &_kalinovskogo_#{$i} {
-                background-image: url(../img/gallery/kalinovskogo/mini/#{$i}.jpg);
-            }
-        }
-        /* kozlova */
-        @for $i from 1 through $galleryImgs_count-kozlova {
-            &_kozlova_#{$i} {
-                background-image: url(../img/gallery/kozlova/mini/#{$i}.jpg);
-            }
-        }
-        /* landera */
-        @for $i from 1 through $galleryImgs_count-landera {
-            &_landera_#{$i} {
-                background-image: url(../img/gallery/landera/mini/#{$i}.jpg);
-            }
-        }
-        /* mazurova */
-        @for $i from 1 through $galleryImgs_count-mazurova {
-            &_mazurova_#{$i} {
-                background-image: url(../img/gallery/mazurova/mini/#{$i}.jpg);
-            }
-        }
-        /* mstislavca */
-        @for $i from 1 through $galleryImgs_count-mstislavca {
-            &_mstislavca_#{$i} {
-                background-image: url(../img/gallery/mstislavca/mini/#{$i}.jpg);
-            }
-        }
-        /* narodnaya */
-        @for $i from 1 through $galleryImgs_count-narodnaya {
-            &_narodnaya_#{$i} {
-                background-image: url(../img/gallery/narodnaya/mini/#{$i}.jpg);
-            }
-        }
-        /* pobediteley */
-        @for $i from 1 through $galleryImgs_count-pobediteley {
-            &_pobediteley_#{$i} {
-                background-image: url(../img/gallery/pobediteley/mini/#{$i}.jpg);
-            }
-        }
-        /* radialnaya */
-        @for $i from 1 through $galleryImgs_count-radialnaya {
-            &_radialnaya_#{$i} {
-                background-image: url(../img/gallery/radialnaya/mini/#{$i}.jpg);
-            }
-        }
-        /* sedih */
-        @for $i from 1 through $galleryImgs_count-sedih {
-            &_sedih_#{$i} {
-                background-image: url(../img/gallery/sedih/mini/#{$i}.jpg);
-            }
-        }
-        /* shirokaya */
-        @for $i from 1 through $galleryImgs_count-shirokaya {
-            &_shirokaya_#{$i} {
-                background-image: url(../img/gallery/shirokaya/mini/#{$i}.jpg);
-            }
-        }
-        /* slobodskaya */
-        @for $i from 1 through $galleryImgs_count-slobodskaya {
-            &_slobodskaya_#{$i} {
-                background-image: url(../img/gallery/slobodskaya/mini/#{$i}.jpg);
-            }
-        }
-        /* uborevicha */
-        @for $i from 1 through $galleryImgs_count-uborevicha {
-            &_uborevicha_#{$i} {
-                background-image: url(../img/gallery/uborevicha/mini/#{$i}.jpg);
-            }
-        }
-        /* vaneeva */
-        @for $i from 1 through $galleryImgs_count-vaneeva {
-            &_vaneeva_#{$i} {
-                background-image: url(../img/gallery/vaneeva/mini/#{$i}.jpg);
-            }
-        }
-        /* yakubovskogo */
-        @for $i from 1 through $galleryImgs_count-yakubovskogo {
-            &_yakubovskogo_#{$i} {
-                background-image: url(../img/gallery/yakubovskogo/mini/#{$i}.jpg);
+        /* baranovichi */
+        @for $i from 1 through $galleryImgs_count-baranovichi {
+            &_baranovichi_#{$i} {
+                background-image: url(../img/gallery/baranovichi/mini/#{$i}.jpg);
             }
         }
 
