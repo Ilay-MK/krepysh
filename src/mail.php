@@ -48,8 +48,8 @@
     /* -------------------------- */
 
     if (!$error) {
-        $recepient = "krepysh.com@gmail.com, krepysh1@tut.by"; /* "MiKrob09@gmail.com" */
-        $sitename  = "krepysh.com";
+        $recepient = "acrorita@mail.ru, MiKrob09@gmail.com"; /* "MiKrob09@gmail.com" */
+        $sitename  = "krepysh.com - Барановичи";
         $pagetitle = "Новая заявка с сайта \"$sitename\"";
 
         $message   = "Телефон: $phone \n\nКуда кликнул: $whichService $utm_source__value $utm_term__value";
