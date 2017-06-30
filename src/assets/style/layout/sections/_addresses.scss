@@ -4,6 +4,13 @@
     color: map-get($colors, "bs1");
     padding: 0;
 
+    /*&__tile {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(../img/addresses/tile_2016x378.jpg);
+        @include size(100%, 378px);
+    }*/
+
     dl {
 
         dt {
