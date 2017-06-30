@@ -266,7 +266,6 @@
 
                     h2 {
                         /*color: map-get($colors, "bp3");*/
-                        text-align: right;
 
                         @media only screen and (max-width: 479px) {
                             font-size: 1.7em;
@@ -275,6 +274,14 @@
 
                         @media only screen and (max-width: 767px) {
                             text-align: center;
+                        }
+
+                        .small {
+                            color: #fff;
+                            display: block;
+                            font-size: 0.5em;
+                            line-height: 1em;
+                            margin-top: 10px;
                         }
 
                     }

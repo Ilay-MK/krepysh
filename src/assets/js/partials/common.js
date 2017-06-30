@@ -152,14 +152,6 @@ $(document).ready(function () {
         yaCounter38441125.reachGoal('HERO-MAIN-BUTTON');
     });
 
-    detachPrependTo("#video", "#youtube-video-desktop", "#youtube-video-mobile", 992, false, false);
-
-    $.extend(true, $(window).resize(), $(window).resize(
-        function () {
-            detachPrependTo("#video", "#youtube-video-desktop", "#youtube-video-mobile", 992, false, false);
-        }
-    ));
-
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
     /* - - - - - - - - - - - - - - - - PROBLEMS - - - - - - - - - - - - - - - */
 
