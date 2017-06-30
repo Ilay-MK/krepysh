@@ -392,7 +392,6 @@ function toDoScroll() {
             parallaxBg = $('.parallaxBg');
 
         if(currScrollPos >= 500) {
-            $("#descr").css("display", "none");
             $("#callMe").css("display", "none");
 
             if (getPageSize()[2] > 1199) {
@@ -410,7 +409,6 @@ function toDoScroll() {
             }
 
             if (getPageSize()[2] > 991) {
-                $("#utpScroll").fadeIn();
                 $("#utpScroll-btn").fadeIn();
             }
 
@@ -420,7 +418,6 @@ function toDoScroll() {
 
             if (getPageSize()[2] < 992 && getPageSize()[2] > 767) {
                 $("#header img.logo").css("display", "block");
-                $("#utpScroll").css("display", "none");
                 $("#header .phone a .fa").css("display", "none");
                 $("#header .phone a.btn").css("padding", "14px 15px");
                 $(".navbar-brand").css("display", "inline-block");
@@ -455,7 +452,6 @@ function toDoScroll() {
             }
         }
         else {
-            $("#utpScroll").css("display", "none");
             $("#utpScroll-btn").css("display", "none");
 
             if (getPageSize()[2] > 1199) {
@@ -479,10 +475,6 @@ function toDoScroll() {
                 $("#header .phone a .fa").css("display", "none");
                 $("#header .phone a.btn").css("padding", "14px 15px");
                 $("#callMe").css("display", "none");
-            }
-
-            if (getPageSize()[2] > 767) {
-                $("#descr").fadeIn();
             }
 
             if (getPageSize()[2] < 768 && getPageSize()[2] > 599) {
