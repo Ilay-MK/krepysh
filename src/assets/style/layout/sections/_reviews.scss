@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
 #reviews {
-    padding-top: 0;
-    padding: 0;
+    background-color: map-get($colors, "bp3");
+    /*height: 515px;*/
+    overflow: hidden;
+    padding-bottom: 50px;
+    /*padding-top: 0;
+    padding: 0;*/
 }
 
 #reviewsVK__getComments {
