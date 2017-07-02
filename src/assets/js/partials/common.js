@@ -297,25 +297,6 @@ $(document).ready(function () {
     });
 
     /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-    /* - - - - - - - - - - - - - - - - LST_RESULT - - - - - - - - - - - - -  */
-
-    /* Разовое исполнение */
-    $('.lst_result-result').one('inview', function (event) {
-        $(this).css("opacity", 1).animateCss('fadeInRight'); /*slideInRight*/
-    });
-
-    /*if (getPageSize()[2] > 767) {
-        // inview
-        jQuery('.list-primary li .icon-font').bind('inview', function (event, visible) {
-            if (visible) {
-                $(this).animateCss('bounceIn');
-            } else {
-                //$(this).stop().removeClass("animated bounceIn");
-            }
-        });
-    }*/
-
-    /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     /* - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - */
 
    /* setTimeout(function () { // нужно APIшку вставить.
@@ -493,12 +474,6 @@ function toDoScroll() {
                 $("#header .phone a .fa").css("display", "none");
                 $("#header .phone a.btn").css("padding", "14px 9px");
             }
-        }
-
-        if (getPageSize()[2] > 767) {
-            /*parallax($('#problems-result'));*/
-            /*parallax($('#advantages-result'));*/
-            /*parallax($('#header', "bg"));*/
         }
     }
 
