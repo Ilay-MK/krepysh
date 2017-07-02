@@ -71,17 +71,6 @@
                 box-shadow: 5px 5px 3px rgba(map-get($colors, "bs1"), 0.6);
             }
 
-            &:nth-child(2n+1) {
-                background-color: map-get($colors, "bs3");
-
-                .item-content {
-
-                    h4, .text p {
-                        /*color: map-get($colors, "b_w");*/
-                    }
-                }
-            }
-
             &:hover {
 
                 .item-content {
