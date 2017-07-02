@@ -13,7 +13,7 @@
         .item-square-3 {
             background-color: map-get($colors, "b_w");
             display: inline-block;
-            height: 460px;
+            height: 526px; /*460px*/
             overflow: hidden;
             margin: 5px;
             padding: 10px;
@@ -24,6 +24,17 @@
 
             box-shadow: 5px 5px 5px rgba(map-get($colors, "bs1"), 0.4);
             transition: all .3s ease;
+
+            &__header {
+                /*height: 40px;*/
+                background-color: map-get($colors, "bp3");
+                margin: 0 auto 10px;
+                padding: 10px 0;
+
+                &_main {
+                    color: map-get($colors, "bp1");
+                }
+            }
 
             &-main {
                 background-color: map-get($colors, "bp1") !important;
