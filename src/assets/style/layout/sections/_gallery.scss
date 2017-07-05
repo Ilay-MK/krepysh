@@ -3,6 +3,8 @@
 /// @sectionName: -=[ gallery ]=-.
 /// @description: секция галереи.
 #gallery {
+    background-color: rgba(map-get($colors, "bp3"), 0.1);
+    border-top: 1px solid map-get($colors, "bp2");
     color: map-get($colors, "bp2");
     padding-top: 0;
     /* --- */
