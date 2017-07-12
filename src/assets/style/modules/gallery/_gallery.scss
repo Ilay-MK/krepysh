@@ -4,7 +4,6 @@
 /// @description: количество картинок.
 $galleryImgs_count-asanalieva: 15;
 $galleryImgs_count-bogdanovicha: 16;
-$galleryImgs_count-bogdanovicha76: 14;
 $galleryImgs_count-gerasimenko: 15;
 $galleryImgs_count-ilimskaya: 16;
 $galleryImgs_count-kalinovskogo: 17;
@@ -21,8 +20,6 @@ $galleryImgs_count-slobodskaya: 13;
 $galleryImgs_count-uborevicha: 13;
 $galleryImgs_count-vaneeva: 14;
 $galleryImgs_count-yakubovskogo: 12;
-
-$galleryImgs_count-chailitko: 6;
 
 #gallery__albums {
 
@@ -55,9 +52,6 @@ $galleryImgs_count-chailitko: 6;
         }
         &_bogdanovicha {
             background-image: url(../img/gallery/bogdanovicha/cover.jpg);
-        }
-        &_bogdanovicha76 {
-            background-image: url(../img/gallery/bogdanovicha76/cover.jpg);
         }
         &_gerasimenko {
             background-image: url(../img/gallery/gerasimenko/cover.jpg);
@@ -213,12 +207,6 @@ $galleryImgs_count-chailitko: 6;
         @for $i from 1 through $galleryImgs_count-bogdanovicha {
             &_bogdanovicha_#{$i} {
                 background-image: url(../img/gallery/bogdanovicha/mini/#{$i}.jpg);
-            }
-        }
-        /* bogdanovicha76 */
-        @for $i from 1 through $galleryImgs_count-bogdanovicha76 {
-            &_bogdanovicha76_#{$i} {
-                background-image: url(../img/gallery/bogdanovicha76/mini/#{$i}.jpg);
             }
         }
         /* gerasimenko */
