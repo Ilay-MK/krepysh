@@ -1,7 +1,7 @@
 {
     "name": "krepysh.com",
-    "version": "1.0.10",
-    "description": "LP - детская гимнастика. [ Артур ]",
+    "version": "0.3.0",
+    "description": "LP - детская гимнастика. [ Ritta ] - Baranovichi",
     "main": "index.html",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
