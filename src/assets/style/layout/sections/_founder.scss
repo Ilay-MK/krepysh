@@ -5,4 +5,37 @@
 #founder {
     color: map-get($colors, "bp2");
     padding-top: 0;
+
+    .list-primary {
+        h3 {
+            .icon {
+                background-image: url(../img/founder/icons__sprite_80x16.png);
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                display: inline-block;
+                @include size(16px);
+
+                &_1 {
+                    background-position: 0 0;
+                }
+                &_2 {
+                    background-position: -16px 0;
+                }
+                &_3 {
+                    background-position: -32px 0;
+                }
+                &_4 {
+                    background-position: -48px 0;
+                }
+                &_5 {
+                    background-position: -64px 0;
+                }
+            }
+        }
+    }
+
+    .img-rita {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }
