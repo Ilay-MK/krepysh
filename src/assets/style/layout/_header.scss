@@ -257,6 +257,7 @@
                     h2 {
                         /*color: map-get($colors, "bp3");*/
                         line-height: 0.9em;
+                        letter-spacing: -0.8px;
 
                         @media only screen and (max-width: 479px) {
                             font-size: 1.7em;
