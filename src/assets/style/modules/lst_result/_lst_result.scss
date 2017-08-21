@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/// @BemEntryName: -=[ lst_result ]=-.
+/// @description: оформления списка преимуществ.
 .lst_result {
 
     &-list {
@@ -9,33 +11,27 @@
 
             li {
 
-                img, .icon-font {
-
-                }
-
                 .icon-font {
-
-
-                    &.fa-stack {
-
-                    }
+                    color: map-get($colors, "bp3");
                 }
 
-                span {
-
+                span, h3 {
+                    color: map-get($colors, "bp3");
                 }
             }
         }
     }
 
     &-result {
+        background-color: lighten(map-get($colors, "bp3"), 5%);
+        box-shadow: 5px 5px 5px rgba(map-get($colors, "bs3"), 0.4);
+        color: map-get($colors, "b_w");
         font-size: 1.2em;
         line-height: 1.3em;
         /*margin-right: -15px;*/
         /*opacity: 0;*/
+        margin-bottom: 30px;
         padding: 30px;
-
-        box-shadow: 5px 5px 5px rgba(map-get($colors, "bs3"), 0.4);
         transition: all .3s ease;
 
         &:hover {
@@ -43,6 +39,9 @@
         }
 
         h3 {
+            /*color: map-get($colors, "bp3");*/
+            /*color: lighten(map-get($colors, "bp3"), 20%);*/
+            color: lighten(map-get($colors, "bp2"), 20%);
             font-weight: 700;
             margin-top: 0;
             text-align: left;
@@ -50,6 +49,8 @@
         }
 
         p {
+            /*color: map-get($colors, "bs2");*/
+            /*color: lighten(map-get($colors, "bp2"), 30%);*/
             font-size: 1.2em;
             font-weight: 700;
         }
