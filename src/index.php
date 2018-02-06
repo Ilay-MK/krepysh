@@ -48,7 +48,7 @@
                 {
                     $addH1_geoloc = $dynamic_keyword;
                     $found = true;
-                    break; // отобразить 1 вхождение/совпадение
+                    break; // отобразить 1e вхождение/совпадение
                 }
 
                 next($dynamic_keywords);
