@@ -3,49 +3,4 @@
 #advantages {
     color: map-get($colors, "bp2");
     padding-top: 0;
-
-    .lst_result {
-
-        &-list {
-
-            ul {
-
-                li {
-
-                    img, .icon-font {
-
-                    }
-
-                    .icon-font {
-                        color: map-get($colors, "bp3");
-
-                        &.fa-stack {
-
-                        }
-                    }
-
-                    span, h3 {
-                        color: map-get($colors, "bp3");
-                    }
-                }
-            }
-        }
-
-        &-result {
-            background-color: lighten(map-get($colors, "bp3"), 5%);
-            color: map-get($colors, "b_w");
-            margin-bottom: 30px;
-
-            h3 {
-                /*color: map-get($colors, "bp3");*/
-                /*color: lighten(map-get($colors, "bp3"), 20%);*/
-                color: lighten(map-get($colors, "bp2"), 20%);
-            }
-
-            p {
-                /*color: map-get($colors, "bs2");*/
-                /*color: lighten(map-get($colors, "bp2"), 30%);*/
-            }
-        }
-    }
 }

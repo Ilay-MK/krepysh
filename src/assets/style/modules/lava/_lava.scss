@@ -41,46 +41,62 @@
                     font-size: 16px;
                     padding: 5px 20px !important;
                 }
+            }
 
-                &_1 {
-                    background-color: #CC8345 !important;
-                    box-shadow: 0 1px 5px 3px #CC8345;
+            &:nth-child(1) {
+                .lava__link {
+                    background-color: #e5605d !important;
+                    box-shadow: 0 1px 5px 3px #e5605d;
                     color: #fff !important;
                 }
-                &_2 {
-                    background-color: #DED23D !important;
-                    box-shadow: 0 1px 5px 3px #DED23D;
+            }
+            &:nth-child(2) {
+                .lava__link {
+                    background-color: #cc8345 !important;
+                    box-shadow: 0 1px 5px 3px #cc8345;
                     color: #ffffff !important;
                 }
-                &_3 {
-                    background-color: #61A53B !important;
-                    box-shadow: 0 1px 5px 3px #61A53B;
+            }
+            &:nth-child(3) {
+                .lava__link {
+                    background-color: #ded23d !important;
+                    box-shadow: 0 1px 5px 3px #ded23d;
                     color: #ffffff !important;
                 }
-                &_4 {
-                    background-color: #3D6581 !important;
-                    box-shadow: 0 1px 5px 3px #3D6581;
+            }
+            &:nth-child(4) {
+                .lava__link {
+                    background-color: #61a53b !important;
+                    box-shadow: 0 1px 5px 3px #61a53b;
                     color: #ffffff !important;
                     /*color: map-get($colors, "bp1") !important;*/
                 }
-                &_5 {
-                    background-color: #453FB0 !important;
-                    box-shadow: 0 1px 5px 3px #453FB0;
+            }
+            &:nth-child(5) {
+                .lava__link {
+                    background-color: #3d6581 !important;
+                    box-shadow: 0 1px 5px 3px #3d6581;
                     color: #ffffff !important
                 }
-                &_6 {
-                    background-color: #5E3785 !important;
-                    box-shadow: 0 1px 5px 3px #5E3785;
+            }
+            &:nth-child(6) {
+                .lava__link {
+                    background-color: #453fb0 !important;
+                    box-shadow: 0 1px 5px 3px #453fb0;
                     color: #ffffff !important;
                 }
-                &_7 {
-                    background-color: #8D56A0 !important;
-                    box-shadow: 0 1px 5px 3px #8D56A0;
+            }
+            &:nth-child(7) {
+                .lava__link {
+                    background-color: #b875bf !important;
+                    box-shadow: 0 1px 5px 3px #b875bf;
                     color: #ffffff !important;
                 }
-                &_8 {
-                    background-color: #B875BF !important;
-                    box-shadow: 0 1px 5px 3px #B875BF;
+            }
+            &:nth-child(8) {
+                .lava__link {
+                    background-color: #5e3885 !important;
+                    box-shadow: 0 1px 5px 3px #5e3885;
                     color: #ffffff !important;
                 }
             }

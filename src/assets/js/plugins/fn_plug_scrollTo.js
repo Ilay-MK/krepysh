@@ -42,5 +42,5 @@ var fn_plug_scrollTo = function (target, speed, offsetTop) {
 };
 
 $(function() {
-    fn_plug_scrollTo(".scrollTo", 800, -50); /*85*/
+    //fn_plug_scrollTo(".scrollTo", 800, -50); /*85*/
 });
