@@ -48,7 +48,7 @@
     /* -------------------------- */
 
     if (!$error) {
-        $recepient = "krepysh.com@gmail.com, krepysh1@tut.by"; /* "MiKrob09@gmail.com" */
+        $recepient = "krepysh.com@gmail.com, krepysh1@tut.by, MiKrob09@gmail.com";
         $sitename  = "krepysh.com";
         $pagetitle = "Новая заявка с сайта \"$sitename\"";
 

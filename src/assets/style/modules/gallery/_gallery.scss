@@ -4,14 +4,12 @@
 /// @description: количество картинок.
 $galleryImgs_count-asanalieva: 15;
 $galleryImgs_count-bogdanovicha: 16;
-$galleryImgs_count-bogdanovicha76: 14;
 $galleryImgs_count-gerasimenko: 15;
 $galleryImgs_count-ilimskaya: 16;
 $galleryImgs_count-kalinovskogo: 17;
 $galleryImgs_count-kozlova: 18;
 $galleryImgs_count-landera: 14;
 $galleryImgs_count-mazurova: 14;
-$galleryImgs_count-mstislavca: 14;
 $galleryImgs_count-narodnaya: 14;
 $galleryImgs_count-pobediteley: 15;
 $galleryImgs_count-radialnaya: 16;
@@ -21,8 +19,6 @@ $galleryImgs_count-slobodskaya: 13;
 $galleryImgs_count-uborevicha: 13;
 $galleryImgs_count-vaneeva: 14;
 $galleryImgs_count-yakubovskogo: 12;
-
-$galleryImgs_count-chailitko: 6;
 
 #gallery__albums {
 
@@ -56,9 +52,6 @@ $galleryImgs_count-chailitko: 6;
         &_bogdanovicha {
             background-image: url(../img/gallery/bogdanovicha/cover.jpg);
         }
-        &_bogdanovicha76 {
-            background-image: url(../img/gallery/bogdanovicha76/cover.jpg);
-        }
         &_gerasimenko {
             background-image: url(../img/gallery/gerasimenko/cover.jpg);
         }
@@ -76,9 +69,6 @@ $galleryImgs_count-chailitko: 6;
         }
         &_mazurova {
             background-image: url(../img/gallery/mazurova/cover.jpg);
-        }
-        &_mstislavca {
-            background-image: url(../img/gallery/mstislavca/cover.jpg);
         }
         &_narodnaya {
             background-image: url(../img/gallery/narodnaya/cover.jpg);
@@ -215,12 +205,6 @@ $galleryImgs_count-chailitko: 6;
                 background-image: url(../img/gallery/bogdanovicha/mini/#{$i}.jpg);
             }
         }
-        /* bogdanovicha76 */
-        @for $i from 1 through $galleryImgs_count-bogdanovicha76 {
-            &_bogdanovicha76_#{$i} {
-                background-image: url(../img/gallery/bogdanovicha76/mini/#{$i}.jpg);
-            }
-        }
         /* gerasimenko */
         @for $i from 1 through $galleryImgs_count-gerasimenko {
             &_gerasimenko_#{$i} {
@@ -255,12 +239,6 @@ $galleryImgs_count-chailitko: 6;
         @for $i from 1 through $galleryImgs_count-mazurova {
             &_mazurova_#{$i} {
                 background-image: url(../img/gallery/mazurova/mini/#{$i}.jpg);
-            }
-        }
-        /* mstislavca */
-        @for $i from 1 through $galleryImgs_count-mstislavca {
-            &_mstislavca_#{$i} {
-                background-image: url(../img/gallery/mstislavca/mini/#{$i}.jpg);
             }
         }
         /* narodnaya */
